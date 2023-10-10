@@ -3,7 +3,9 @@ const theme = {
     primaryBackground: "#0f172a",
   },
   fontSizes: {},
-  fontFamily: {},
+  fontFamily: {
+    primaryFontFamily: "MyCustomFont",
+  },
 
   // max-width for different screen sizes in px
   breakingPoints: {
