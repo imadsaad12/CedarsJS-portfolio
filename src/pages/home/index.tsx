@@ -1,9 +1,14 @@
-import { Container } from "./styles";
+import { useEffect, useState } from "react";
+import { Container, Logo } from "./styles";
+import logoImage from "../../static/logo.png";
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => setIsLoading(false), 3000);
+  }, []);
+
   return (
-    <Container>
-      <p>add</p>
-    </Container>
+    <Container>{isLoading ? <Logo src={logoImage} /> : <p>home</p>}</Container>
   );
 }
