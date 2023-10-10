@@ -26,7 +26,7 @@ export const Logo = styled.img`
   opacity: 0;
   width: 400px;
   height: 200px;
-  animation: ${fadeInOut} 2s ease-in-out;
+  animation: ${fadeInOut} 3s ease-in-out;
   @media (max-width: ${(props) => props.theme.breakingPoints.xs}px) {
     width: 200px;
     height: 100px;
