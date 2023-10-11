@@ -4,7 +4,7 @@ import Home from "../pages/home";
 import HOC from "../HOC";
 // import Home from "../pages/home";
 // import HOC from "../HOC";
- 
+
 export default function ApplicationRoutes() {
   return (
     <HashRouter>

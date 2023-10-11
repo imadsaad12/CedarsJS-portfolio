@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -9,5 +9,3 @@ export const Container = styled.div`
   align-items: center;
   overflow-y: scroll;
 `;
-
-

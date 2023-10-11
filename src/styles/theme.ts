@@ -1,10 +1,13 @@
 const theme = {
   colors: {
     primaryBackground: "#0f172a",
+    primaryFontColor: "#ccd6f6", // light white
+    secondaryFontColor: "#61f8d4", // green
   },
   fontSizes: {},
-  fontFamily: {
-    primaryFontFamily: "MyCustomFont",
+  fontsFamily: {
+    primaryFontFamily: "MyCustomFont", // techno (used in navbar)
+    secondaryFontFamily: "monospace",
   },
 
   // max-width for different screen sizes in px
