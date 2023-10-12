@@ -17,14 +17,14 @@ export const NavbarContainer = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 11%;
-  height: 100%;
+  width: 9%;
+  height: 90%;
   margin-left: 2em;
   @media (max-width: ${(props) => props.theme.breakingPoints.md}px) {
     width: 22%;
   }
   @media (max-width: ${(props) => props.theme.breakingPoints.sm}px) {
-    width: 40%;
+    width: 30%;
     margin-left: 1em;
   }
 `;

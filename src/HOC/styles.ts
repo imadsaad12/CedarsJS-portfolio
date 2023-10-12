@@ -115,6 +115,7 @@ export const ComponentWrapper = styled.div`
   width: 65%;
   display: flex;
   min-height: 100vh;
+  flex-direction: column;
   flex: 1;
   @media (max-width: ${(props) => props.theme.breakingPoints.md}px) {
     width: 80%;
