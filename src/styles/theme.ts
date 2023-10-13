@@ -3,6 +3,7 @@ const theme = {
     primaryBackground: "#0f172a",
     primaryFontColor: "#ccd6f6", // light white
     secondaryFontColor: "#61f8d4", // green
+    primaryFontColorWithOpacity:"#6D7690"
   },
   fontSizes: {},
   fontsFamily: {

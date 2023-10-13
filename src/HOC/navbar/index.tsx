@@ -20,11 +20,12 @@ export default function Navbar() {
   };
 
   const menuList = [
-    { name: "Home", number: "I." },
-    { name: "About us", number: "II." },
-    { name: "Work", number: "III." },
-    { name: "Contact", number: "VI." },
+    { name: "Home", number: "I .", link: "work" },
+    { name: "About us", number: "II .", link: "work" },
+    { name: "Work", number: "III .", link: "work" },
+    { name: "Contact", number: "VI .", link: "work" },
   ];
+
   return (
     <NavbarContainer>
       <Logo src={logoImage} />
@@ -36,8 +37,8 @@ export default function Navbar() {
         </BurgerMenuButton>
       ) : (
         <MenuContainer>
-          {menuList.map(({ name, number }) => (
-            <MenuItem name={name} number={number} />
+          {menuList.map(({ name, number, link }) => (
+            <MenuItem name={name} number={number} link={link} />
           ))}
         </MenuContainer>
       )}

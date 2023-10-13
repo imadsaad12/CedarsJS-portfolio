@@ -1,4 +1,3 @@
-import React from "react";
 import { FiGithub } from "react-icons/fi";
 import { MdOutlineIosShare } from "react-icons/md";
 
@@ -15,7 +14,7 @@ import {
   IconsContainer,
 } from "../styles";
 
-const skills = ["ReactJs", "TypeScript","StyledCmpts"];
+const skills = ["ReactJs", "TypeScript", "StyledCmpts"];
 
 export default function ProjectDetails() {
   return (

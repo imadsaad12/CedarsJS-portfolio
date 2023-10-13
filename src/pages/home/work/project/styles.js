@@ -30,7 +30,7 @@ export const ImageWrapper = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  width: 60%;
+  width: ${(props) => (props.isSmallScreen ? "100%" : "60%")};
   background-color: ${(props) => props.theme.colors.secondaryFontColor};
   position: relative;
   cursor: pointer;
@@ -102,6 +102,15 @@ export const SkillsContainer = styled.span`
   padding-top: 2em;
 `;
 
+export const SmallSkillsContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 2em;
+  align-items: center;
+`;
+
 export const SkillsList = styled.ul`
   width: 100%;
   margin: 0;
@@ -133,4 +142,61 @@ export const IconsContainer = styled.div`
   margin-top: 1em;
   gap: 12px;
   font-size: 18px;
+`;
+
+export const SmallScreenContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 30em;
+  position: relative;
+`;
+
+export const SmallScreenImage = styled.img`
+  width: 100%;
+  height: 70%;
+`;
+
+export const SmallTitle = styled.p`
+  color: ${(props) => props.theme.colors.secondaryFontColor};
+  font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
+  font-size: 15px;
+`;
+
+export const MainTitle = styled(SmallTitle)`
+  margin-top: -10px;
+  color: ${(props) => props.theme.colors.primaryFontColor};
+  font-size: 25px;
+  font-weight: bold;
+`;
+export const SmallDescription = styled.p`
+  font-size: 20px;
+  color: ${(props) => props.theme.colors.primaryFontColor};
+  opacity: 0.7;
+  width: 70%;
+  line-height: 25px;
+  @media (max-width: ${(props) => props.theme.breakingPoints.sm}px) {
+    width: 91%;
+    font-size: 15px;
+  }
+`;
+
+export const SmallSkill = styled.p`
+  font-size: 15px;
+  color: ${(props) => props.theme.colors.secondaryFontColor};
+  font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+export const SmallDescriptionContainer = styled.div`
+  width: 60%;
+  height: fit-content;
+  background-color: #112240;
+  position: absolute;
+  bottom: 15%;
+  padding: 10px;
+  right: -30px;
+  border-radius: 5px;
+  z-index: 10;
 `;

@@ -8,6 +8,7 @@ export const Container = styled.div`
   @media (max-width: ${(props) => props.theme.breakingPoints.xs}px) {
     margin-top: 5em;
   }
+
   height: 100vh;
 `;
 
@@ -18,6 +19,9 @@ export const Header = styled.div`
   flex-direction: row;
   align-items: center;
   gap: 10px;
+  @media (max-width: ${(props) => props.theme.breakingPoints.sm}px) {
+    width: 90%;
+  }
 `;
 
 export const Number = styled.span`
@@ -31,7 +35,7 @@ export const Number = styled.span`
 `;
 
 export const Title = styled.span`
-  font-size: 25px;
+  font-size: 28px;
   font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
   color: ${(props) => props.theme.colors.primaryFontColor};
   height: 100%;
@@ -39,14 +43,18 @@ export const Title = styled.span`
   align-items: center;
   margin-bottom: 5px;
   font-weight: bold;
+  @media (max-width: ${(props) => props.theme.breakingPoints.xs}px) {
+    font-size: 18px;
+  }
 `;
 
-export const Line = styled.span`
-height: 0.5px;
-flex:1;
-background-color: ${(props) => props.theme.colors.primaryFontColor};
-margin-left: 10px;
-opacity: 0.2;
+export const Line = styled.div`
+  height: 0.5px;
+  flex: 1;
+  background-color: ${(props) => props.theme.colors.primaryFontColor};
+  margin-left: 10px;
+  opacity: 0.2;
+  @media (max-width: ${(props) => props.theme.breakingPoints.sm}px) {
+    display: none;
+  }
 `;
-
-
