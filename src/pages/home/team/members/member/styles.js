@@ -19,8 +19,9 @@ export const ImageWrapper = styled.div`
 `;
 
 export const Container = styled.div`
-  width: 70px;
-  height: 70px;
+  /* width: 70px;
+  height: 70px; */
+  flex: 1;
   border-radius: 50%;
   overflow: hidden;
   /* border:3px solid ${(props) => props.theme.colors.secondaryFontColor}; */

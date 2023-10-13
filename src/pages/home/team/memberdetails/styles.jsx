@@ -5,9 +5,8 @@ export const Container = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
-
 `;
 export const TextContainer = styled.div`
   width: 70%;
@@ -18,40 +17,30 @@ export const TextContainer = styled.div`
   align-items: center;
   justify-content: flex-end;
   padding-bottom: 25px;
-  color:white;
-  font-size:17px;
+  color: white;
+  font-size: 17px;
   z-index: 20;
   text-align: center;
   flex-direction: column;
-
-
 `;
-export const Text = styled.span`
-
-
-
-`;
+export const Text = styled.span``;
 export const BorderBox = styled.div`
   width: 70%;
   height: 70%;
   margin-top: 30px;
   margin-left: 30px;
-    border-radius: 5px;
+  border-radius: 5px;
   /* inset:-5px; */
   position: absolute;
   overflow: hidden;
   border: 2px solid ${(props) => props.theme.colors.secondaryFontColor};
-
-
 `;
 export const ImageContainer = styled.div`
   width: 70%;
-  height: 70%;
+  height: 100%;
   position: relative;
   overflow: hidden;
   background-color: ${(props) => props.theme.colors.secondaryFontColor};
-
-
 `;
 export const ImageWrapper = styled.div`
   width: 100%;
@@ -60,12 +49,10 @@ export const ImageWrapper = styled.div`
   overflow: hidden;
   filter: grayscale(100%) contrast(1) brightness(90%);
   mix-blend-mode: multiply;
-
 `;
 export const Image = styled.img`
   width: 100%;
   height: 100%;
-
 `;
 
 const decreaseUpperHeight = keyframes`
@@ -85,19 +72,17 @@ const decreaseUpperHeight = keyframes`
     }
 `;
 
-
-
 export const UpperLayer = styled.div`
   position: absolute;
   top: 0;
   width: 100%;
-  background-color:#0f172a;
-  height: 50%;
+  background-color: #0f172a;
+  height: 30%;
   transform-origin: top;
   transform: scaleY(0);
   animation: ${decreaseUpperHeight} 1s ease-in-out;
+  /* animation-delay: 0.5s; */
   z-index: 4;
-
 `;
 
 const decreaseBottomHeight = keyframes`
@@ -119,16 +104,17 @@ const decreaseBottomHeight = keyframes`
     }
 `;
 export const BottomLayer = styled.div`
-  height: 50%;
+  height: 70%;
   transform-origin: bottom;
   transform: scaleY(0);
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color:#0f172a;
+  background-color: #0f172a;
   animation: ${decreaseBottomHeight} 1s ease-in-out;
+  /* animation-delay: 0.5s; */
+  transition: all 1s ease-in-out;
   z-index: 4;
-
 `;
 
 export const ColorLayer = styled.div`
@@ -140,5 +126,4 @@ export const ColorLayer = styled.div`
   width: 100%;
   height: 100%;
   transition: all 0.1s ease-in-out;
-
 `;

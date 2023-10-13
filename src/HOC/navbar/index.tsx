@@ -21,7 +21,7 @@ export default function Navbar() {
 
   const menuList = [
     { name: "Home", number: "I .", link: "work" },
-    { name: "About us", number: "II .", link: "work" },
+    { name: "About us", number: "II .", link: "about-us" },
     { name: "Work", number: "III .", link: "work" },
     { name: "Contact", number: "VI .", link: "work" },
   ];

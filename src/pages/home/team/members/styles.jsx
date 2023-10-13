@@ -1,18 +1,11 @@
 import styled from "styled-components";
 
-
-
-
 export const Container = styled.div`
-flex:1;
-display: flex;
-justify-content: center;
+  flex: 0.2;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  /* align-items: flex-end; */
+  background-color: red;
 `;
-
-export const MembersLayout = styled.div`
-width: 50%;
-display: flex;
-flex-direction: column;
-gap:15px;
-`;
-
