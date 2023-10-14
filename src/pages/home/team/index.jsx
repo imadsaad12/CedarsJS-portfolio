@@ -49,11 +49,11 @@ export default function Team() {
       togglecircle(true,oldid);
       toggleline(true,oldid);
 
-    }, 1300);
+    }, 1000);
 
     setTimeout(() => {
       toggleLayers(false);
-    }, 2500);
+    }, 1500);
   }
 
   return (

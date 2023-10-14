@@ -82,7 +82,7 @@ export const growcircle = keyframes`
   0% {
     transform: scale(0)
   }
-  80% {
+  60% {
     transform: scale(0)
 
   }
@@ -103,7 +103,7 @@ export const Circle = styled.div`
   display: ${(props) => (props.isClicked ? "block" : "none")};
   background-color: ${(props) => props.theme.colors.primaryFontColor};
   opacity: 0.6;
-  animation: ${growcircle} 0.8s ease-in-out;
+  animation: ${growcircle} 0.6s ease-in-out;
 
   /* animation-delay: 1s; */
 `;
