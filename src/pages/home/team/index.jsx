@@ -17,10 +17,10 @@ import Members from "./members";
 import MemberDetails from "./memberdetails";
 export default function Team() {
   const [teamMembers, setTeamMembers] = useState([
-    { id: 1, isClicked: true, upperHeight: 0, bottomHeight: 100 },
-    { id: 2, isClicked: false, upperHeight: 34.5, bottomHeight: 65.5 },
-    { id: 3, isClicked: false, upperHeight: 65.5, bottomHeight: 34.5 },
-    { id: 4, isClicked: false, upperHeight: 100, bottomHeight: 0 },
+    { id: 1, isClicked: true, upperHeight: 0, bottomHeight: 100 ,name:"Hadi Saab",job:"Software Developer"},
+    { id: 2, isClicked: false, upperHeight: 34.5, bottomHeight: 65.5 ,name:"Imad Saad",job:"Software Developer"},
+    { id: 3, isClicked: false, upperHeight: 65.5, bottomHeight: 34.5,name:"Ali Hashem",job:"Software Developer" },
+    { id: 4, isClicked: false, upperHeight: 100, bottomHeight: 0 ,name:"Bassel Kassem",job:"Software Developer"},
   ]);
 
 

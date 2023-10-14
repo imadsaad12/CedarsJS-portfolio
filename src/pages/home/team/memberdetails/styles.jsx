@@ -9,21 +9,30 @@ export const Container = styled.div`
   position: relative;
 `;
 export const TextContainer = styled.div`
-  width: 70%;
-  height: 70%;
+  width: 58%;
+  height: 72%;
   position: absolute;
   overflow: hidden;
   display: flex;
-  align-items: center;
   justify-content: flex-end;
   padding-bottom: 25px;
   color: white;
-  font-size: 17px;
   z-index: 20;
-  text-align: center;
+  font-family: ${(props) => props.theme.fontsFamily.FontFamily};
+
   flex-direction: column;
 `;
-export const Text = styled.span``;
+export const NameText = styled.span`
+margin-left: 10px;
+font-weight: bold;
+font-size: 11px;
+
+`;
+export const JobText = styled.span`
+margin-left: 10px;
+font-size: 9px;
+
+`;
 export const BorderBox = styled.div`
   width: 70%;
   height: 70%;
@@ -41,6 +50,7 @@ export const ImageContainer = styled.div`
   position: relative;
   overflow: hidden;
   background-color: ${(props) => props.theme.colors.secondaryFontColor};
+
 `;
 export const ImageWrapper = styled.div`
   width: 100%;

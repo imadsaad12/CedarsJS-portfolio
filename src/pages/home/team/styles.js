@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 
 export const Container = styled.div`
-  width: 80%;
+  width: 82%;
   display: flex;
   flex-direction: column;
   margin-top: 5em;

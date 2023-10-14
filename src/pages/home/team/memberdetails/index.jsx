@@ -7,15 +7,16 @@ import {
   Image,
   ColorLayer,
   ImageContainer,
-  BorderBox,
+  JobText,
   TextContainer,
-  Text,
+  NameText,
 } from "./styles";
 import hadi from "../../../../static/hadi.jpg";
 
-export default function MemberDetails({teamMembers}) {
-  const upperHeight = teamMembers.find(item => item.isClicked === true).upperHeight;
-  const bottomHeight = teamMembers.find(item => item.isClicked === true).bottomHeight;
+export default function MemberDetails({ teamMembers }) {
+  const activemember = teamMembers.find((member) => member.isClicked);
+  const {upperHeight,bottomHeight,name,job}=activemember
+
 
   return (
     <Container>
@@ -24,9 +25,15 @@ export default function MemberDetails({teamMembers}) {
       <Text>Hadi Saab </Text>
         <Text>Full Stack Web Developer</Text>
       </TextContainer> */}
+      <TextContainer>
+        <UpperLayer upperHeight={upperHeight} id="upperlayer" />
+        <BottomLayer bottomHeight={bottomHeight} id="bottomlayer" />
+        <NameText>{name}</NameText>
+        <JobText>{job}</JobText>
+      </TextContainer>
       <ImageContainer>
         <ColorLayer />
-        <UpperLayer upperHeight={upperHeight} id="upperlayer"/>
+        <UpperLayer upperHeight={upperHeight} id="upperlayer" />
         <BottomLayer bottomHeight={bottomHeight} id="bottomlayer" />
         <ImageWrapper>
           <Image src={hadi} />
