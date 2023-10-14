@@ -49,7 +49,7 @@ export const MembersLayout = styled.div`
   display: flex;
   flex-direction: row;
   /* margin-top: 2em; */
-  height: 20em;
+  height: 24em;
 `;
 
 export const growAndCurveAnimation = keyframes`
@@ -60,12 +60,12 @@ export const growAndCurveAnimation = keyframes`
     width: 50%;
   }
   100% {
-    width: 100%;
+    width: 94.5%;
   }
 `;
 
 export const DrawingContainer = styled.div`
-  width: 96%;
+  width: 94.5%;
   height: 0.5px;
   align-self: center;
   display: ${(props) => (props.isClicked ? "block" : "none")};
@@ -74,30 +74,59 @@ export const DrawingContainer = styled.div`
   align-self: center;
   background: ${(props) => props.theme.colors.primaryFontColor};
   opacity: 0.6;
+  transition: all  0.5s ease-in-out;
+
 `;
 
+export const growcircle = keyframes`
+  0% {
+    transform: scale(0)
+  }
+  80% {
+    transform: scale(0)
+
+  }
+  100% {
+    transform: scale(1)
+
+  }
+`;
 export const Circle = styled.div`
   position: absolute;
+  transform-origin: center;
   height: 5px;
   width: 5px;
   border-radius: 50%;
   right: 10px;
+  transform: scale(1);
+  transition: all  0.2s ease-in-out;
+  display: ${(props) => (props.isClicked ? "block" : "none")};
   background-color: ${(props) => props.theme.colors.primaryFontColor};
   opacity: 0.6;
+  animation: ${growcircle} 0.8s ease-in-out;
+
+  /* animation-delay: 1s; */
 `;
 export const LinesContainer = styled.div`
   display: flex;
   flex: 0.7;
-  flex-direction: column;
   justify-content: center;
   height: 100%;
   align-items: center;
-  gap: 15px;
   position: relative;
+  align-items: center;
 `;
+export const LinesLayout = styled.div`
+height: 95%;
+display: flex;
+flex-direction: column;
+width: 100%;
+
+`;
+
 export const LineContainer = styled.div`
   width: 100%;
-  height: 70px;
+  flex: 1;
   display: flex;
   align-items: center;
   gap: 15px;

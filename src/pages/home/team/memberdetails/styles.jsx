@@ -36,8 +36,8 @@ export const BorderBox = styled.div`
   border: 2px solid ${(props) => props.theme.colors.secondaryFontColor};
 `;
 export const ImageContainer = styled.div`
-  width: 70%;
-  height: 100%;
+  width: 58%;
+  height: 72%;
   position: relative;
   overflow: hidden;
   background-color: ${(props) => props.theme.colors.secondaryFontColor};
@@ -77,12 +77,13 @@ export const UpperLayer = styled.div`
   top: 0;
   width: 100%;
   background-color: #0f172a;
-  height: 30%;
+  height:  ${(props) => props.upperHeight}%;
   transform-origin: top;
   transform: scaleY(0);
-  animation: ${decreaseUpperHeight} 1s ease-in-out;
+  animation: ${decreaseUpperHeight} 1.5s ease-in-out;
   /* animation-delay: 0.5s; */
   z-index: 4;
+  transition: transform 0.6s ease-in-out;
 `;
 
 const decreaseBottomHeight = keyframes`
@@ -104,17 +105,18 @@ const decreaseBottomHeight = keyframes`
     }
 `;
 export const BottomLayer = styled.div`
-  height: 70%;
+  height:  ${(props) => props.bottomHeight}%;
   transform-origin: bottom;
   transform: scaleY(0);
   position: absolute;
   bottom: 0;
   width: 100%;
   background-color: #0f172a;
-  animation: ${decreaseBottomHeight} 1s ease-in-out;
+  animation: ${decreaseBottomHeight} 1.5s ease-in-out;
   /* animation-delay: 0.5s; */
-  transition: all 1s ease-in-out;
   z-index: 4;
+  transition: transform 0.6s ease-in-out;
+
 `;
 
 export const ColorLayer = styled.div`

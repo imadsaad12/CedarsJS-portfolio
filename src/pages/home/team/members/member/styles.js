@@ -22,12 +22,13 @@ export const Container = styled.div`
   /* width: 70px;
   height: 70px; */
   flex: 1;
-  border-radius: 50%;
-  overflow: hidden;
   /* border:3px solid ${(props) => props.theme.colors.secondaryFontColor}; */
   /* background-color: ${(props) => props.theme.colors.secondaryFontColor}; */
   position: relative;
   cursor: pointer;
+  display: flex;
+  align-items:center;
+  justify-content:flex-end;
   /* &:hover ${Layer} {
     background-color: #0a192f;
     mix-blend-mode: screen;
@@ -41,6 +42,15 @@ export const Container = styled.div`
     mix-blend-mode: multiply;
   } */
 `;
+
+export const MemberWrapper = styled.div`
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+    overflow: hidden;
+
+`;
+
 export const Image = styled.img`
   width: 100%;
   height: 100%;

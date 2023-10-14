@@ -3,13 +3,14 @@ import { Container, MembersLayout } from "./styles";
 import Member from "./member";
 import { DrawingContainer } from "../styles";
 
-const members = ["hadi", "imad", "hashem", "bassel"];
-export default function Members() {
+export default function Members({ teamMembers, handlemember }) {
   return (
     <Container>
-      {members.map((member) => (
-        <Member />
-      ))}
+      <MembersLayout>
+        {teamMembers.map((member) => (
+          <Member handlemember={handlemember} member={member} />
+        ))}
+      </MembersLayout>
     </Container>
   );
 }
