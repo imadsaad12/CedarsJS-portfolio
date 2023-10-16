@@ -9,7 +9,7 @@ interface Props {
 }
 
 export default function MenuItem({
-  name,
+  name, 
   number,
   link,
   isSideBar = false,

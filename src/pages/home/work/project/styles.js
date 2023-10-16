@@ -43,6 +43,11 @@ export const ImageContainer = styled.div`
     filter: grayscale(0%) contrast(1) brightness(90%);
     mix-blend-mode: normal;
   }
+  @media (max-width: ${(props) => props.theme.breakingPoints.sm}px) {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 15em;
+  }
 `;
 
 export const DetailsContainer = styled.div`
@@ -59,6 +64,10 @@ export const DetailsContainer = styled.div`
 export const Image = styled.img`
   width: 100%;
   height: 100%;
+  @media (max-width: ${(props) => props.theme.breakingPoints.sm}px) {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
 `;
 export const TitleContainer = styled.div`
   flex: 1;
@@ -147,8 +156,10 @@ export const IconsContainer = styled.div`
 export const SmallScreenContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 30em;
-  position: relative;
+  min-height: 20em;
+  width: 100%;
+  align-self: center;
+  margin-bottom: 2em;
 `;
 
 export const SmallScreenImage = styled.img`
@@ -182,21 +193,39 @@ export const SmallDescription = styled.p`
 
 export const SmallSkill = styled.p`
   font-size: 15px;
+  color: ${(props) => props.theme.colors.primaryFontColor};
+  font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
+`;
+
+export const Website = styled.a`
+  font-size: 15px;
   color: ${(props) => props.theme.colors.secondaryFontColor};
   font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
-  &:hover {
-    text-decoration: underline;
-  }
+  outline: none;
+  text-decoration: none;
+`;
+export const LinkContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  color: ${(props) => props.theme.colors.primaryFontColor};
+  font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
+  align-items: center;
+  justify-content: center;
+`;
+
+export const Text = styled.pre`
+  font-size: 15px;
 `;
 
 export const SmallDescriptionContainer = styled.div`
-  width: 60%;
-  height: fit-content;
+  width: 100%;
+  height: 100%;
   background-color: #112240;
-  position: absolute;
-  bottom: 15%;
-  padding: 10px;
-  right: -30px;
-  border-radius: 5px;
-  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 `;
