@@ -24,19 +24,18 @@ const IconAnimation = keyframes`
 export const LinkedInContainer = styled.span`
   position: absolute;
   top: 1.5em;
-  left:1em;
+  left: 1em;
   display: none;
   animation: ${IconAnimation} 0.5s ease-in-out;
   cursor: pointer;
-
 `;
 export const GmailContainer = styled.span`
   position: absolute;
   top: 3em;
-  left:1em;
+  left: 1em;
   display: none;
   animation: ${IconAnimation} 0.8s ease-in-out;
-cursor: pointer;
+  cursor: pointer;
 `;
 export const NameText = styled.span`
   margin-left: 10px;
@@ -52,7 +51,7 @@ export const TextContainer = styled.div`
   justify-content: flex-end;
   padding-bottom: 25px;
   color: white;
-  z-index: 20;
+  z-index: 4;
   font-family: ${(props) => props.theme.fontsFamily.FontFamily};
   flex-direction: column;
   &:hover ${LinkedInContainer} {
@@ -165,7 +164,7 @@ export const ColorLayer = styled.div`
   background-color: #0a192f;
   mix-blend-mode: screen;
   position: absolute;
-  z-index: 3;
+  z-index: 2;
   inset: 3px;
   width: 100%;
   height: 100%;

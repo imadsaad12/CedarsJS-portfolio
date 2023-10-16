@@ -22,12 +22,14 @@ export default function HOC(WrappedComponent: React.FC) {
     setTimeout(() => setIsLoading(false), 2000);
   }, []);
 
+  const [isBlurred, setIsBlurred] = useState(false);
+
   return (
     <PageLayout>
       {!isLoading ? (
         <>
-          <Navbar />
-          <PageContent>
+          <Navbar setIsBlurred={setIsBlurred} />
+          <PageContent isBlurred={isBlurred}>
             <ComponentWrapper>
               <WrappedComponent />
             </ComponentWrapper>
@@ -52,7 +54,7 @@ export default function HOC(WrappedComponent: React.FC) {
           </PageContent>
         </>
       ) : (
-        <Logo/>
+        <Logo />
       )}
     </PageLayout>
   );

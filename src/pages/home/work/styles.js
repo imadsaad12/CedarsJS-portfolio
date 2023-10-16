@@ -3,13 +3,12 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   display: flex;
+  height: auto;
   margin-top: 10em;
   flex-direction: column;
   @media (max-width: ${(props) => props.theme.breakingPoints.xs}px) {
     margin-top: 5em;
   }
-
-  height: 100vh;
 `;
 
 export const Header = styled.div`

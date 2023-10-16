@@ -4,13 +4,15 @@ function Logo() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="375"
-      height="177"
       fillRule="evenodd"
       clipRule="evenodd"
       imageRendering="optimizeQuality"
       shapeRendering="geometricPrecision"
       textRendering="geometricPrecision"
+      width="200"
+      height="100"
+      viewBox="0 0 350 200"
+      style={{ marginTop: "1em" }}
     >
       <path
         fill="#60f7d3"

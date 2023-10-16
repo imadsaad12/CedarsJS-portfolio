@@ -9,7 +9,10 @@ export const PageLayout = styled.div`
   position: relative;
 `;
 
-export const PageContent = styled.div`
+type PageContentProps = {
+  isBlurred: boolean;
+};
+export const PageContent = styled.div<PageContentProps>`
   flex: 1;
   width: 100%;
   display: flex;
@@ -17,6 +20,7 @@ export const PageContent = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 10vh;
+  filter: ${(props) => props.isBlurred && "blur(10px)"};
 `;
 
 const fadeInOut = keyframes`

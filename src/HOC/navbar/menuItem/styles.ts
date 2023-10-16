@@ -1,10 +1,15 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+type ContainerProps = {
+  isSideBar: boolean;
+};
+export const Container = styled.div<ContainerProps>`
   display: flex;
-  flex-direction: row;
+  flex-direction: ${(props) => (props.isSideBar ? "column" : "row")};
   align-items: center;
-  gap: 5px;
+  gap: ${(props) => !props.isSideBar && "5px"};
+  line-height: 1px;
+  font-size: ${(props) => (props.isSideBar ? "13px" : "10px")};
   color: ${(props) => props.theme.colors.primaryFontColor};
   &:hover {
     cursor: pointer;
@@ -13,8 +18,12 @@ export const Container = styled.div`
 `;
 
 export const Text = styled.p`
-  font-size: 10px;
   font-family: ${(props) => props.theme.fontsFamily.primaryFontFamily};
 `;
 
-export const Number = styled(Text)``;
+export const Number = styled(Text)<ContainerProps>`
+  color: ${(props) =>
+    props.isSideBar
+      ? props.theme.colors.secondaryFontColor
+      : props.theme.colors.primaryFontColor};
+`;

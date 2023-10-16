@@ -3,7 +3,7 @@ import { Container, Description, Header, SmallText, SubHeader } from "./styles";
 
 export default function Intro() {
   return (
-    <Container>
+    <Container id="home">
       <SmallText>Hi, we are </SmallText>
       <Header>Cedars JS.</Header>
       <SubHeader>we build things for the web.</SubHeader>
