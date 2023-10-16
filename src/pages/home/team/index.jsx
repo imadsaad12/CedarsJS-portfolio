@@ -38,6 +38,7 @@ export default function Team() {
 
     setTeamMembers(updatedTeamMembers);
   };
+  
   const handlemember = (activeid) => {
     const oldid = teamMembers.find((member) => member.isClicked).id;
 

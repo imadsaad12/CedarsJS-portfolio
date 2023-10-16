@@ -4,11 +4,13 @@ import Member from "./member";
 import { DrawingContainer } from "../styles";
 
 export default function Members({ teamMembers, handlemember }) {
+  const activeId = teamMembers.find((member) => member.isClicked).id;
+
   return (
     <Container>
       <MembersLayout>
         {teamMembers.map((member) => (
-          <Member handlemember={handlemember} member={member} />
+          <Member handlemember={handlemember} member={member} activeId={activeId} />
         ))}
       </MembersLayout>
     </Container>

@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import logoImage from "../../static/logo.png";
+import Logo from "../../static/logo";
 import {
   Bar,
   BurgerMenuButton,
-  Logo,
   MenuContainer,
   NavbarContainer,
 } from "./styles";
@@ -28,7 +27,7 @@ export default function Navbar() {
 
   return (
     <NavbarContainer>
-      <Logo src={logoImage} />
+      <Logo  />
       {isSmallScreen ? (
         <BurgerMenuButton onClick={toggleMenu}>
           <Bar isOpen={isOpen} />

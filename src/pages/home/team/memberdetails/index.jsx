@@ -10,22 +10,28 @@ import {
   JobText,
   TextContainer,
   NameText,
+  LinkedIn,
+  Gmail,
+  LinkedInContainer,
+  GmailContainer
 } from "./styles";
 import hadi from "../../../../static/hadi.jpg";
+import { FaLinkedin } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 
 export default function MemberDetails({ teamMembers }) {
   const activemember = teamMembers.find((member) => member.isClicked);
-  const {upperHeight,bottomHeight,name,job}=activemember
-
+  const { upperHeight, bottomHeight, name, job } = activemember;
 
   return (
     <Container>
-      {/* <BorderBox/> */}
-      {/* <TextContainer>
-      <Text>Hadi Saab </Text>
-        <Text>Full Stack Web Developer</Text>
-      </TextContainer> */}
       <TextContainer>
+        <LinkedInContainer>
+          <FaLinkedin  size={15} />
+        </LinkedInContainer>
+        <GmailContainer>
+          <SiGmail  size={15} />
+        </GmailContainer>
         <UpperLayer upperHeight={upperHeight} id="upperlayer" />
         <BottomLayer bottomHeight={bottomHeight} id="bottomlayer" />
         <NameText>{name}</NameText>

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
   PageLayout,
-  Logo,
   PageContent,
   EmailContainer,
   Email,
@@ -12,7 +11,7 @@ import {
   ComponentWrapper,
 } from "./styles";
 import Navbar from "./navbar";
-import logoImage from "../static/logo.png";
+import Logo from "../static/logo";
 import { CiFacebook } from "react-icons/ci";
 import { BiLogoInstagram } from "react-icons/bi";
 import { FaLinkedin } from "react-icons/fa";
@@ -53,7 +52,7 @@ export default function HOC(WrappedComponent: React.FC) {
           </PageContent>
         </>
       ) : (
-        <Logo src={logoImage} />
+        <Logo/>
       )}
     </PageLayout>
   );

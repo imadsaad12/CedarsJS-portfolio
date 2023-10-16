@@ -12,43 +12,45 @@ export const Layer = styled.div`
 export const ImageWrapper = styled.div`
   width: 100%;
   height: 100%;
-  /* filter: grayscale(0%) contrast(1) brightness(90%);
-  mix-blend-mode: normal; */
+  filter: ${(props) => props.isClicked ? "grayscale(100%)" :  "grayscale(0%)"};
+  filter: contrast(1);
+  filter: brightness(90%);
+  mix-blend-mode: ${(props) => props.isClicked ? "multiply" : "none"};
 
-  transition: all 0.1s ease-in-out;
+  transition: all 1s ease-in-out;
 `;
 
 export const Container = styled.div`
-  /* width: 70px;
-  height: 70px; */
   flex: 1;
-  /* border:3px solid ${(props) => props.theme.colors.secondaryFontColor}; */
-  /* background-color: ${(props) => props.theme.colors.secondaryFontColor}; */
   position: relative;
   cursor: pointer;
   display: flex;
-  align-items:center;
-  justify-content:flex-end;
-  /* &:hover ${Layer} {
-    background-color: #0a192f;
-    mix-blend-mode: screen;
-  }
-  &:hover {
-  background-color: ${(props) => props.theme.colors.secondaryFontColor};
+  align-items: center;
+  justify-content: flex-end;
+`;
 
-  }
-  &:hover ${ImageWrapper} {
-    filter: grayscale(100%) contrast(1) brightness(90%);
-    mix-blend-mode: multiply;
-  } */
+export const ColorLayer = styled.div`
+  background-color: ${(props) => (props.isClicked ? "#0a192f" : "transparent")};
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  mix-blend-mode: ${(props) => (props.isClicked ? "screen" : "none")};
+  position: absolute;
+  z-index: 3;
+  inset: 0px;
+
+  /* transition: all 1s ease-in-out; */
 `;
 
 export const MemberWrapper = styled.div`
   width: 65px;
   height: 65px;
   border-radius: 50%;
-    overflow: hidden;
-
+  overflow: hidden;
+  position: relative;
+  background-color: ${(props) =>
+  props.isClicked ? props.theme.colors.secondaryFontColor : "transparent"};
+  
 `;
 
 export const Image = styled.img`

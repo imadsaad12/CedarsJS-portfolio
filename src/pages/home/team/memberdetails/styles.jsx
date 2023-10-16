@@ -8,8 +8,43 @@ export const Container = styled.div`
   justify-content: flex-start;
   position: relative;
 `;
+
+const IconAnimation = keyframes`
+0%{
+  opacity: 0;
+  left:0em;
+}
+100%{
+  left:1em;
+  opacity: 1;
+
+}
+
+`;
+export const LinkedInContainer = styled.span`
+  position: absolute;
+  top: 1.5em;
+  left:1em;
+  display: none;
+  animation: ${IconAnimation} 0.5s ease-in-out;
+  cursor: pointer;
+
+`;
+export const GmailContainer = styled.span`
+  position: absolute;
+  top: 3em;
+  left:1em;
+  display: none;
+  animation: ${IconAnimation} 0.8s ease-in-out;
+cursor: pointer;
+`;
+export const NameText = styled.span`
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 11px;
+`;
 export const TextContainer = styled.div`
-  width: 58%;
+  width: 60%;
   height: 72%;
   position: absolute;
   overflow: hidden;
@@ -19,19 +54,18 @@ export const TextContainer = styled.div`
   color: white;
   z-index: 20;
   font-family: ${(props) => props.theme.fontsFamily.FontFamily};
-
   flex-direction: column;
+  &:hover ${LinkedInContainer} {
+    display: block;
+  }
+  &:hover ${GmailContainer} {
+    display: block;
+  }
 `;
-export const NameText = styled.span`
-margin-left: 10px;
-font-weight: bold;
-font-size: 11px;
 
-`;
 export const JobText = styled.span`
-margin-left: 10px;
-font-size: 9px;
-
+  margin-left: 10px;
+  font-size: 9px;
 `;
 export const BorderBox = styled.div`
   width: 70%;
@@ -45,12 +79,11 @@ export const BorderBox = styled.div`
   border: 2px solid ${(props) => props.theme.colors.secondaryFontColor};
 `;
 export const ImageContainer = styled.div`
-  width: 58%;
+  width: 60%;
   height: 72%;
   position: relative;
   overflow: hidden;
   background-color: ${(props) => props.theme.colors.secondaryFontColor};
-
 `;
 export const ImageWrapper = styled.div`
   width: 100%;
@@ -87,7 +120,7 @@ export const UpperLayer = styled.div`
   top: 0;
   width: 100%;
   background-color: #0f172a;
-  height:  ${(props) => props.upperHeight}%;
+  height: ${(props) => props.upperHeight}%;
   transform-origin: top;
   transform: scaleY(0);
   animation: ${decreaseUpperHeight} 1.5s ease-in-out;
@@ -115,7 +148,7 @@ const decreaseBottomHeight = keyframes`
     }
 `;
 export const BottomLayer = styled.div`
-  height:  ${(props) => props.bottomHeight}%;
+  height: ${(props) => props.bottomHeight}%;
   transform-origin: bottom;
   transform: scaleY(0);
   position: absolute;
@@ -126,7 +159,6 @@ export const BottomLayer = styled.div`
   /* animation-delay: 0.5s; */
   z-index: 4;
   transition: transform 0.6s ease-in-out;
-
 `;
 
 export const ColorLayer = styled.div`
