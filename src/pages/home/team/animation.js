@@ -1,4 +1,5 @@
 import $ from "jquery";
+
 export const toggleLayers = (show) => {
   $("#upperlayer").css("transform", `scaleY(${show ? 1 : 0})`);
   $("#bottomlayer").css("transform", `scaleY(${show ? 1 : 0})`);

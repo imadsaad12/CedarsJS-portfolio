@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 interface BarProps {
   isOpen: boolean;
@@ -26,7 +26,6 @@ export const Logo = styled.img`
   }
   @media (max-width: ${(props) => props.theme.breakingPoints.sm}px) {
     width: 30%;
-    margin-left: 1em;
   }
 `;
 
@@ -58,7 +57,7 @@ export const BurgerMenuButton = styled.button`
   height: 25px;
   padding: 0;
   margin: 0;
-  z-index: 1;
+  z-index: 9999;
   position: relative;
   margin-right: 10%;
   gap: 3px;
@@ -97,4 +96,52 @@ export const Bar = styled.div<BarProps>`
     `
         : `width: 15px;`}
   }
+`;
+
+export const displaySideBar = keyframes`
+  0% {
+    width: 0
+  }
+  50% {
+    width: 30%
+
+  }
+  100% {
+    width: 70%;
+
+  }
+`;
+const closeSideBar = keyframes`
+  0% {
+    width: 70%;
+  }
+  50% {
+    width: 20%;
+  }
+  100% {
+    width: 0;
+  }
+`;
+
+type SideBarProps = {
+  isOpen: boolean;
+};
+
+export const SideBar = styled.div<SideBarProps>`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  position: fixed;
+  background-color: ${(props) => props.theme.colors.sideBarColor};
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 999;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-name: ${(props) => (props.isOpen ? displaySideBar : closeSideBar)};
+  gap: 40px;
 `;

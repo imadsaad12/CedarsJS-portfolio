@@ -6,9 +6,9 @@ import Contact from "./contact";
 export default function Home() {
   return (
     <>
-      <Team />
       <Intro />
       <Work />
+      <Team />
       <Contact />
     </>
   );
