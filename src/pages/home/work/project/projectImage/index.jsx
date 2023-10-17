@@ -1,5 +1,5 @@
 import React from "react";
-import { ImageContainer, Image, ImageWrapper, Layer } from "../styles";
+import { ImageContainer, Image, ImageWrapper, Layer } from "./styles";
 import useBreakpoint from "../../../../../utils/useMediaQuery";
 import theme from "../../../../../styles/theme";
 

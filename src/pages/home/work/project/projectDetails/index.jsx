@@ -12,7 +12,7 @@ import {
   Skill,
   SkillsContainer,
   IconsContainer,
-} from "../styles";
+} from "./styles";
 
 const skills = ["ReactJs", "TypeScript", "StyledCmpts"];
 
