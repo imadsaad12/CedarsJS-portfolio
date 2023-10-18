@@ -12,10 +12,16 @@ import {
   LinesLayout,
   Circle,
 } from "./styles";
+import theme from "../../../styles/theme";
+import useBreakpoint from "../../../utils/useMediaQuery";
+
 import { toggleline, toggleLayers, togglecircle } from "./animation";
 import Members from "./members";
 import MemberDetails from "./memberdetails";
+import Slider from "./slider";
 export default function Team() {
+  const isSmallSmallScreen = useBreakpoint(theme.breakingPoints.sm);
+
   const [teamMembers, setTeamMembers] = useState([
     {
       id: 1,
@@ -32,7 +38,8 @@ export default function Team() {
       bottomHeight: 65.5,
       name: "Imad Saad",
       job: "Software Developer",
-    },
+    }
+    ,
     {
       id: 3,
       isClicked: false,
@@ -41,14 +48,14 @@ export default function Team() {
       name: "Ali Hashem",
       job: "Software Developer",
     },
-    {
-      id: 4,
-      isClicked: false,
-      upperHeight: 100,
-      bottomHeight: 0,
-      name: "Bassel Kassem",
-      job: "Software Developer",
-    },
+    // {
+    //   id: 4,
+    //   isClicked: false,
+    //   upperHeight: 100,
+    //   bottomHeight: 0,
+    //   name: "Bassel Kassem",
+    //   job: "Software Developer",
+    // },
   ]);
 
   const updatemembers = (memberid) => {
@@ -89,21 +96,24 @@ export default function Team() {
         <Title>Meet The Team</Title>
         <Line></Line>
       </Header>
-      <MembersLayout>
-        {console.log(teamMembers)}
-        <Members teamMembers={teamMembers} handlemember={handlemember} />
-        <LinesContainer>
-          <LinesLayout>
-            {teamMembers.map(({ isClicked, id }) => (
-              <LineContainer>
-                <DrawingContainer isClicked={isClicked} id={"line" + id} />
-                <Circle isClicked={isClicked} id={"circle" + id} />
-              </LineContainer>
-            ))}
-          </LinesLayout>
-        </LinesContainer>
-        <MemberDetails teamMembers={teamMembers} />
-      </MembersLayout>
+      {isSmallSmallScreen ? (
+        <Slider teamMembers={teamMembers}/>
+      ) : (
+        <MembersLayout>
+          <Members teamMembers={teamMembers} handlemember={handlemember} />
+          <LinesContainer>
+            <LinesLayout>
+              {teamMembers.map(({ isClicked, id }) => (
+                <LineContainer>
+                  <DrawingContainer isClicked={isClicked} id={"line" + id} />
+                  <Circle isClicked={isClicked} id={"circle" + id} />
+                </LineContainer>
+              ))}
+            </LinesLayout>
+          </LinesContainer>
+          <MemberDetails teamMembers={teamMembers} />
+        </MembersLayout>
+      )}
     </Container>
   );
 }

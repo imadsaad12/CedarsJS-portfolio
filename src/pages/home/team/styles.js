@@ -5,6 +5,9 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 5em;
+  @media (max-width: ${(props) => props.theme.breakingPoints.md}px) {
+    width: 100%;
+  }
 `;
 
 export const Header = styled.div`
