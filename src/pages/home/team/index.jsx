@@ -15,6 +15,7 @@ import {
 import { toggleline, toggleLayers, togglecircle } from "./animation";
 import Members from "./members";
 import MemberDetails from "./memberdetails";
+
 export default function Team() {
   const [teamMembers, setTeamMembers] = useState([
     {
@@ -24,6 +25,7 @@ export default function Team() {
       bottomHeight: 100,
       name: "Hadi Saab",
       job: "Software Developer",
+      src: "hadi.jpg",
     },
     {
       id: 2,
@@ -31,7 +33,8 @@ export default function Team() {
       upperHeight: 34.5,
       bottomHeight: 65.5,
       name: "Imad Saad",
-      job: "Software Developer",
+      job: "Software Engineer",
+      src: "imad.jpg",
     },
     {
       id: 3,
@@ -40,6 +43,7 @@ export default function Team() {
       bottomHeight: 34.5,
       name: "Ali Hashem",
       job: "Software Developer",
+      src: "hadi.jpg",
     },
     {
       id: 4,
@@ -48,6 +52,7 @@ export default function Team() {
       bottomHeight: 0,
       name: "Bassel Kassem",
       job: "Software Developer",
+      src: "hadi.jpg",
     },
   ]);
 
@@ -90,7 +95,6 @@ export default function Team() {
         <Line></Line>
       </Header>
       <MembersLayout>
-        {console.log(teamMembers)}
         <Members teamMembers={teamMembers} handlemember={handlemember} />
         <LinesContainer>
           <LinesLayout>

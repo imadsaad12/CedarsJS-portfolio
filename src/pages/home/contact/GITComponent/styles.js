@@ -2,23 +2,23 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   max-width: 600px;
-  margin: 100px auto;
+  margin: 50px auto;
   text-align: center;
   box-sizing: inherit;
 `;
 
 export const Title = styled.h1`
-  font-size: 48px;
+  font-size: 35px;
   margin: 0px 0px 20px;
   font-weight: 600;
   color: ${(props) => props.theme.colors.primaryFontColor};
   line-height: 1.1;
   font-family: ${(props) => props.theme.fontsFamily.primaryFontFamily};
   @media (max-width: ${(props) => props.theme.breakingPoints.sm}px) and (min-width: ${(props) => props.theme.breakingPoints.xs}px) {
-    font-size: 36px;
+    font-size: 30px;
   }
   @media (max-width: ${(props) => props.theme.breakingPoints.xs}px) {
-    font-size: 24px;
+    font-size: 20px;
   }
 `;
 
