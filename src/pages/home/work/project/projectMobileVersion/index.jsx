@@ -1,47 +1,42 @@
-import React, { useState } from "react";
-import ProjectImage from "../projectImage";
 import {
-  LinkContainer,
   Description,
   DescriptionContainer,
   Container,
-  Text,
-  Website,
+  Header,
+  Logo,
+  Title,
+  SkillsContainer,
+  Skill,
 } from "./styles";
-import ramadanProj from "../../../../../static/ramadnProj.png";
-import ShowMoreText from "react-show-more-text";
+import test from "../../../../../static/testLogo.png";
+import { BiLinkExternal } from "react-icons/bi";
 
 export default function ProjectsMobileVersion() {
-  const [isShowMoreClicked, setIsShowMoreClicked] = useState(false);
-
   return (
     <>
       {[1, 2, 2, 2, 2].map(() => {
         return (
-          <Container isShowMoreClicked={isShowMoreClicked}>
-            <ProjectImage src={ramadanProj} />
+          <Container>
+            <Header>
+              <Logo src={test} />
+              <BiLinkExternal
+                size={25}
+                style={{ opacity: "0.7", marginBottom: "3px" }}
+              />
+            </Header>
             <DescriptionContainer>
+              <Title>Ramadan juices</Title>
               <Description>
-                <ShowMoreText
-                  lines={1}
-                  more="read more"
-                  less="read less"
-                  onClick={() => setIsShowMoreClicked(isShowMoreClicked)}
-                  expanded={isShowMoreClicked}
-                  truncatedEndingComponent={"... "}
-                >
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Aliquid, odio enim dolorum quia nostrum et architecto alias
-                  atque omnis ex
-                </ShowMoreText>
+                Building a custome multisite compatib WordPress plugin to build
+                global each search with Algolia
               </Description>
-              <LinkContainer>
-                <Text>visit : </Text>
-                <Website href="http://ramadanjuice-saida.com" target="_blank">
-                  ramadanjuice-saida.com
-                </Website>
-              </LinkContainer>
             </DescriptionContainer>
+            <SkillsContainer>
+              <Skill>React</Skill>
+              <Skill>Strapi</Skill>
+              <Skill>PostgreSQL</Skill>
+              <Skill></Skill>
+            </SkillsContainer>
           </Container>
         );
       })}

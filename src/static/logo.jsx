@@ -9,7 +9,7 @@ function Logo() {
       imageRendering="optimizeQuality"
       shapeRendering="geometricPrecision"
       textRendering="geometricPrecision"
-      width="200"
+      width="150"
       height="80"
       viewBox="0 0 350 200"
       style={{ marginTop: "1em" }}
