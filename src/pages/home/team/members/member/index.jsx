@@ -16,7 +16,7 @@ export default function Member({ handlemember, member, activeId }) {
       >
         <ColorLayer isClicked={member.id === activeId ? true : false} />
         <ImageWrapper isClicked={member.id === activeId ? true : false}>
-          <Image src={require(`../../../../../static/${member.src}`)} />
+          <Image src={member.image} />
         </ImageWrapper>
       </MemberWrapper>
     </Container>

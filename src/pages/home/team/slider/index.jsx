@@ -1,37 +1,51 @@
-import React, { useState } from "react";
-import { Carousel, CarouselContainer} from "./styles";
-import Card from "./card"
+import React, { useState, useRef } from "react";
+import { Carousel, CarouselContainer } from "./styles";
+import Card from "./card";
 export default function Slider({ teamMembers }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const handleleft = () => {
-    setCurrentIndex(currentIndex + 1);
+  const divRef = useRef(null);
+  const [startX, setStartX] = useState(null);
+
+  const handleTouchStart = (event) => {
+    setStartX(event.touches[0].clientX);
   };
+  const handleleft = () =>
+    currentIndex + 1 < teamMembers.length && setCurrentIndex(currentIndex + 1);
 
   const handleright = () => {
     if (currentIndex - 1 >= 0) {
       setCurrentIndex(currentIndex - 1);
     }
   };
+  const handleTouchMove = (event) => {
+    if (startX) {
+      const currentX = event.touches[0].clientX;
+      const deltaX = currentX - startX;
 
+      if (deltaX > 0) {
+        handleright();
+      } else if (deltaX < 0) {
+        handleleft();
+      }
 
+      setStartX(null);
+    }
+  };
 
   return (
     <Carousel>
-      <button
-        onClick={handleleft}
-        style={{ position: "absolute", zIndex: 9, left: "20px" }}
+      <CarouselContainer
+        ref={divRef}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
       >
-        left
-      </button>
-      <button
-        onClick={handleright}
-        style={{ position: "absolute", zIndex: 9, left: "50px" }}
-      >
-        right
-      </button>
-      <CarouselContainer>
         {teamMembers.map((member, index) => (
-          <Card index={index} currentIndex={currentIndex} member={member} teamMembers={teamMembers} />
+          <Card
+            index={index}
+            currentIndex={currentIndex}
+            member={member}
+            teamMembers={teamMembers}
+          />
         ))}
       </CarouselContainer>
     </Carousel>

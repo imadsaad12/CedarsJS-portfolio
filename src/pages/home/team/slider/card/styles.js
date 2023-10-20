@@ -1,16 +1,15 @@
-import styled, { keyframes } from "styled-components";
-
+import styled from "styled-components";
 
 export const CardContainer = styled.div`
   position: absolute;
   width: 15em;
   height: 100%;
   left: 1em;
-  transition: all 0.5s ease-in-out;
-  border-radius: 10px;
-  overflow:hidden;
-  background-color: ${(props) => props.theme.colors.secondaryFontColor};
+  transition: height 0.5s ease, transform 0.5s ease, filter 1s ease;
 
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: ${(props) => props.theme.colors.secondaryFontColor};
 `;
 export const Image = styled.img`
   width: 100%;

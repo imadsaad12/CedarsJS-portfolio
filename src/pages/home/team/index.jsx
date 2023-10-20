@@ -14,11 +14,12 @@ import {
 } from "./styles";
 import theme from "../../../styles/theme";
 import useBreakpoint from "../../../utils/useMediaQuery";
-import { members } from "../../../static/teamData";
 import { toggleline, toggleLayers, togglecircle } from "./animation";
 import Members from "./members";
 import MemberDetails from "./memberdetails";
 import Slider from "./slider";
+import { members } from "../../../static/teamData";
+
 export default function Team() {
   const isSmallSmallScreen = useBreakpoint(theme.breakingPoints.sm);
 
@@ -63,7 +64,7 @@ export default function Team() {
         <Line></Line>
       </Header>
       {isSmallSmallScreen ? (
-        <Slider teamMembers={teamMembers}/>
+        <Slider teamMembers={teamMembers} />
       ) : (
         <MembersLayout>
           <Members teamMembers={teamMembers} handlemember={handlemember} />

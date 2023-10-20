@@ -1,12 +1,11 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 export const Carousel = styled.div`
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   height: 23em;
   position: relative;
 `;
-
 
 export const CarouselContainer = styled.div`
   position: relative;
@@ -17,4 +16,3 @@ export const CarouselContainer = styled.div`
   align-items: center;
   justify-content: center;
 `;
-
