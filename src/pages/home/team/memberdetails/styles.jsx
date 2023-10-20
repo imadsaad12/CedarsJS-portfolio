@@ -79,7 +79,7 @@ export const BorderBox = styled.div`
 `;
 export const ImageContainer = styled.div`
   width: 60%;
-  height: 72%;
+  height: calc(72% + 25px);
   position: relative;
   overflow: hidden;
   background-color: ${(props) => props.theme.colors.secondaryFontColor};
