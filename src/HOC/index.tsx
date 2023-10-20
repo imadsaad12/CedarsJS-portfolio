@@ -1,28 +1,19 @@
 import React, { useState, useEffect } from "react";
-import {
-  PageLayout,
-  PageContent,
-  EmailContainer,
-  Email,
-  Line,
-  SocialMediaContainer,
-  SubContainer,
-  IconContainer,
-  ComponentWrapper,
-} from "./styles";
+import { PageLayout, PageContent, ComponentWrapper } from "./styles";
 import Navbar from "./navbar";
 import Logo from "../static/logo";
-import { CiFacebook } from "react-icons/ci";
-import { BiLogoInstagram } from "react-icons/bi";
-import { FaLinkedin } from "react-icons/fa";
+import EmailAndSocialMedia from "./emaiAndSocialMedia";
+import useBreakpoint from "../utils/useMediaQuery";
+import theme from "../styles/theme";
 
 export default function HOC(WrappedComponent: React.FC) {
   const [isLoading, setIsLoading] = useState(true);
+  const [isBlurred, setIsBlurred] = useState(false);
+  const isSmallScreen = useBreakpoint(theme.breakingPoints.sm);
+
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 2000);
   }, []);
-
-  const [isBlurred, setIsBlurred] = useState(false);
 
   return (
     <PageLayout>
@@ -33,24 +24,18 @@ export default function HOC(WrappedComponent: React.FC) {
             <ComponentWrapper>
               <WrappedComponent />
             </ComponentWrapper>
-            <EmailContainer>
-              <Email>cedarsjs@gmail.com</Email>
-              <Line />
-            </EmailContainer>
-            <SocialMediaContainer>
-              <SubContainer>
-                <IconContainer style={{ top: 20 }}>
-                  <CiFacebook size={30} />
-                </IconContainer>
-                <IconContainer style={{ top: 75 }}>
-                  <BiLogoInstagram size={30} />
-                </IconContainer>
-                <IconContainer style={{ top: 130 }}>
-                  <FaLinkedin size={25} />
-                </IconContainer>
-              </SubContainer>
-              <Line />
-            </SocialMediaContainer>
+            {isSmallScreen ? (
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  bottom: "10px",
+                  border: "1px solid white",
+                }}
+              ></div>
+            ) : (
+              <EmailAndSocialMedia />
+            )}
           </PageContent>
         </>
       ) : (

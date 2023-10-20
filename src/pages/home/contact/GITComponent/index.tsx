@@ -14,27 +14,17 @@ export default function GIT() {
   };
 
   return (
-    <>
-      <Container>
-        <Title>Get In Touch</Title>
-        <Description>
-          We're CedarsJS, a team of passionate developers who are building the
-          next generation of web development tools and frameworks. We're always
-          open to connecting, whether you have a question, want to say hi, or
-          collaborate on a project.
-        </Description>
-        <Button type="button" onClick={handleClick}>
-          Say Hello
-        </Button>
-      </Container>
-      {/* <Footer>
-        <GitHub
-          href="https://github.com/imadsaad12/CedarsJS-portfolio"
-          target="_blank"
-        >
-          Designed & Built by CedarsJS
-        </GitHub>
-      </Footer> */}
-    </>
+    <Container>
+      <Title>Get In Touch</Title>
+      <Description>
+        We're CedarsJS, a team of passionate developers who are building the
+        next generation of web development tools and frameworks. We're always
+        open to connecting, whether you have a question, want to say hi, or
+        collaborate on a project.
+      </Description>
+      <Button type="button" onClick={handleClick}>
+        Say Hello
+      </Button>
+    </Container>
   );
 }
