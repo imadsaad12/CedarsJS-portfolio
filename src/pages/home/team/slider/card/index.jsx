@@ -11,7 +11,8 @@ export default function Card({index,currentIndex,member,teamMembers}) {
         };
       
         if (index < currentIndex) {
-          styles.transform = `translateX(${(index - currentIndex) * 100}%)`;
+          styles.transform = `translateX(${(index - currentIndex) * 110}%)`;
+          styles.height="80%"
         } else if (index === currentIndex + 1) {
           styles.transform = 'translateX(15%)';
           styles.height = '90%';

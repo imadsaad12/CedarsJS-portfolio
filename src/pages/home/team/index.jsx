@@ -14,7 +14,7 @@ import {
 } from "./styles";
 import theme from "../../../styles/theme";
 import useBreakpoint from "../../../utils/useMediaQuery";
-import { members } from "./data";
+import { members } from "../../../static/teamData";
 import { toggleline, toggleLayers, togglecircle } from "./animation";
 import Members from "./members";
 import MemberDetails from "./memberdetails";

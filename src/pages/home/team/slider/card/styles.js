@@ -3,9 +3,9 @@ import styled, { keyframes } from "styled-components";
 
 export const CardContainer = styled.div`
   position: absolute;
-  width: 80%;
+  width: 15em;
   height: 100%;
-  left: 0;
+  left: 1em;
   transition: all 0.5s ease-in-out;
   border-radius: 10px;
   overflow:hidden;
