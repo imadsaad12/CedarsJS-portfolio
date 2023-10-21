@@ -1,8 +1,15 @@
 import styled from "styled-components";
 
+export const Wrapper = styled.div`
+  margin-top: 2em;
+  align-self: center;
+  width: 60%;
+  @media (max-width: 650px) {
+    width: 80%;
+  }
+`;
 export const Description = styled.p`
   font-size: 20px;
-  margin-top: -5px;
   color: ${(props) => props.theme.colors.primaryFontColor};
   font-family: sans-serif;
   opacity: 0.7;
@@ -14,40 +21,36 @@ export const Description = styled.p`
   }
 `;
 export const DescriptionContainer = styled.div`
-  width: 80%;
+  width: 100%;
   height: 90%;
   display: flex;
   flex-direction: column;
-  align-self: center;
   justify-content: center;
+  margin-left: 4%;
 `;
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 17em;
-  width: 90%;
-  align-self: center;
-  margin-bottom: 2em;
+  justify-content: flex-end;
+  min-height: 21em;
+  width: 100%;
+  margin-bottom: 3em;
   background-color: #112240;
-  border-radius: 5px;
+  border-radius: 10px;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  position: relative;
 `;
 export const Text = styled.pre`
   font-size: 15px;
 `;
-export const Header = styled.div`
-  display: flex;
-  margin-top: 1em;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 80%;
-  margin-left: 5%;
-  align-items: center;
-  color: ${(props) => props.theme.colors.primaryFontColor};
-`;
 
 export const Logo = styled.img`
-  width: 65px;
-  height: 55px;
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  align-self: center;
+  top: -40px;
 `;
 
 export const Title = styled.p`
@@ -56,19 +59,39 @@ export const Title = styled.p`
   font-weight: bold;
   font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
   letter-spacing: 2px;
+  text-align: center;
 `;
-
 export const SkillsContainer = styled.div`
-  width: 80%;
-  align-self: center;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 20px;
   gap: 17px;
 `;
-export const Skill = styled(Title)`
+export const Skill = styled.p`
+  color: ${(props) => props.theme.colors.primaryFontColor};
+  font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
+  text-align: center;
   font-size: 12px;
   opacity: 0.6;
-  font-weight: 100;
   letter-spacing: 1px;
+`;
+export const Link = styled.a`
+  text-decoration: none;
+  text-align: center;
+  color: ${(props) => props.theme.colors.secondaryFontColor};
+  font-size: 13px;
+  margin-top: -10px;
+  margin-bottom: 2em;
+`;
+export const Divider = styled.div`
+  width: 100%;
+  align-self: center;
+  height: 1px;
+  opacity: 0.7;
+  background-color: ${(props) => props.theme.colors.primaryFontColor};
+  margin-bottom: 10px;
+  margin-top: 20px;
 `;

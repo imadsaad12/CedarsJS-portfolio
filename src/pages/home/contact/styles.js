@@ -8,8 +8,7 @@ export const Container = styled.div`
   @media (max-width: ${(props) => props.theme.breakingPoints.xs}px) {
     margin-top: 5em;
   }
-
-  height: 100vh;
+  height: 33em;
 `;
 
 export const Header = styled.div`

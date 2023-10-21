@@ -20,14 +20,14 @@ export default function EmailAndSocialMedia() {
       </EmailContainer>
       <SocialMediaContainer>
         <SubContainer>
-          <IconContainer style={{ top: 20 }}>
-            <CiFacebook size={30} />
+          <IconContainer style={{ top: 60 }}>
+            <CiFacebook size={25} />
           </IconContainer>
-          <IconContainer style={{ top: 75 }}>
-            <BiLogoInstagram size={30} />
+          <IconContainer style={{ top: 110 }}>
+            <BiLogoInstagram size={25} />
           </IconContainer>
-          <IconContainer style={{ top: 130 }}>
-            <FaLinkedin size={25} />
+          <IconContainer style={{ top: 160 }}>
+            <FaLinkedin size={20} />
           </IconContainer>
         </SubContainer>
         <Line />
