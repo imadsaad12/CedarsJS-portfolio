@@ -11,10 +11,12 @@ export const Title = styled.h1`
   font-size: 35px;
   margin: 0px 0px 20px;
   font-weight: 600;
-  color: ${(props) => props.theme.colors.primaryFontColor};
+  color: ${(props) => props.theme.colors.dark};
   line-height: 1.1;
   font-family: ${(props) => props.theme.fontsFamily.primaryFontFamily};
-  @media (max-width: ${(props) => props.theme.breakingPoints.sm}px) and (min-width: ${(props) => props.theme.breakingPoints.xs}px) {
+  @media (max-width: ${(props) =>
+      props.theme.breakingPoints.sm}px) and (min-width: ${(props) =>
+      props.theme.breakingPoints.xs}px) {
     font-size: 30px;
   }
   @media (max-width: ${(props) => props.theme.breakingPoints.xs}px) {
@@ -29,7 +31,7 @@ export const Description = styled.p`
 `;
 
 export const Button = styled.button`
-  color: ${(props) => props.theme.colors.secondaryFontColor};
+  color: ${(props) => props.theme.colors.navBar};
   background-color: transparent;
   border: 1px solid ${(props) => props.theme.colors.secondaryFontColor};
   border-radius: 4px;

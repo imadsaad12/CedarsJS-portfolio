@@ -8,23 +8,21 @@ export const Container = styled.div`
   justify-content: center;
   position: absolute;
   transition: all 1s ease-in-out;
-  opacity: ${(props) => props.index==props.currentIndex?"1":"0"};
-  transform: ${(props) => `translateX(${(props.index-props.currentIndex)*100}%)`};
+  opacity: ${(props) => (props.index === props.currentIndex ? "1" : "0")};
+  transform: ${(props) =>
+    `translateX(${(props.index - props.currentIndex) * 100}%)`};
 `;
-
 
 export const Card = styled.div`
   width: 70%;
   height: 70%;
-  background-color: #979797;
+  background-color: ${(props) => props.theme.colors.background};
   border-radius: 30px;
   margin-top: 40px;
-
 `;
 export const Image = styled.img`
   width: 100%;
   height: 100%;
-
 `;
 export const Profile = styled.img`
   height: 90%;
@@ -41,8 +39,6 @@ export const Name = styled.span`
   letter-spacing: 3px;
   bottom: 30px;
   transition: all 1s ease-in-out;
-
-
 `;
 export const Family = styled.span`
   position: absolute;
@@ -51,8 +47,4 @@ export const Family = styled.span`
   font-family: ${(props) => props.theme.fontsFamily.primaryFontFamily};
   color: white;
   transition: all 1s ease-in-out;
-
 `;
-
-
-

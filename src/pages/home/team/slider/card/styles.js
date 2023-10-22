@@ -4,7 +4,8 @@ export const CardContainer = styled.div`
   position: absolute;
   width: 15em;
   height: 100%;
-  transition: height 0.5s ease, transform 0.5s ease, filter 1s ease,opacity 0.5s ease;
+  transition: height 0.5s ease, transform 0.5s ease, filter 1s ease,
+    opacity 0.5s ease;
   border-radius: 20px;
   overflow: hidden;
   z-index: 999;
@@ -26,20 +27,17 @@ export const TextContainer = styled.div`
 `;
 
 export const Work = styled.span`
-color: ${(props) => props.theme.colors.primaryFontColor};;
-font-size: 10px;
-font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
-margin-left: 10px;
-margin-bottom: 10px;
-
+  color: ${(props) => props.theme.colors.background};
+  font-size: 10px;
+  font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
+  margin-left: 10px;
+  margin-bottom: 10px;
 `;
 
 export const Name = styled.div`
-color: ${(props) => props.theme.colors.primaryFontColor};;
-font-size: 18px;
-font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
-font-weight: bold;
-margin-left: 10px;
-
-
+  color: ${(props) => props.theme.colors.background};
+  font-size: 18px;
+  font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
+  font-weight: bold;
+  margin-left: 10px;
 `;

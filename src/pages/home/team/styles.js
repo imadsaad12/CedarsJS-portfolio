@@ -38,6 +38,9 @@ export const Title = styled.span`
   align-items: center;
   margin-bottom: 5px;
   font-weight: bold;
+  @media (max-width: ${(props) => props.theme.breakingPoints.xs}px) {
+    font-size: 18px;
+  }
 `;
 
 export const Line = styled.span`
@@ -75,10 +78,9 @@ export const DrawingContainer = styled.div`
   justify-self: center;
   animation: ${growAndCurveAnimation} 0.4s linear;
   align-self: center;
-  background: ${(props) => props.theme.colors.primaryFontColor};
+  background-color: ${(props) => props.theme.colors.dark};
   opacity: 0.6;
-  transition: all  0.5s ease-in-out;
-
+  transition: all 0.5s ease-in-out;
 `;
 
 export const growcircle = keyframes`
@@ -102,9 +104,9 @@ export const Circle = styled.div`
   border-radius: 50%;
   right: 10px;
   transform: scale(1);
-  transition: all  0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   display: ${(props) => (props.isClicked ? "block" : "none")};
-  background-color: ${(props) => props.theme.colors.primaryFontColor};
+  background-color: ${(props) => props.theme.colors.dark};
   opacity: 0.6;
   animation: ${growcircle} 0.6s ease-in-out;
 
@@ -120,11 +122,10 @@ export const LinesContainer = styled.div`
   align-items: center;
 `;
 export const LinesLayout = styled.div`
-height: 95%;
-display: flex;
-flex-direction: column;
-width: 100%;
-
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 `;
 
 export const LineContainer = styled.div`

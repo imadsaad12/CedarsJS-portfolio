@@ -12,11 +12,12 @@ export const Container = styled.div`
   justify-content: center;
 `;
 export const Item = styled.div`
-  width:  ${(props) => props.index==props.currentIndex?"10px":"8px"}; 
-  height: ${(props) => props.index==props.currentIndex?"10px":"8px"}; ;
+  width: ${(props) => (props.index == props.currentIndex ? "10px" : "8px")};
+  height: ${(props) => (props.index == props.currentIndex ? "10px" : "8px")};
   border: 1px solid;
   border-color: ${(props) => props.theme.colors.primaryFontColor};
   border-radius: 50%;
-  background-color: ${(props) => props.index==props.currentIndex?props.theme.colors.secondaryFontColor:null};
-  transition:all 0.3s ease-in-out; 
+  background-color: ${(props) =>
+    props.index == props.currentIndex ? props.theme.colors.navBar : null};
+  transition: all 0.3s ease-in-out;
 `;

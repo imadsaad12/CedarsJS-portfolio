@@ -25,7 +25,7 @@ export const Email = styled.p`
   letter-spacing: 3px;
   width: 50%;
   &:hover {
-    color: ${(props) => props.theme.colors.secondaryFontColor};
+    color: ${(props) => props.theme.colors.navBar};
     cursor: pointer;
     margin-left: -10px;
     transition: all 0.1s ease-in-out;
@@ -71,7 +71,7 @@ export const SubContainer = styled.div`
 export const IconContainer = styled.div`
   position: absolute;
   &:hover {
-    color: ${(props) => props.theme.colors.secondaryFontColor};
+    color: ${(props) => props.theme.colors.navBar};
     cursor: pointer;
     margin-top: -10px;
     transition: all 0.2s ease-in-out;
