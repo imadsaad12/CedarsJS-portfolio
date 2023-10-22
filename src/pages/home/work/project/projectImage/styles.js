@@ -31,7 +31,7 @@ export const ImageWrapper = styled.div`
 
 export const ImageContainer = styled.div`
   width: ${(props) => (props.isSmallScreen ? "100%" : "60%")};
-  background-color: ${(props) => props.theme.colors.secondaryFontColor};
+  background-color: ${(props) => props.theme.colors.background};
   position: relative;
   cursor: pointer;
   &:hover ${Layer} {

@@ -21,8 +21,8 @@ export const SubTitle = styled.span`
 export const DescriptionContainer = styled.div`
   width: 100%;
   box-shadow: 0 20px 30px -15px rgba(2, 12, 27, 0.7);
-  background-color: #112240;
-  color: ${(props) => props.theme.colors.primaryFontColor};
+  background-color: ${(props) => props.theme.colors.navBar};
+  color: ${(props) => props.theme.colors.background};
   flex: 1;
   text-align: right;
   display: flex;
@@ -60,7 +60,7 @@ export const SkillsList = styled.ul`
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-end;
-  color: ${(props) => props.theme.colors.primaryFontColor};
+  color: ${(props) => props.theme.colors.light};
   font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
 
   gap: 12px;
@@ -78,7 +78,7 @@ export const IconsContainer = styled.div`
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-end;
-  color: ${(props) => props.theme.colors.primaryFontColor};
+  color: ${(props) => props.theme.colors.light};
   margin-top: 1em;
   gap: 12px;
   font-size: 18px;

@@ -13,7 +13,7 @@ export const NavbarContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.35);
-  background-color: ${(props) => props.theme.colors.primaryBackground};
+  background-color: ${(props) => props.theme.colors.navBar};
   z-index: 5;
 `;
 
@@ -65,21 +65,23 @@ export const BurgerMenuButton = styled.button`
 export const Bar = styled.div<BarProps>`
   height: 2px;
   transition: transform 0.3s, opacity 0.3s;
-  background-color: ${(props) => props.theme.colors.primaryFontColor};
+  background-color: ${(props) => props.theme.colors.dark};
   &:nth-child(1) {
     ${({ isOpen }) =>
       isOpen
         ? `
       opacity: 0;
+    
     `
         : `width:35px;`}
   }
   &:nth-child(2) {
-    ${({ isOpen }) =>
+    ${({ isOpen, theme }) =>
       isOpen
         ? `
       width: 30px;
       transform: translateY(0.4px) rotate(45deg);
+
       opacity: 1;
     `
         : `width: 25px;`}
@@ -133,7 +135,8 @@ export const SideBar = styled.div<SideBarProps>`
   justify-content: center;
   width: 0;
   position: fixed;
-  background-color: ${(props) => props.theme.colors.sideBarColor};
+  /* background-color: ${(props) => props.theme.colors.background}; */
+  background-color: #e2e8ea;
   right: 0;
   top: 0;
   height: 100vh;

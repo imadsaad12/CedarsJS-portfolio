@@ -14,7 +14,7 @@ export const Header = styled.p`
   font-family: ${(props) => props.theme.fontsFamily.primaryFontFamily};
   font-size: 60px;
   line-height: 1px;
-  color: ${(props) => props.theme.colors.primaryFontColor};
+  color: ${(props) => props.theme.colors.dark};
   @media (max-width: ${(props) => props.theme.breakingPoints.md}px) {
     font-size: 45px;
   }
@@ -26,7 +26,7 @@ export const Header = styled.p`
 export const SubHeader = styled.p`
   font-family: ${(props) => props.theme.fontsFamily.primaryFontFamily};
   font-size: 50px;
-  color: ${(props) => props.theme.colors.primaryFontColor};
+  color: ${(props) => props.theme.colors.light};
   opacity: 0.5;
   margin-top: -20px;
   word-wrap: none;
@@ -42,7 +42,7 @@ export const SubHeader = styled.p`
 export const Description = styled.p`
   margin-top: -10px;
   font-size: 20px;
-  color: ${(props) => props.theme.colors.primaryFontColor};
+  color: ${(props) => props.theme.colors.light};
   opacity: 0.7;
   width: 70%;
   @media (max-width: ${(props) => props.theme.breakingPoints.sm}px) {
@@ -53,7 +53,7 @@ export const Description = styled.p`
 
 export const SmallText = styled.p`
   font-size: 20px;
-  color: ${(props) => props.theme.colors.secondaryFontColor};
+  color: ${(props) => props.theme.colors.dark};
   font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
   line-height: 1px;
 `;

@@ -1,9 +1,9 @@
 const theme = {
   colors: {
-    primaryBackground: "#0f172a",
-    primaryFontColor: "#ccd6f6", // light white
-    secondaryFontColor: "#61f8d4", // green
-    primaryFontColorWithOpacity: "#6D7690",
+    navBar: "#0081AF",
+    dark: "#02203c", 
+    light: "#7d8c9c", 
+    background: "#f6f9fc",
     sideBarColor: "#112240",
   },
   fontSizes: {},

@@ -118,7 +118,7 @@ export const UpperLayer = styled.div`
   position: absolute;
   top: 0;
   width: 100%;
-  background-color: #0f172a;
+  background-color: ${(props) => props.theme.colors.background};
   height: ${(props) => props.upperHeight}%;
   transform-origin: top;
   transform: scaleY(0);
@@ -153,7 +153,7 @@ export const BottomLayer = styled.div`
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: #0f172a;
+  background-color: ${(props) => props.theme.colors.background};
   animation: ${decreaseBottomHeight} 1.5s ease-in-out;
   /* animation-delay: 0.5s; */
   z-index: 4;

@@ -10,10 +10,10 @@ export const Container = styled.div<ContainerProps>`
   gap: ${(props) => !props.isSideBar && "5px"};
   line-height: 1px;
   font-size: ${(props) => (props.isSideBar ? "13px" : "10px")};
-  color: ${(props) => props.theme.colors.primaryFontColor};
+  color: ${(props) => props.isSideBar ? props.theme.colors.dark: props.theme.colors.background};
   &:hover {
     cursor: pointer;
-    color: ${(props) => props.theme.colors.secondaryFontColor};
+    color: ${(props) => props.theme.colors.dark};
   }
 `;
 
@@ -24,6 +24,6 @@ export const Text = styled.p`
 export const Number = styled(Text)<ContainerProps>`
   color: ${(props) =>
     props.isSideBar
-      ? props.theme.colors.secondaryFontColor
-      : props.theme.colors.primaryFontColor};
+      ? props.theme.colors.dark
+      : props.theme.colors.background};
 `;
