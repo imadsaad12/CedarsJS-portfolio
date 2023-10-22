@@ -43,7 +43,7 @@ export default function Navbar({ setIsBlurred }: { setIsBlurred: Function }) {
           ))}
         </MenuContainer>
       )}
-      {/* <SideBar isOpen={isOpen}>
+      <SideBar isOpen={isOpen}>
         {menuList.map(
           ({ name, number, link }) =>
             isOpen && (
@@ -52,11 +52,11 @@ export default function Navbar({ setIsBlurred }: { setIsBlurred: Function }) {
                 number={number}
                 link={link}
                 isSideBar={true}
-                onClick={() => toggleMenu()}
+                onClick={toggleMenu}
               />
             )
         )}
-      </SideBar> */}
+      </SideBar>
     </NavbarContainer>
   );
 }
