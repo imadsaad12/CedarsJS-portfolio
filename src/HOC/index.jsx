@@ -26,7 +26,7 @@ export default function HOC(WrappedComponent: React.FC) {
   }, []);
 
   return (
-    <PageLayout>
+    <PageLayout isLoading={isLoading}>
       <LogoContainer isLoading={isLoading}>
         <Logo color="#02203c" />
       </LogoContainer>

@@ -36,7 +36,7 @@ const fadeInOut = keyframes`
 export const LogoContainer = styled.div`
   opacity: 1;
   background-color: ${(props) => props.theme.colors.navBar};
-  position: absolute;
+  position: fixed;
   z-index: 99;
   height: 100vh;
   width: 100%;
