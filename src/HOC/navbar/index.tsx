@@ -52,7 +52,7 @@ export default function Navbar({ setIsBlurred }: { setIsBlurred: Function }) {
                 number={number}
                 link={link}
                 isSideBar={true}
-                onClick={() => toggleMenu()}
+                onClick={toggleMenu}
               />
             )
         )}
