@@ -46,6 +46,14 @@ export const Logo = styled.img`
   }
 `;
 
+export const Text=styled.p`
+ color:${(props) => props.theme.colors.primaryFontColor};
+ font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
+ padding-bottom: 10px;
+ width: 70%;
+ text-align: center;
+`;
+
 export const ComponentWrapper = styled.div`
   width: 65%;
   display: flex;

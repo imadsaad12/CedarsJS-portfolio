@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { PageLayout, PageContent, ComponentWrapper } from "./styles";
+import { PageLayout, PageContent, ComponentWrapper, Text } from "./styles";
 import Navbar from "./navbar";
 import Logo from "../static/logo";
 import EmailAndSocialMedia from "./emaiAndSocialMedia";
 import useBreakpoint from "../utils/useMediaQuery";
 import theme from "../styles/theme";
+import { CiFacebook } from "react-icons/ci";
+import { IconContainer } from "./emaiAndSocialMedia/styles";
+import { BiLogoInstagram } from "react-icons/bi";
+import { FaLinkedin } from "react-icons/fa";
 
 export default function HOC(WrappedComponent: React.FC) {
   const [isLoading, setIsLoading] = useState(true);
@@ -25,14 +29,25 @@ export default function HOC(WrappedComponent: React.FC) {
               <WrappedComponent />
             </ComponentWrapper>
             {isSmallScreen ? (
+              <>
               <div
                 style={{
                   display: "flex",
                   flexDirection: "row",
                   bottom: "10px",
-                  border: "1px solid white",
+                  alignItems:"center",
+                  justifyContent:"space-between",
+                  height:"50px",
+                  width:"40%"
                 }}
-              ></div>
+              >
+                <CiFacebook size={25} style={{color:"white"}}/>
+                <BiLogoInstagram size={25} style={{color:"white"}}/>
+                <FaLinkedin size={25} style={{color:"white"}}/>
+              </div>
+              <Text>Designed & built by CedarsJS</Text>
+              </>
+
             ) : (
               <EmailAndSocialMedia />
             )}

@@ -2,44 +2,40 @@ import {
   Description,
   DescriptionContainer,
   Container,
-  Header,
   Logo,
   Title,
   SkillsContainer,
   Skill,
+  Link,
+  Divider,
+  Wrapper,
 } from "./styles";
 import test from "../../../../../static/testLogo.png";
-import { BiLinkExternal } from "react-icons/bi";
 
 export default function ProjectsMobileVersion() {
   return (
-    <>
+    <Wrapper>
       {[1, 2, 2, 2, 2].map(() => {
         return (
           <Container>
-            <Header>
-              <Logo src={test} />
-              <BiLinkExternal
-                size={25}
-                style={{ opacity: "0.7", marginBottom: "3px" }}
-              />
-            </Header>
+            <Logo src={test} />
+            <Title>Ramadan Juices</Title>
+            <Link>ramadanjuice-said.com</Link>
             <DescriptionContainer>
-              <Title>Ramadan juices</Title>
               <Description>
-                Building a custome multisite compatib WordPress plugin to build
-                global each search with Algolia
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Consequuntur nulla debitis vero laudantium cum culpa earum ipsa
               </Description>
             </DescriptionContainer>
+            <Divider />
             <SkillsContainer>
               <Skill>React</Skill>
               <Skill>Strapi</Skill>
               <Skill>PostgreSQL</Skill>
-              <Skill></Skill>
             </SkillsContainer>
           </Container>
         );
       })}
-    </>
+    </Wrapper>
   );
 }
