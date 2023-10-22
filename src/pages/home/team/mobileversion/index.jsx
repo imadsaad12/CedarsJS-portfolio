@@ -1,12 +1,11 @@
 import React, { useState, useRef } from "react";
-import { Carousel, CarouselContainer } from "./styles";
-import Card from "./card";
-import Pagination from "./pagination";
-export default function Slider({ teamMembers }) {
+import { Container } from "./styles";
+import SliderItem from "./slideritem";
+import { Family, Name } from "./slideritem/styles";
+export default function TeamSlider({ teamMembers }) {
   const [currentIndex, setCurrentIndex] = useState(2);
   const divRef = useRef(null);
   const [startX, setStartX] = useState(null);
-
   const handleTouchStart = (event) => {
     setStartX(event.touches[0].clientX);
   };
@@ -15,9 +14,11 @@ export default function Slider({ teamMembers }) {
 
   const handleright = () => {
     if (currentIndex - 1 >= 0) {
+      console.log("hi")
       setCurrentIndex(currentIndex - 1);
     }
   };
+
   const handleTouchMove = (event) => {
     if (startX) {
       const currentX = event.touches[0].clientX;
@@ -34,23 +35,21 @@ export default function Slider({ teamMembers }) {
   };
 
   return (
-    <Carousel>
-      <CarouselContainer
-        ref={divRef}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-      >
+    <Container
+      ref={divRef}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+    >
         {teamMembers.map((member, index) => (
-          <Card
+          <SliderItem
             index={index}
             currentIndex={currentIndex}
             member={member}
             teamMembers={teamMembers}
           />
         ))}
-      </CarouselContainer>
-      <Pagination teamMembers={ teamMembers } currentIndex={currentIndex}/>
-      
-    </Carousel>
+
+
+    </Container>
   );
 }

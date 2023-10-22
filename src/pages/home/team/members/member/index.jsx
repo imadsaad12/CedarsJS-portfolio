@@ -5,6 +5,8 @@ import {
   MemberWrapper,
   ColorLayer,
 } from "./styles";
+import hadi from "../../../../../static/hadi.jpg"
+
 export default function Member({ handlemember, member, activeId }) {
   return (
     <Container>
@@ -16,7 +18,7 @@ export default function Member({ handlemember, member, activeId }) {
       >
         <ColorLayer isClicked={member.id === activeId ? true : false} />
         <ImageWrapper isClicked={member.id === activeId ? true : false}>
-          <Image src={member.image} />
+          <Image src={hadi} />
         </ImageWrapper>
       </MemberWrapper>
     </Container>

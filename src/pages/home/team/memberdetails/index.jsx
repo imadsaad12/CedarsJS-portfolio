@@ -15,7 +15,7 @@ import {
 } from "./styles";
 import { FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-
+import hadi from "../../../../static/hadi.jpg"
 export default function MemberDetails({ teamMembers }) {
   const activemember = teamMembers.find((member) => member.isClicked);
   const { upperHeight, bottomHeight, name, job, image } = activemember;
@@ -39,7 +39,7 @@ export default function MemberDetails({ teamMembers }) {
         <UpperLayer upperHeight={upperHeight} id="upperlayer" />
         <BottomLayer bottomHeight={bottomHeight} id="bottomlayer" />
         <ImageWrapper>
-          <Image src={image} />
+          <Image src={hadi} />
         </ImageWrapper>
       </ImageContainer>
     </Container>

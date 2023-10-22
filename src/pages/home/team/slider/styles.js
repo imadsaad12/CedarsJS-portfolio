@@ -3,8 +3,10 @@ import styled from "styled-components";
 export const Carousel = styled.div`
   width: 100%;
   overflow-x: hidden;
-  height: 23em;
+  height: 26em;
   position: relative;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const CarouselContainer = styled.div`

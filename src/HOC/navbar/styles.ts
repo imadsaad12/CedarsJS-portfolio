@@ -14,7 +14,7 @@ export const NavbarContainer = styled.div`
   align-items: center;
   box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.35);
   background-color: ${(props) => props.theme.colors.primaryBackground};
-  z-index: 5;
+  z-index: 20;
 `;
 
 export const Logo = styled.img`
