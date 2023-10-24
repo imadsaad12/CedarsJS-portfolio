@@ -1,10 +1,11 @@
 const theme = {
   colors: {
-    navBar: "#0081AF",
-    dark: "#02203c", 
-    light: "#7d8c9c", 
-    background: "#f6f9fc",
-    sideBarColor: "#112240",
+    background: "#0f172a",
+    blue: "#368dc5",
+    green: "#0ec3cc",
+    white: "#fff",
+    black: "#000",
+    gray: "gray",
   },
   fontSizes: {},
   fontsFamily: {

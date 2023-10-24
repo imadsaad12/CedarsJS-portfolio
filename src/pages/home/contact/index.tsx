@@ -10,7 +10,7 @@ export default function Contact() {
         <Title>What’s Next?</Title>
         <Line />
       </Header>
-      <GIT /> 
+      <GIT />
     </Container>
   );
 }

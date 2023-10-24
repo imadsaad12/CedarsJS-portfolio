@@ -11,7 +11,7 @@ export const Title = styled.h1`
   font-size: 35px;
   margin: 0px 0px 20px;
   font-weight: 600;
-  color: ${(props) => props.theme.colors.dark};
+  color: ${({ theme: { colors } }) => colors.white};
   line-height: 1.1;
   font-family: ${(props) => props.theme.fontsFamily.primaryFontFamily};
   @media (max-width: ${(props) =>
@@ -27,13 +27,13 @@ export const Title = styled.h1`
 export const Description = styled.p`
   margin: 0px;
   font-size: 18px;
-  color: ${(props) => props.theme.colors.primaryFontColorWithOpacity};
+  color: ${({ theme: { colors } }) => colors.white};
 `;
 
 export const Button = styled.button`
-  color: ${(props) => props.theme.colors.navBar};
+  color: ${({ theme: { colors } }) => colors.gray};
   background-color: transparent;
-  border: 1px solid ${(props) => props.theme.colors.secondaryFontColor};
+  border: 1px solid ${({ theme: { colors } }) => colors.white};
   border-radius: 4px;
   padding: 1.25rem 1.75rem;
   font-size: 14px;
@@ -45,29 +45,7 @@ export const Button = styled.button`
   cursor: pointer;
   &:hover {
     outline: none;
-    box-shadow: 4px 4px 0 0 ${(props) => props.theme.colors.secondaryFontColor};
+    box-shadow: 4px 4px 0 0 ${({ theme: { colors } }) => colors.white};
     transform: translate(-5px, -5px);
   }
 `;
-
-// export const Footer = styled.div`
-//   display: flex;
-//   -webkit-box-pack: center;
-//   justify-content: center;
-//   -webkit-box-align: center;
-//   align-items: center;
-//   flex-direction: column;
-//   height: auto;
-//   min-height: 70px;
-//   padding: 15px;
-//   text-align: center;
-//   cursor: pointer;
-// `;
-
-// export const GitHub = styled.a`
-//   padding: 10px;
-//   color: ${(props) => props.theme.colors.primaryFontColor};
-//   &:hover {
-//     color: ${(props) => props.theme.colors.secondaryFontColor};
-//   }
-// `;

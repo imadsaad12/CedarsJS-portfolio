@@ -7,7 +7,7 @@ export const EmailContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: ${(props) => props.theme.colors.primaryFontColor};
+  color: ${({ theme: { colors } }) => colors.white};
   right: -130px;
   bottom: 19%;
   transform: rotate(90deg);
@@ -25,7 +25,7 @@ export const Email = styled.p`
   letter-spacing: 3px;
   width: 50%;
   &:hover {
-    color: ${(props) => props.theme.colors.navBar};
+    color: ${({ theme: { colors } }) => colors.white};
     cursor: pointer;
     margin-left: -10px;
     transition: all 0.1s ease-in-out;
@@ -46,7 +46,7 @@ export const SocialMediaContainer = styled.div`
   bottom: 19%;
   transform: rotate(90deg);
   gap: 15px;
-  color: ${(props) => props.theme.colors.primaryFontColor};
+  color: ${({ theme: { colors } }) => colors.white};
   left: -130px;
   @media (max-width: ${(props) => props.theme.breakingPoints.md}px) {
     left: -150px;
@@ -71,7 +71,7 @@ export const SubContainer = styled.div`
 export const IconContainer = styled.div`
   position: absolute;
   &:hover {
-    color: ${(props) => props.theme.colors.navBar};
+    color: ${({ theme: { colors } }) => colors.white};
     cursor: pointer;
     margin-top: -10px;
     transition: all 0.2s ease-in-out;

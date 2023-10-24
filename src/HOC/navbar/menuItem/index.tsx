@@ -1,4 +1,4 @@
-import { Container, Number, Text } from "./styles";
+import { Container, Text } from "./styles";
 import { Link } from "react-scroll";
 interface Props {
   name: string;
@@ -9,7 +9,7 @@ interface Props {
 }
 
 export default function MenuItem({
-  name, 
+  name,
   number,
   link,
   isSideBar = false,
@@ -23,7 +23,6 @@ export default function MenuItem({
           onClick();
         }}
       >
-        <Number isSideBar={isSideBar}>{number}</Number>
         <Text>{name}</Text>
       </Container>
     </Link>
