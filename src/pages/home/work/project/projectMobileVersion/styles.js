@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
 `;
 export const Description = styled.p`
   font-size: 20px;
-  color: ${(props) => props.theme.colors.background};
+  color: ${({ theme: { colors } }) => colors.gray};
   font-family: sans-serif;
   opacity: 0.7;
   width: 100%;
@@ -35,7 +35,7 @@ export const Container = styled.div`
   min-height: 21em;
   width: 100%;
   margin-bottom: 3em;
-  background-color: ${(props) => props.theme.colors.navBar};
+  background-color: ${({ theme: { colors } }) => colors.blue};
   border-radius: 10px;
   border-top-right-radius: 50px;
   border-top-left-radius: 50px;
@@ -55,7 +55,7 @@ export const Logo = styled.img`
 
 export const Title = styled.p`
   font-size: 20px;
-  color: ${(props) => props.theme.colors.background};
+  color: ${({ theme: { colors } }) => colors.background};
   font-weight: bold;
   font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
   letter-spacing: 2px;
@@ -71,7 +71,7 @@ export const SkillsContainer = styled.div`
   gap: 17px;
 `;
 export const Skill = styled.p`
-  color: ${(props) => props.theme.colors.background};
+  color: ${({ theme: { colors } }) => colors.black};
   font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
   text-align: center;
   font-size: 12px;
@@ -81,7 +81,6 @@ export const Skill = styled.p`
 export const Link = styled.a`
   text-decoration: none;
   text-align: center;
-  /* color: ${(props) => props.theme.colors.dark}; */
   color: blue;
   font-size: 13px;
   margin-top: -10px;
@@ -92,7 +91,7 @@ export const Divider = styled.div`
   align-self: center;
   height: 1px;
   opacity: 0.7;
-  background-color: ${(props) => props.theme.colors.background};
+  background-color: ${({ theme: { colors } }) => colors.white};
   margin-bottom: 10px;
   margin-top: 20px;
 `;

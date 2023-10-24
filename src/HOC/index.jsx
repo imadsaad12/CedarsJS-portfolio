@@ -16,25 +16,37 @@ import { CiFacebook } from "react-icons/ci";
 import { BiLogoInstagram } from "react-icons/bi";
 import { FaLinkedin } from "react-icons/fa";
 
-export default function HOC(WrappedComponent: React.FC) {
+export default function HOC(WrappedComponent) {
   const [isLoading, setIsLoading] = useState(true);
   const [isBlurred, setIsBlurred] = useState(false);
+  const [isFadeIn, setIsFadeIn] = useState(true);
   const isSmallScreen = useBreakpoint(theme.breakingPoints.sm);
 
   useEffect(() => {
+    let prevScrollPos = window.pageYOffset;
+
+    window.onscroll = () => {
+      const currentScrollPos = window.pageYOffset;
+
+      if (prevScrollPos > currentScrollPos) {
+        setIsFadeIn(true);
+      } else {
+        setIsFadeIn(false);
+      }
+
+      prevScrollPos = currentScrollPos;
+    };
     setTimeout(() => setIsLoading(false), 3000);
   }, []);
 
   return (
     <PageLayout isLoading={isLoading}>
-      <LogoContainer isLoading={isLoading}>
+      {/* <LogoContainer isLoading={isLoading}>
         <Logo color="#02203c" />
-      </LogoContainer>
-      <Navbar setIsBlurred={setIsBlurred} />
+      </LogoContainer> */}
+      <Navbar setIsBlurred={setIsBlurred} isFadeIn={isFadeIn} />
       <PageContent isLoading={isLoading} isBlurred={isBlurred}>
-        <ComponentWrapper>
-          <WrappedComponent />
-        </ComponentWrapper>
+        <WrappedComponent />
         {isSmallScreen ? (
           <>
             <IconsContainer>

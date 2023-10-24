@@ -16,7 +16,7 @@ export const Container = styled.div`
 export const Card = styled.div`
   width: 70%;
   height: 70%;
-  background-color: ${(props) => props.theme.colors.background};
+  background-color: ${({ theme: { colors } }) => colors.gray};
   border-radius: 30px;
   margin-top: 40px;
 `;

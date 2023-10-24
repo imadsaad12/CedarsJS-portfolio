@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
+  width: 80%;
   display: flex;
   margin-top: 10em;
   flex-direction: column;
@@ -26,7 +26,7 @@ export const Header = styled.div`
 export const Number = styled.span`
   font-size: 16px;
   font-family: ${(props) => props.theme.fontsFamily.primaryFontFamily};
-  color: ${(props) => props.theme.colors.dark};
+  color: ${({ theme: { colors } }) => colors.white};
   letter-spacing: 1px;
   height: 100%;
   display: flex;
@@ -36,7 +36,7 @@ export const Number = styled.span`
 export const Title = styled.span`
   font-size: 28px;
   font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
-  color: ${(props) => props.theme.colors.dark};
+  color: ${({ theme: { colors } }) => colors.white};
   height: 100%;
   display: flex;
   align-items: center;
@@ -50,7 +50,7 @@ export const Title = styled.span`
 export const Line = styled.div`
   height: 0.5px;
   flex: 1;
-  background-color: ${(props) => props.theme.colors.dark};
+  background-color: ${({ theme: { colors } }) => colors.white};
   margin-left: 10px;
   opacity: 0.2;
   @media (max-width: ${(props) => props.theme.breakingPoints.sm}px) {

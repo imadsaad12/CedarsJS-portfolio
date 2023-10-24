@@ -22,7 +22,7 @@ export const Header = styled.div`
 export const Number = styled.span`
   font-size: 16px;
   font-family: ${(props) => props.theme.fontsFamily.primaryFontFamily};
-  color: ${(props) => props.theme.colors.secondaryFontColor};
+  color: ${({ theme: { colors } }) => colors.white};
   letter-spacing: 1px;
   height: 100%;
   display: flex;
@@ -32,7 +32,7 @@ export const Number = styled.span`
 export const Title = styled.span`
   font-size: 25px;
   font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
-  color: ${(props) => props.theme.colors.primaryFontColor};
+  color: ${({ theme: { colors } }) => colors.white};
   height: 100%;
   display: flex;
   align-items: center;
@@ -78,7 +78,7 @@ export const DrawingContainer = styled.div`
   justify-self: center;
   animation: ${growAndCurveAnimation} 0.4s linear;
   align-self: center;
-  background-color: ${(props) => props.theme.colors.dark};
+  background-color: ${({ theme: { colors } }) => colors.white};
   opacity: 0.6;
   transition: all 0.5s ease-in-out;
 `;
@@ -106,7 +106,7 @@ export const Circle = styled.div`
   transform: scale(1);
   transition: all 0.2s ease-in-out;
   display: ${(props) => (props.isClicked ? "block" : "none")};
-  background-color: ${(props) => props.theme.colors.dark};
+  background-color: ${({ theme: { colors } }) => colors.white};
   opacity: 0.6;
   animation: ${growcircle} 0.6s ease-in-out;
 

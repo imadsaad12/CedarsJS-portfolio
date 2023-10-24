@@ -75,14 +75,14 @@ export const BorderBox = styled.div`
   /* inset:-5px; */
   position: absolute;
   overflow: hidden;
-  border: 2px solid ${(props) => props.theme.colors.secondaryFontColor};
+  border: 2px solid ${({ theme: { colors } }) => colors.white};
 `;
 export const ImageContainer = styled.div`
   width: 60%;
   height: calc(72% + 25px);
   position: relative;
   overflow: hidden;
-  background-color: ${(props) => props.theme.colors.secondaryFontColor};
+  background-color: ${({ theme: { colors } }) => colors.white};
 `;
 export const ImageWrapper = styled.div`
   width: 100%;
@@ -118,7 +118,7 @@ export const UpperLayer = styled.div`
   position: absolute;
   top: 0;
   width: 100%;
-  background-color: ${(props) => props.theme.colors.background};
+  background-color: ${({ theme: { colors } }) => colors.background};
   height: ${(props) => props.upperHeight}%;
   transform-origin: top;
   transform: scaleY(0);
@@ -153,7 +153,7 @@ export const BottomLayer = styled.div`
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: ${(props) => props.theme.colors.background};
+  background-color: ${({ theme: { colors } }) => colors.background};
   animation: ${decreaseBottomHeight} 1.5s ease-in-out;
   /* animation-delay: 0.5s; */
   z-index: 4;
@@ -161,7 +161,7 @@ export const BottomLayer = styled.div`
 `;
 
 export const ColorLayer = styled.div`
-  background-color: #0a192f;
+  background-color: ${({ theme: { colors } }) => colors.background};
   mix-blend-mode: screen;
   position: absolute;
   z-index: 2;

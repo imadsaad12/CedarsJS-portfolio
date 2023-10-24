@@ -27,7 +27,7 @@ export const TextContainer = styled.div`
 `;
 
 export const Work = styled.span`
-  color: ${(props) => props.theme.colors.background};
+  color: ${({ theme: { colors } }) => colors.background};
   font-size: 10px;
   font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
   margin-left: 10px;
@@ -35,7 +35,7 @@ export const Work = styled.span`
 `;
 
 export const Name = styled.div`
-  color: ${(props) => props.theme.colors.background};
+  color: ${({ theme: { colors } }) => colors.background};
   font-size: 18px;
   font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
   font-weight: bold;

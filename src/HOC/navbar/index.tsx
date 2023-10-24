@@ -11,7 +11,13 @@ import MenuItem from "./menuItem";
 import useBreakpoint from "../../utils/useMediaQuery";
 import theme from "../../styles/theme";
 
-export default function Navbar({ setIsBlurred }: { setIsBlurred: Function }) {
+export default function Navbar({
+  setIsBlurred,
+  isFadeIn,
+}: {
+  setIsBlurred: Function;
+  isFadeIn: boolean;
+}) {
   const [isOpen, setIsOpen] = useState(false);
   const isSmallScreen = useBreakpoint(theme.breakingPoints.sm);
 
@@ -28,7 +34,7 @@ export default function Navbar({ setIsBlurred }: { setIsBlurred: Function }) {
   ];
 
   return (
-    <NavbarContainer>
+    <NavbarContainer id="navbar" isFadeIn={isFadeIn}>
       <Logo />
       {isSmallScreen ? (
         <BurgerMenuButton onClick={toggleMenu}>
@@ -43,20 +49,22 @@ export default function Navbar({ setIsBlurred }: { setIsBlurred: Function }) {
           ))}
         </MenuContainer>
       )}
-      <SideBar isOpen={isOpen}>
-        {menuList.map(
-          ({ name, number, link }) =>
-            isOpen && (
-              <MenuItem
-                name={name}
-                number={number}
-                link={link}
-                isSideBar={true}
-                onClick={toggleMenu}
-              />
-            )
-        )}
-      </SideBar>
+      {isOpen && (
+        <SideBar isOpen={isOpen}>
+          {menuList.map(
+            ({ name, number, link }) =>
+              isOpen && (
+                <MenuItem
+                  name={name}
+                  number={number}
+                  link={link}
+                  isSideBar={true}
+                  onClick={toggleMenu}
+                />
+              )
+          )}
+        </SideBar>
+      )}
     </NavbarContainer>
   );
 }

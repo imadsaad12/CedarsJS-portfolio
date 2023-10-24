@@ -3,7 +3,34 @@ import styled, { keyframes } from "styled-components";
 interface BarProps {
   isOpen: boolean;
 }
-export const NavbarContainer = styled.div`
+interface NavBarProps {
+  isFadeIn: boolean;
+}
+const fadeIn = keyframes`
+0% {
+ height: 0;
+}
+50% {
+ height: 5vh;
+}
+100% {
+ height: 10vh;
+}
+`;
+
+const fadeOut = keyframes`
+0% {
+ height: 10vh;
+}
+50% {
+ height: 5vh;
+}
+100% {
+ height: 0vh;
+ margin-top: -5vh;
+}
+`;
+export const NavbarContainer = styled.div<NavBarProps>`
   display: flex;
   flex-direction: row;
   position: fixed;
@@ -13,8 +40,13 @@ export const NavbarContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.35);
-  background-color: ${(props) => props.theme.colors.navBar};
+  background-color: ${({ theme: { colors } }) => colors.background};
   z-index: 20;
+
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-name: ${(props) => (props.isFadeIn ? fadeIn : fadeOut)};
 `;
 
 export const Logo = styled.img`
@@ -34,7 +66,7 @@ export const MenuContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 5%;
+  gap: 10%;
   margin-right: 2em;
   @media (max-width: ${(props) => props.theme.breakingPoints.xl}px) {
     width: 44%;
@@ -65,7 +97,7 @@ export const BurgerMenuButton = styled.button`
 export const Bar = styled.div<BarProps>`
   height: 2px;
   transition: transform 0.3s, opacity 0.3s;
-  background-color: ${(props) => props.theme.colors.dark};
+  background-color: ${({ theme: { colors } }) => colors.black};
   &:nth-child(1) {
     ${({ isOpen }) =>
       isOpen
@@ -135,8 +167,7 @@ export const SideBar = styled.div<SideBarProps>`
   justify-content: center;
   width: 0;
   position: fixed;
-  /* background-color: ${(props) => props.theme.colors.background}; */
-  background-color: #e2e8ea;
+  background-color: ${({ theme: { colors } }) => colors.white};
   right: 0;
   top: 0;
   height: 100vh;
