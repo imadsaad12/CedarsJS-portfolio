@@ -17,6 +17,8 @@ export const PageContent = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 10vh;
+  overflow: hidden;
+  position: relative;
   filter: ${(props) => props.isBlurred && "blur(10px)"};
 `;
 

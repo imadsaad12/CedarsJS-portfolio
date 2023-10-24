@@ -31,8 +31,8 @@ export const Container = styled.div`
 
 export const ColorLayer = styled.div`
   background-color: ${(props) => (props.isClicked ? "#7d8c9c" : "transparent")};
-  width: 65px;
-  height: 65px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
   mix-blend-mode: ${(props) => (props.isClicked ? "screen" : "none")};
   position: absolute;
@@ -43,8 +43,8 @@ export const ColorLayer = styled.div`
 `;
 
 export const MemberWrapper = styled.div`
-  width: 65px;
-  height: 65px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
   overflow: hidden;
   position: relative;

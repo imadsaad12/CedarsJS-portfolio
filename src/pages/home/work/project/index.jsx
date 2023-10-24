@@ -5,6 +5,7 @@ import useBreakpoint from "../../../../utils/useMediaQuery";
 import theme from "../../../../styles/theme";
 import ramadanProjDesktop from "../../../../static/ramadanjuice.png";
 import ProjectsMobileVersion from "./projectMobileVersion";
+import ProjectMobile from "./projectMobile";
 
 export default function Project() {
   const isSmallSmallScreen = useBreakpoint(theme.breakingPoints.sm);
@@ -12,7 +13,8 @@ export default function Project() {
   return (
     <>
       {isSmallSmallScreen ? (
-        <ProjectsMobileVersion />
+        // <ProjectsMobileVersion />
+        <ProjectMobile/>
       ) : (
         <ProjectContainer>
           <ProjectImage src={ramadanProjDesktop} />

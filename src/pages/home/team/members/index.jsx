@@ -3,7 +3,8 @@ import { Container, MembersLayout } from "./styles";
 import Member from "./member";
 
 export default function Members({ teamMembers, handlemember }) {
-  const activeId = teamMembers.find((member) => member.isClicked).id;
+  console.log(teamMembers)
+  const activeId = teamMembers.find((member) => member.isClicked);
 
   return (
     <Container>
@@ -12,7 +13,7 @@ export default function Members({ teamMembers, handlemember }) {
           <Member
             handlemember={handlemember}
             member={member}
-            activeId={activeId}
+            activeId={activeId?.id}
           />
         ))}
       </MembersLayout>

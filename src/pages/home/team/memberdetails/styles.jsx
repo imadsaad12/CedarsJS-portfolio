@@ -7,6 +7,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: flex-start;
   position: relative;
+  border-radius: 10px;
 `;
 
 const IconAnimation = keyframes`
@@ -43,8 +44,8 @@ export const NameText = styled.span`
   font-size: 11px;
 `;
 export const TextContainer = styled.div`
-  width: 60%;
-  height: 72%;
+  width: 100%;
+  height: calc(60% + 25px);
   position: absolute;
   overflow: hidden;
   display: flex;
@@ -60,6 +61,7 @@ export const TextContainer = styled.div`
   &:hover ${GmailContainer} {
     display: block;
   }
+  
 `;
 
 export const JobText = styled.span`
@@ -78,8 +80,8 @@ export const BorderBox = styled.div`
   border: 2px solid ${(props) => props.theme.colors.secondaryFontColor};
 `;
 export const ImageContainer = styled.div`
-  width: 60%;
-  height: calc(72% + 25px);
+  width: 100%;
+  height: calc(60% + 25px);
   position: relative;
   overflow: hidden;
   background-color: ${(props) => props.theme.colors.secondaryFontColor};
@@ -165,7 +167,6 @@ export const ColorLayer = styled.div`
   mix-blend-mode: screen;
   position: absolute;
   z-index: 2;
-  inset: 3px;
   width: 100%;
   height: 100%;
   transition: all 0.1s ease-in-out;

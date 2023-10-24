@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 
 export const Container = styled.div`
-  width: 82%;
+  width: 65%;
   display: flex;
   flex-direction: column;
   margin-top: 5em;
@@ -55,7 +55,7 @@ export const MembersLayout = styled.div`
   display: flex;
   flex-direction: row;
   /* margin-top: 2em; */
-  height: 24em;
+  height: 27em;
 `;
 
 export const growAndCurveAnimation = keyframes`
@@ -102,7 +102,9 @@ export const Circle = styled.div`
   height: 5px;
   width: 5px;
   border-radius: 50%;
-  right: 10px;
+  right: ${(props) => (props.direction=="left" ? "5px" : "none")};
+  left: ${(props) => (props.direction=="left" ? "none" : "5px")};
+
   transform: scale(1);
   transition: all 0.2s ease-in-out;
   display: ${(props) => (props.isClicked ? "block" : "none")};
@@ -114,7 +116,7 @@ export const Circle = styled.div`
 `;
 export const LinesContainer = styled.div`
   display: flex;
-  flex: 0.7;
+  flex: 0.5;
   justify-content: center;
   height: 100%;
   align-items: center;
@@ -134,4 +136,6 @@ export const LineContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 15px;
+  justify-content: ${(props) => (props.direction=="left" ? "flex-start" : "flex-end")};
+
 `;

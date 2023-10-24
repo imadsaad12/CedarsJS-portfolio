@@ -8,6 +8,7 @@ import {
 import hadi from "../../../../../static/hadi.jpg"
 
 export default function Member({ handlemember, member, activeId }) {
+  console.log(member)
   return (
     <Container>
       <MemberWrapper

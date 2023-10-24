@@ -57,3 +57,5 @@ export const SmallText = styled.p`
   font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
   line-height: 1px;
 `;
+
+

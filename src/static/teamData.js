@@ -15,8 +15,8 @@ export const members = [
   {
     id: 2,
     isClicked: false,
-    upperHeight: 34.5,
-    bottomHeight: 65.5,
+    upperHeight: 50,
+    bottomHeight: 50,
     name: "Imad Saad",
     job: "Software Developer",
     image: per2,
@@ -24,8 +24,8 @@ export const members = [
   {
     id: 3,
     isClicked: false,
-    upperHeight: 65.5,
-    bottomHeight: 34.5,
+    upperHeight: 100,
+    bottomHeight: 0,
     name: "Ali Hashem",
     job: "Software Developer",
     image: per3,
@@ -33,8 +33,8 @@ export const members = [
   {
     id: 4,
     isClicked: false,
-    upperHeight: 100,
-    bottomHeight: 0,
+    upperHeight: 0,
+    bottomHeight: 100,
     name: "Bassel Kassem",
     job: "Software Developer",
     image: per1,
@@ -42,10 +42,20 @@ export const members = [
   {
     id: 5,
     isClicked: false,
+    upperHeight: 50,
+    bottomHeight: 50,
+    name: "Bassel Kassem",
+    job: "Software Developer",
+    image: per1,
+  }
+  ,
+  {
+    id: 6,
+    isClicked: false,
     upperHeight: 100,
     bottomHeight: 0,
     name: "Bassel Kassem",
     job: "Software Developer",
-    image: per3,
-  },
+    image: per1,
+  }
 ];
