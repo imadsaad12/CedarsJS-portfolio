@@ -11,6 +11,9 @@ export const members = [
     name: "Hadi Saab",
     job: "Software Developer",
     image: per1,
+    zIndex: "2",
+    top: "10%",
+    left: "0",
   },
   {
     id: 2,
@@ -20,6 +23,9 @@ export const members = [
     name: "Imad Saad",
     job: "Software Developer",
     image: per2,
+    zIndex: "3",
+    top: "10%",
+    left: "49%",
   },
   {
     id: 3,
@@ -29,6 +35,9 @@ export const members = [
     name: "Ali Hashem",
     job: "Software Developer",
     image: per3,
+    zIndex: "4",
+    top: "39%",
+    left: "0",
   },
   {
     id: 4,
@@ -38,6 +47,9 @@ export const members = [
     name: "Bassel Kassem",
     job: "Software Developer",
     image: per1,
+    zIndex: "5",
+    top: "39%",
+    left: "49%",
   },
   {
     id: 5,
@@ -47,8 +59,10 @@ export const members = [
     name: "Bassel Kassem",
     job: "Software Developer",
     image: per1,
-  }
-  ,
+    zIndex: "6",
+    top: "70%",
+    left: "0",
+  },
   {
     id: 6,
     isClicked: false,
@@ -57,5 +71,8 @@ export const members = [
     name: "Bassel Kassem",
     job: "Software Developer",
     image: per1,
-  }
+    zIndex: "7",
+    top: "70%",
+    left: "49%",
+  },
 ];
