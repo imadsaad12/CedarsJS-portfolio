@@ -1,16 +1,29 @@
 import React from "react";
-import { Container, Description, Header, SmallText, SubHeader } from "./styles";
+import { Container,LeftContainer, RightContainer ,Hand,Light,Code,Title,InspireContainer,Inspire,TitleContainer} from "./styles";
+import hand from "./hand.png"
+import code from "./code.png"
 
 export default function Intro() {
   return (
     <Container id="home">
-      <SmallText>Hi, we are </SmallText>
-      <Header>Cedars JS.</Header>
-      <SubHeader>we build things for the web.</SubHeader>
-      <Description>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. quaerat eius
-        ducimus. Voluptas, nemo. Qui hic adipisci, obcaecati minima veniam
-      </Description>
+      <LeftContainer>
+        <TitleContainer>
+
+        <Title>We Develop</Title>
+        <Title>We Design</Title>
+        <InspireContainer>
+            <Title>We</Title>
+            <Inspire>Inspire</Inspire>
+
+        </InspireContainer>
+        </TitleContainer>
+      </LeftContainer>
+      <RightContainer>
+        <Hand src={hand}/>
+        <Code src={code}/>
+
+        <Light/>
+      </RightContainer>
     </Container>
   );
 }

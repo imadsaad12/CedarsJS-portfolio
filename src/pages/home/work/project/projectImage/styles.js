@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Layer = styled.div`
-  background-color: #0a192f;
+  background-color: #0c2434;
   mix-blend-mode: screen;
   position: absolute;
   z-index: 3;
@@ -31,7 +31,7 @@ export const ImageWrapper = styled.div`
 
 export const ImageContainer = styled.div`
   width: ${(props) => (props.isSmallScreen ? "100%" : "60%")};
-  background-color: ${(props) => props.theme.colors.background};
+  background-color: ${({ theme: { colors } }) => colors.blue};
   position: relative;
   cursor: pointer;
   &:hover ${Layer} {

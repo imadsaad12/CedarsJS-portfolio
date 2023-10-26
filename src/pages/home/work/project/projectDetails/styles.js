@@ -11,18 +11,18 @@ export const DetailsContainer = styled.div`
   flex-direction: column;
 `;
 export const Title = styled.span`
-  color: ${(props) => props.theme.colors.primaryFontColor};
+  color: ${({ theme: { colors } }) => colors.white};
   font-size: 24px;
 `;
 export const SubTitle = styled.span`
   font-size: 14px;
-  color: ${(props) => props.theme.colors.secondaryFontColor};
+  color: ${({ theme: { colors } }) => colors.white};
 `;
 export const DescriptionContainer = styled.div`
   width: 100%;
   box-shadow: 0 20px 30px -15px rgba(2, 12, 27, 0.7);
-  background-color: ${(props) => props.theme.colors.navBar};
-  color: ${(props) => props.theme.colors.background};
+  background-color: ${({ theme: { colors } }) => colors.blue};
+  color: ${({ theme: { colors } }) => colors.white};
   flex: 1;
   text-align: right;
   display: flex;
@@ -60,12 +60,12 @@ export const SkillsList = styled.ul`
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-end;
-  color: ${(props) => props.theme.colors.light};
+  color: ${({ theme: { colors } }) => colors.white};
   font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
 
   gap: 12px;
   font-size: 15px;
-  opacity: 0.5;
+  opacity: 0.7;
 `;
 export const Skill = styled.li``;
 
@@ -78,8 +78,10 @@ export const IconsContainer = styled.div`
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-end;
-  color: ${(props) => props.theme.colors.light};
+  color: ${({ theme: { colors } }) => colors.white};
   margin-top: 1em;
   gap: 12px;
   font-size: 18px;
+  opacity: 0.7;
+
 `;
