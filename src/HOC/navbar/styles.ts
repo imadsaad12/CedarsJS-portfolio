@@ -66,7 +66,7 @@ export const MenuContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 10%;
+  gap: 10px;
   margin-right: 2em;
   @media (max-width: ${(props) => props.theme.breakingPoints.xl}px) {
     width: 44%;

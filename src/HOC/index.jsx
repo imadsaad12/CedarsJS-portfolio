@@ -31,7 +31,7 @@ export default function HOC(WrappedComponent) {
       if (prevScrollPos > currentScrollPos) {
         setIsFadeIn(true);
       } else {
-        setIsFadeIn(false);
+        setIsFadeIn(true);
       }
 
       prevScrollPos = currentScrollPos;

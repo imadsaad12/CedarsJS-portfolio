@@ -47,7 +47,7 @@ bottom: 0;
 left: 0;
 mix-blend-mode: color-dodge;
 z-index: 5;
-animation :infinite ${HandAnimation} 4s ;
+/* animation :infinite ${HandAnimation} 4s ; */
 
 `;
 export const CodeAnimation = keyframes`
@@ -72,7 +72,7 @@ bottom: 22%;
 left: 50px;
 mix-blend-mode:color-dodge;
 z-index: 5;
-animation :infinite ${CodeAnimation} 4s ;
+/* animation :infinite ${CodeAnimation} 4s ; */
 
 `;
 

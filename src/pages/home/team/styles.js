@@ -102,8 +102,8 @@ export const Circle = styled.div`
   height: 5px;
   width: 5px;
   border-radius: 50%;
-  right: ${(props) => (props.direction=="left" ? "5px" : "none")};
-  left: ${(props) => (props.direction=="left" ? "none" : "5px")};
+  right: ${(props) => (props.direction == "left" ? "5px" : "none")};
+  left: ${(props) => (props.direction == "left" ? "none" : "5px")};
 
   transform: scale(1);
   transition: all 0.2s ease-in-out;
@@ -136,6 +136,6 @@ export const LineContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 15px;
-  justify-content: ${(props) => (props.direction=="left" ? "flex-start" : "flex-end")};
-
+  justify-content: ${(props) =>
+    props.direction == "left" ? "flex-start" : "flex-end"};
 `;

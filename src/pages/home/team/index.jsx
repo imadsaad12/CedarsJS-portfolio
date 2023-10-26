@@ -19,6 +19,7 @@ import Members from "./members";
 import MemberDetails from "./memberdetails";
 import Slider from "./slider";
 import { members } from "../../../static/teamData";
+import NewTeam from "../newTeam";
 
 export default function Team() {
   const isSmallSmallScreen = useBreakpoint(theme.breakingPoints.sm);
@@ -63,7 +64,8 @@ export default function Team() {
         <Title>Meet The Team</Title>
         <Line></Line>
       </Header>
-      {isSmallSmallScreen ? (
+      <NewTeam />
+      {/* {isSmallSmallScreen ? (
         <Slider teamMembers={teamMembers} />
       ) : (
         <MembersLayout>
@@ -92,7 +94,7 @@ export default function Team() {
           <Members teamMembers={teamMembers.slice(-3)} handlemember={handlemember} />
 
         </MembersLayout>
-      )}
+      )} */}
     </Container>
   );
 }
