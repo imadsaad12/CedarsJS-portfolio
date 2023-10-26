@@ -91,3 +91,32 @@ export const InnerSpinner = styled(OuterSpinner)`
   animation: ${spin} 2s linear reverse infinite;
   border-top: 3px solid #fff;
 `;
+
+export const Time = styled.p`
+  color: white;
+  font-size: 10px;
+  position: absolute;
+  top: 12px;
+  left: 24px;
+`;
+export const WifiStyle = {
+  color: "white",
+  position: "absolute",
+  zIndex: "10",
+  right: "55",
+  top: "21",
+};
+export const NetWorkStyle = {
+  color: "white",
+  position: "absolute",
+  zIndex: "10",
+  right: "43",
+  top: "23",
+};
+export const BatteryStyle = {
+  color: "white",
+  position: "absolute",
+  zIndex: "10",
+  right: "22",
+  top: "21",
+};

@@ -1,13 +1,17 @@
 import { useState } from "react";
 import {
+  BatteryStyle,
   Container,
   InnerCircle,
   InnerSpinner,
   Mobile,
   MobileFrame,
+  NetWorkStyle,
   OuterSpinner,
   TeamMemberContainer,
   TeamMembersContainer,
+  Time,
+  WifiStyle,
 } from "./styles";
 import phone from "./x.png";
 import { members } from "../../../static/teamData";
@@ -17,41 +21,20 @@ import { BsBatteryHalf } from "react-icons/bs";
 
 export default function NewTeam() {
   const [selectedId, setSelectedId] = useState(null);
+  const date = new Date();
+  const formattedTime = date.toLocaleTimeString([], {
+    hour: "numeric",
+    minute: "2-digit",
+  });
 
   return (
     <Container>
       <Mobile>
         <TeamMembersContainer>
-          <BiWifi2
-            size={15}
-            style={{
-              color: "white",
-              position: "absolute",
-              zIndex: "10",
-              right: "55",
-              top: "21",
-            }}
-          />
-          <GiNetworkBars
-            size={10}
-            style={{
-              color: "white",
-              position: "absolute",
-              zIndex: "10",
-              right: "43",
-              top: "23",
-            }}
-          />
-          <BsBatteryHalf
-            size={15}
-            style={{
-              color: "white",
-              position: "absolute",
-              zIndex: "10",
-              right: "22",
-              top: "21",
-            }}
-          />
+          <Time>{formattedTime}</Time>
+          <BiWifi2 size={15} style={WifiStyle} />
+          <GiNetworkBars size={10} style={NetWorkStyle} />
+          <BsBatteryHalf size={15} style={BatteryStyle} />
           {members.map(({ id, zIndex, top, left, image }, index) => (
             <TeamMemberContainer
               zIndex={zIndex}
