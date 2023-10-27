@@ -12,7 +12,7 @@ export const members = [
     job: "Software Developer",
     image: per1,
     zIndex: "2",
-    top: "10%",
+    top: "20%",
     left: "0",
   },
   {
@@ -24,7 +24,7 @@ export const members = [
     job: "Software Developer",
     image: per2,
     zIndex: "3",
-    top: "10%",
+    top: "20%",
     left: "49%",
   },
   {
@@ -36,7 +36,7 @@ export const members = [
     job: "Software Developer",
     image: per3,
     zIndex: "4",
-    top: "39%",
+    top: "45%",
     left: "0",
   },
   {
@@ -48,7 +48,7 @@ export const members = [
     job: "Software Developer",
     image: per1,
     zIndex: "5",
-    top: "39%",
+    top: "45%",
     left: "49%",
   },
   {
