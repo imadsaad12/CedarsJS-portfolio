@@ -1,7 +1,28 @@
 import styled, { keyframes } from "styled-components";
-
+const fadeIn = keyframes`
+0%{
+transform-origin: left;
+transform:scaleX(0);
+}
+100%{
+  transform:scaleX(1);
+  transform-origin: left;
+}
+`;
+// export const Container = styled.div`
+//   position: absolute;
+//   left: 15%;
+//   bottom: 14%;
+//   width: 200px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   flex-direction: column;
+//   z-index: 12;
+//   gap: 10px;
+//   /* animation: ${fadeIn} 0.4s linear; */
+// `;
 export const Container = styled.div`
-  /* background-color: red; */
   position: absolute;
   left: 15%;
   bottom: 14%;
@@ -12,8 +33,18 @@ export const Container = styled.div`
   flex-direction: column;
   z-index: 12;
   gap: 10px;
-`;
 
+  & > :first-child {
+    animation: ${fadeIn} 0.7s ease-in-out;
+  }
+
+  & > :nth-child(2) {
+    animation: ${fadeIn} 0.9s ease-in-out;
+  }
+  & > :nth-child(3) {
+    animation: ${fadeIn} 1.1s ease-in-out;
+  }
+`;
 export const Link = styled.div`
   background: linear-gradient(
     to left,

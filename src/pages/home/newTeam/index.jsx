@@ -17,8 +17,12 @@ import {
   ClickText,
   Time,
   WifiStyle,
+  Stars,
+  Light,
+  Light2,
 } from "./styles";
 import arrow from "./arrow.png";
+import stars from "./stars.png";
 
 import phone from "./x.png";
 import { members } from "../../../static/teamData";
@@ -73,6 +77,9 @@ export default function NewTeam() {
 
   return (
     <Container>
+      <Stars src={stars} />
+      <Light />
+      <Light2 />
       {!selectedId && (
         <ClickContainer>
           <ClickText>

@@ -1,5 +1,17 @@
 import styled, { keyframes } from "styled-components";
 
+const fadeIn = keyframes`
+0%{
+transform: scale(0);
+opacity: 0;
+}
+
+100%{
+  transform: scale(1);
+  opacity: 1;
+
+}
+`;
 export const Container = styled.div`
   position: absolute;
   background-color: ${({ theme: { colors } }) => colors.white};
@@ -14,6 +26,9 @@ export const Container = styled.div`
   flex-direction: column;
   overflow: hidden;
   z-index: 12;
+  animation: ${fadeIn} 0.4s linear;
+  opacity: 1;
+
 `;
 export const CodeContainer = styled.div`
   display: flex;

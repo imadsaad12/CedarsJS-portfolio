@@ -6,8 +6,10 @@ export default function Experience() {
     <>
       <OuterSpinner>
         <Content>
-          <Text style={{ fontSize: "35px" }}>2+</Text>
-          <p style={{ fontSize: "15px", marginTop: "-25px" }}>Years</p>
+          <Text style={{ fontSize: "35px", fontWeight: "bold" }}>2+</Text>
+          <p style={{ fontSize: "15px", marginTop: "-25px", color: "white" }}>
+            Years
+          </p>
         </Content>
         <SVG width="200" height="200" xmlns="http://www.w3.org/2000/svg">
           <defs>
