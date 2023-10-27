@@ -2,8 +2,6 @@ import { useState } from "react";
 import {
   BatteryStyle,
   Container,
-  InnerCircle,
-  InnerSpinner,
   Mobile,
   MobileFrame,
   NetWorkStyle,
@@ -35,7 +33,7 @@ export default function NewTeam() {
           <BiWifi2 size={15} style={WifiStyle} />
           <GiNetworkBars size={10} style={NetWorkStyle} />
           <BsBatteryHalf size={15} style={BatteryStyle} />
-          {members.map(({ id, zIndex, top, left, image }, index) => (
+          {members.map(({ id, zIndex, top, left, image }) => (
             <TeamMemberContainer
               zIndex={zIndex}
               top={top}
@@ -44,7 +42,7 @@ export default function NewTeam() {
               isClicked={selectedId === id}
               backgroundImage={image}
             >
-              {index % 2 === 0 ? <OuterSpinner /> : <InnerSpinner />}
+              <OuterSpinner isClicked={selectedId === id} />
             </TeamMemberContainer>
           ))}
         </TeamMembersContainer>

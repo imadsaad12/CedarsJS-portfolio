@@ -78,18 +78,16 @@ const spin = keyframes`
 `;
 export const OuterSpinner = styled.div`
   border: 3px solid transparent;
+  display: ${({ isClicked }) => isClicked && "none"};
   border-radius: 50%;
   border: 3px solid #3498db;
+  border-top: 3px solid #fff;
   width: 100px;
   height: 100px;
-  animation: ${spin} 2s linear infinite;
+  animation: ${spin} 2s linear reverse infinite;
   position: absolute;
   top: -3px;
   left: -3px;
-`;
-export const InnerSpinner = styled(OuterSpinner)`
-  animation: ${spin} 2s linear reverse infinite;
-  border-top: 3px solid #fff;
 `;
 
 export const Time = styled.p`
