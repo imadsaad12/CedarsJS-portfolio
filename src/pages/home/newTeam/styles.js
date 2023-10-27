@@ -100,73 +100,31 @@ export const InnerSpinner = styled(OuterSpinner)`
   border-top: 3px solid #fff;
 `;
 
-export const SwipeContainer = styled.div`
+export const Time = styled.p`
+  color: white;
+  font-size: 10px;
   position: absolute;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  bottom: 35px;
-  width: 100px;
-  height: 100px;
-  left: 32%;
-  color: ${({ theme: { colors } }) => colors.white};
-  user-select: none; // Disable text selection while swiping
-  touch-action: manipulation; // Improve touch handling
-  z-index: 8;
+  top: 12px;
+  left: 24px;
 `;
-export const Swipe = styled.span`
-
-user-select: none; // Disable text selection while swiping
-  touch-action: manipulation; // Improve touch handling`;
-
-const IconAnimation = keyframes`
-  0% {
-    bottom: 20px;
-  }
-  50% {
-    bottom: 40px;
-  }
-  100% {
-    bottom: 20px;
-  }
-`;
-
-export const AnimatedIcon = styled(MdKeyboardDoubleArrowUp)`
-  position: absolute;
-  bottom: 0px;
-  animation: 1s ${IconAnimation} infinite;
-  user-select: none; // Disable text selection while swiping
-  touch-action: manipulation; // Improve touch handling
-`;
-
-export const Title = styled.span`
-color:${({ theme: { colors } }) => colors.white};
-font-size: 20px;
-width: 100%;
-text-align: center;
-position: absolute;
-top:10%
-`
-
-export const ClickContainer = styled.div`
-  position: absolute;
-  left:11%;
-  top:30%;
-  /* background-color: red; */
-  display: flex;
-  flex-direction: row;
-  z-index: 12;
-`;
-
-
-export const Arrow = styled.img`
-width: 150px;
-height: 70px;
-
-`
-
-export const ClickText = styled.pre`
-margin-top: 70px;
-
-color:${({ theme: { colors } }) => colors.white};
-`
+export const WifiStyle = {
+  color: "white",
+  position: "absolute",
+  zIndex: "10",
+  right: "55",
+  top: "21",
+};
+export const NetWorkStyle = {
+  color: "white",
+  position: "absolute",
+  zIndex: "10",
+  right: "43",
+  top: "23",
+};
+export const BatteryStyle = {
+  color: "white",
+  position: "absolute",
+  zIndex: "10",
+  right: "22",
+  top: "21",
+};
