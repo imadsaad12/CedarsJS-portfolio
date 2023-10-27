@@ -10,7 +10,6 @@ import {
   OuterSpinner,
   TeamMemberContainer,
   TeamMembersContainer,
-<<<<<<< HEAD
   SwipeContainer,
   Swipe,
   AnimatedIcon,
@@ -18,10 +17,8 @@ import {
   ClickContainer,
   Arrow,
   ClickText,
-=======
   Time,
   WifiStyle,
->>>>>>> 376288947aa4cf878cb29713861ebfd6dc5b48d7
 } from "./styles";
 import arrow from "./arrow.png";
 
