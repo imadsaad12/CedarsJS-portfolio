@@ -25,7 +25,6 @@ import { members } from "../../../static/teamData";
 import { BiWifi2 } from "react-icons/bi";
 import { GiNetworkBars } from "react-icons/gi";
 import { BsBatteryHalf } from "react-icons/bs";
-import { MdKeyboardDoubleArrowUp } from "react-icons/md";
 
 import MemberInfo from "./memberinfo";
 
@@ -85,6 +84,7 @@ export default function NewTeam() {
       )}
       {selectedId && <MemberInfo />}
       <Mobile>
+        <Title>Meet Our Tram</Title>
         <TeamMembersContainer>
           <Time>{formattedTime}</Time>
           <BiWifi2 size={15} style={WifiStyle} />

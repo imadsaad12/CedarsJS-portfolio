@@ -2,21 +2,22 @@ import styled, { keyframes } from "styled-components";
 import { MdKeyboardDoubleArrowUp } from "react-icons/md";
 
 export const Container = styled.div`
-  width: 100%;
+  width: 79%;
   height: 38em;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   position: relative;
+  align-self: center;
 `;
 
 export const Mobile = styled.div`
-  width: 32%;
+  width: 42%;
   height: 100%;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   position: relative;
   background-image: url("https://i.stack.imgur.com/yLOOp.jpg");
   border-radius: 50px;
@@ -24,9 +25,11 @@ export const Mobile = styled.div`
 `;
 
 export const TeamMembersContainer = styled.div`
-  width: 100%;
-  height: 100%;
+  width: 99%;
+  height: 99%;
   position: relative;
+  overflow: hidden;
+  border-radius: 50px;
 `;
 const fadeIn = keyframes`
 0%{
@@ -62,7 +65,6 @@ export const TeamMemberContainer = styled.div`
   animation: ${({ condition }) =>
     condition ? `${fadeIn} 1s ease-in-out` : "none"};
   cursor: pointer;
-
 `;
 
 export const MobileFrame = styled.img`
@@ -73,7 +75,6 @@ export const MobileFrame = styled.img`
   user-select: none; // Disable text selection while swiping
   touch-action: manipulation; // Improve touch handling
   -webkit-user-drag: none;
-
 `;
 
 const spin = keyframes`
@@ -113,9 +114,9 @@ export const SwipeContainer = styled.div`
   z-index: 8;
 `;
 export const Swipe = styled.span`
-
-user-select: none; // Disable text selection while swiping
-  touch-action: manipulation; // Improve touch handling`;
+  user-select: none; // Disable text selection while swiping
+  touch-action: manipulation; // Improve touch handling
+`;
 
 const IconAnimation = keyframes`
   0% {
@@ -138,42 +139,41 @@ export const AnimatedIcon = styled(MdKeyboardDoubleArrowUp)`
 `;
 
 export const Title = styled.span`
-color:${({ theme: { colors } }) => colors.white};
-font-size: 20px;
-width: 100%;
-text-align: center;
-position: absolute;
-top:10%
-`
+  color: ${({ theme: { colors } }) => colors.white};
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 10%;
+`;
 
 export const ClickContainer = styled.div`
   position: absolute;
-  left:11%;
-  top:30%;
+  left: 0%;
+  top: 30%;
   /* background-color: red; */
   display: flex;
   flex-direction: row;
   z-index: 12;
 `;
 
-
 export const Arrow = styled.img`
-width: 150px;
-height: 70px;
-
-`
+  width: 150px;
+  height: 70px;
+`;
 
 export const ClickText = styled.pre`
-margin-top: 70px;
+  margin-top: 70px;
 
-color:${({ theme: { colors } }) => colors.white};
-`
+  color: ${({ theme: { colors } }) => colors.white};
+`;
 export const Time = styled.p`
   color: white;
   font-size: 10px;
   position: absolute;
   top: 12px;
   left: 24px;
+  z-index: 20;
 `;
 export const WifiStyle = {
   color: "white",
