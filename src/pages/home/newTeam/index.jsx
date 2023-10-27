@@ -8,7 +8,6 @@ import {
   OuterSpinner,
   TeamMemberContainer,
   TeamMembersContainer,
-<<<<<<< HEAD
   SwipeContainer,
   Swipe,
   AnimatedIcon,
@@ -16,10 +15,8 @@ import {
   ClickContainer,
   Arrow,
   ClickText,
-=======
   Time,
   WifiStyle,
->>>>>>> 376288947aa4cf878cb29713861ebfd6dc5b48d7
 } from "./styles";
 import arrow from "./arrow.png";
 
@@ -48,7 +45,6 @@ export default function NewTeam() {
     const deltaX = endX - startX;
     const deltaY = endY - startY;
 
-    // Determine the swipe direction based on deltaX and deltaY
     if (Math.abs(deltaX) > Math.abs(deltaY)) {
       // Horizontal swipe
       if (deltaX > 50) {
@@ -64,7 +60,6 @@ export default function NewTeam() {
         console.log("Mouse swiped down");
         // Perform your desired action here
       } else if (deltaY < -50) {
-        console.log("Mouse swiped up");
         setSelectedId(null);
         // Perform your desired action here
       }
@@ -79,15 +74,15 @@ export default function NewTeam() {
 
   return (
     <Container>
-      {!selectedId &&
-      <ClickContainer>
-        <ClickText>
-          Click To View <br />
-          Member Info
-        </ClickText>
-        <Arrow src={arrow} />
-      </ClickContainer>
-}
+      {!selectedId && (
+        <ClickContainer>
+          <ClickText>
+            Click To View <br />
+            Member Info
+          </ClickText>
+          <Arrow src={arrow} />
+        </ClickContainer>
+      )}
       {selectedId && <MemberInfo />}
       <Mobile>
         <TeamMembersContainer>
