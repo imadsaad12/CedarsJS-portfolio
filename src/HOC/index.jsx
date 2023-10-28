@@ -31,19 +31,22 @@ export default function HOC(WrappedComponent) {
       if (prevScrollPos > currentScrollPos) {
         setIsFadeIn(true);
       } else {
-        setIsFadeIn(true);
+        setIsFadeIn(false);
+      }
+      document.getElementById("navbar").style.boxShadow =
+        "0px 10px 30px -10px rgba(0, 0, 0, 0.35)";
+
+      if (currentScrollPos === 0) {
+        document.getElementById("navbar").style.boxShadow = "none";
       }
 
       prevScrollPos = currentScrollPos;
     };
     setTimeout(() => setIsLoading(false), 3000);
-  }, []);
+  });
 
   return (
     <PageLayout isLoading={isLoading}>
-      {/* <LogoContainer isLoading={isLoading}>
-        <Logo color="#02203c" />
-      </LogoContainer> */}
       <Navbar setIsBlurred={setIsBlurred} isFadeIn={isFadeIn} />
       <PageContent isLoading={isLoading} isBlurred={isBlurred}>
         <WrappedComponent />

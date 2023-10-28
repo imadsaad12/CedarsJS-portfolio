@@ -1,11 +1,5 @@
 import styled, { keyframes } from "styled-components";
 
-interface BarProps {
-  isOpen: boolean;
-}
-interface NavBarProps {
-  isFadeIn: boolean;
-}
 const fadeIn = keyframes`
 0% {
  height: 0;
@@ -30,7 +24,7 @@ const fadeOut = keyframes`
  margin-top: -5vh;
 }
 `;
-export const NavbarContainer = styled.div<NavBarProps>`
+export const NavbarContainer = styled.div`
   display: flex;
   flex-direction: row;
   position: fixed;
@@ -39,10 +33,12 @@ export const NavbarContainer = styled.div<NavBarProps>`
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.35);
   background-color: ${({ theme: { colors } }) => colors.background};
   z-index: 20;
+<<<<<<< HEAD:src/HOC/navbar/styles.ts
 overflow: hidden;
+=======
+>>>>>>> bc01780 (fix):src/HOC/navbar/styles.js
   animation-duration: 0.2s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
@@ -66,7 +62,7 @@ export const MenuContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 10px;
+  gap: 17px;
   margin-right: 2em;
   @media (max-width: ${(props) => props.theme.breakingPoints.xl}px) {
     width: 44%;
@@ -94,7 +90,7 @@ export const BurgerMenuButton = styled.button`
   gap: 3px;
 `;
 
-export const Bar = styled.div<BarProps>`
+export const Bar = styled.div`
   height: 2px;
   transition: transform 0.3s, opacity 0.3s;
   background-color: ${({ theme: { colors } }) => colors.black};
@@ -120,7 +116,7 @@ export const Bar = styled.div<BarProps>`
   }
 
   &:nth-child(3) {
-    ${({ isOpen }: any) =>
+    ${({ isOpen }) =>
       isOpen
         ? `
       width: 30px;
@@ -156,11 +152,7 @@ const closeSideBar = keyframes`
   }
 `;
 
-type SideBarProps = {
-  isOpen: boolean;
-};
-
-export const SideBar = styled.div<SideBarProps>`
+export const SideBar = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
