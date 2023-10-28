@@ -7,6 +7,8 @@ export const PageLayout = styled.div`
   justify-content: center;
   min-height: 100vh;
   position: relative;
+  overflow: hidden;
+
 `;
 
 export const PageContent = styled.div`
@@ -18,7 +20,6 @@ export const PageContent = styled.div`
   align-items: center;
   margin-top: 10vh;
   overflow: hidden;
-  position: relative;
   filter: ${(props) => props.isBlurred && "blur(10px)"};
 `;
 
@@ -64,6 +65,7 @@ export const ComponentWrapper = styled.div`
   min-height: 100vh;
   flex-direction: column;
   flex: 1;
+  overflow: hidden;
   @media (max-width: ${(props) => props.theme.breakingPoints.md}px) {
     width: 90%;
   }

@@ -91,7 +91,7 @@ export default function NewTeam() {
       )}
       {selectedId && <MemberInfo />}
       <Mobile>
-        <Title>Meet Our Tram</Title>
+        <Title>Meet Our Team</Title>
         <TeamMembersContainer>
           <Time>{formattedTime}</Time>
           <BiWifi2 size={15} style={WifiStyle} />
