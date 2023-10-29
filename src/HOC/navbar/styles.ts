@@ -42,7 +42,7 @@ export const NavbarContainer = styled.div<NavBarProps>`
   box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.35);
   background-color: ${({ theme: { colors } }) => colors.background};
   z-index: 20;
-
+overflow: hidden;
   animation-duration: 0.2s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;

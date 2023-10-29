@@ -10,6 +10,7 @@ import {
 import MenuItem from "./menuItem";
 import useBreakpoint from "../../utils/useMediaQuery";
 import theme from "../../styles/theme";
+import Stars from "../../styles/reusable/Stars";
 
 export default function Navbar({
   setIsBlurred,
@@ -36,6 +37,9 @@ export default function Navbar({
   return (
     <NavbarContainer id="navbar" isFadeIn={isFadeIn}>
       <Logo />
+      <Stars left={"0"}  width={"50%"}  />
+      <Stars right={"0"}  width={"50%"}  />
+
       {isSmallScreen ? (
         <BurgerMenuButton onClick={toggleMenu}>
           <Bar isOpen={isOpen} />

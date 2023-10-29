@@ -44,7 +44,7 @@ export default function HOC(WrappedComponent) {
       {/* <LogoContainer isLoading={isLoading}>
         <Logo color="#02203c" />
       </LogoContainer> */}
-      {/* <Navbar setIsBlurred={setIsBlurred} isFadeIn={isFadeIn} /> */}
+      <Navbar setIsBlurred={setIsBlurred} isFadeIn={isFadeIn} />
       <PageContent isLoading={isLoading} isBlurred={isBlurred}>
         <WrappedComponent />
         {isSmallScreen ? (

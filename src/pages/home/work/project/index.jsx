@@ -6,6 +6,7 @@ import theme from "../../../../styles/theme";
 import ramadanProjDesktop from "../../../../static/ramadanjuice.png";
 import ProjectsMobileVersion from "./projectMobileVersion";
 import ProjectMobile from "./projectMobile";
+import Stars from "../../../../styles/reusable/Stars";
 
 export default function Project() {
   const isSmallSmallScreen = useBreakpoint(theme.breakingPoints.sm);
