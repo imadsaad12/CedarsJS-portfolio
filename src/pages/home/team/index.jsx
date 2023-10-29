@@ -60,7 +60,7 @@ export default function Team() {
   return (
     <Container id="about-us">
       <Header>
-        <Number>II.</Number>
+        <Number>01.</Number>
         <Title>Meet The Team</Title>
         <Line></Line>
       </Header>

@@ -1,30 +1,5 @@
 import styled, { keyframes } from "styled-components";
 
-const spin = keyframes`
-   0% { 
-    transform: rotate(0deg); 
-  }
-   100%{ 
-    /* border-right: 15px solid #fff;
-    border-top: 15px solid #fff; */
-    transform: rotate(360deg); 
-  }
-`;
-// export const OuterSpinner = styled.div`
-//   border-radius: 50%;
-//   border: 15px solid #3498db;
-//   border-bottom: 15px solid #fff;
-//   border-right: 15px solid #fff;
-//   width: 120px;
-//   height: 120px;
-//   animation: ${spin} 0.8s ease-in;
-//   position: absolute;
-//   z-index: 10;
-//   right: 20%;
-//   top: 54%;
-//   background: ${({ theme: { colors } }) => colors.blue};
-// `;
-
 export const OuterSpinner = styled.div`
   position: absolute;
   width: fit-content;
@@ -40,11 +15,20 @@ export const SVG = styled.svg`
 `;
 
 export const Text = styled.pre`
-  font-size: 15px;
+  font-size: 35px;
+  font-weight: bold;
   color: white;
   align-self: center;
   justify-self: center;
   z-index: 12;
+  font-family: ${({ theme: { fontsFamily } }) => fontsFamily.SFMonoLight};
+`;
+
+export const Years = styled.p`
+  font-size: 15px;
+  margin-top: -25px;
+  color: white;
+  font-family: ${({ theme: { fontsFamily } }) => fontsFamily.SFMonoLight};
 `;
 
 const html = keyframes`

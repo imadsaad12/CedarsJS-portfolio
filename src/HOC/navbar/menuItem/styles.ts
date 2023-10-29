@@ -17,7 +17,7 @@ export const Container = styled.div<ContainerProps>`
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 70px;
+  width: fit-content;
   height: 35px;
   gap: ${(props) => !props.isSideBar && "5px"};
   line-height: 1px;
@@ -25,7 +25,6 @@ export const Container = styled.div<ContainerProps>`
   color: ${({ theme: { colors }, isSideBar }) =>
     isSideBar ? colors.black : colors.white};
   overflow: hidden;
-  /* border-radius: 20px; */
   &:hover {
     color: white;
     background: transparent;
@@ -41,8 +40,6 @@ export const Container = styled.div<ContainerProps>`
     width: 0;
     background: ${({ theme: { colors } }) =>
       `linear-gradient( ${colors.blue}, ${colors.green})`};
-    /* box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px #0003,
-      4px 4px 5px 0px #0002; */
     transition: 400ms ease all;
   }
   &::after {
@@ -54,29 +51,16 @@ export const Container = styled.div<ContainerProps>`
   &:hover:before,
   &:hover:after {
     width: 100%;
-    transition: 800ms ease all;
+    transition: 400ms ease all;
   }
-
-  /* &:hover {
-    &::before {
-      content: "";
-      position: absolute;
-      width: 200px;
-      height: 30px;
-      background: ${({ theme: { colors } }) =>
-    `linear-gradient( ${colors.blue}, ${colors.green})`};
-      animation: ${border} 4s linear infinite;
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      background-color: ${({ theme: { colors } }) => colors.background};
-      inset: 2px;
-    }
-  } */
 `;
 
 export const Text = styled.p`
-  font-family: ${(props) => props.theme.fontsFamily.primaryFontFamily};
+  font-family: ${({ theme: { fontsFamily } }) => fontsFamily.SFMonoLight};
+  font-size: 14px;
   z-index: 20;
+`;
+export const Number = styled.p`
+  font-family: ${({ theme: { fontsFamily } }) => fontsFamily.SFMonoLight};
+  color: ${({ theme: { colors } }) => colors.green};
 `;

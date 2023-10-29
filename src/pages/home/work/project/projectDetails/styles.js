@@ -13,10 +13,12 @@ export const DetailsContainer = styled.div`
 export const Title = styled.span`
   color: ${({ theme: { colors } }) => colors.white};
   font-size: 24px;
+  font-family: ${({ theme: { fontsFamily } }) => fontsFamily.SFMonoHeavy};
 `;
 export const SubTitle = styled.span`
   font-size: 14px;
   color: ${({ theme: { colors } }) => colors.white};
+  font-family: ${({ theme: { fontsFamily } }) => fontsFamily.SFMonoLight};
 `;
 export const DescriptionContainer = styled.div`
   width: 100%;
@@ -33,6 +35,7 @@ export const DescriptionContainer = styled.div`
 export const Description = styled.span`
   font-size: 15px;
   width: 90%;
+  font-family: ${({ theme: { fontsFamily } }) => fontsFamily.CalibreLight};
 `;
 export const TitleContainer = styled.div`
   flex: 1;
@@ -83,5 +86,4 @@ export const IconsContainer = styled.div`
   gap: 12px;
   font-size: 18px;
   opacity: 0.7;
-
 `;

@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <Container id="contact">
       <Header>
-        <Number>IV.</Number>
+        <Number>04.</Number>
         <Title>What’s Next?</Title>
         <Line />
       </Header>

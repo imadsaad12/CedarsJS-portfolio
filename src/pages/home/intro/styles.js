@@ -112,7 +112,7 @@ export const Title = styled.span`
   color: ${({ theme: { colors } }) => colors.white};
   text-align: left;
   display: inline-block;
-  font-weight: bold;
+  font-family: ${({ theme: { fontsFamily } }) => fontsFamily.CalibreBold};
 `;
 
 export const Inspire = styled.span`
@@ -122,7 +122,7 @@ export const Inspire = styled.span`
     ${({ theme: { colors } }) => colors.blue},
     ${({ theme: { colors } }) => colors.green}
   );
-  /* background: linear-gradient(red,green); */
+  font-family: ${({ theme: { fontsFamily } }) => fontsFamily.CalibreBold};
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

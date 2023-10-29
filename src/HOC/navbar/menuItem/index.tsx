@@ -1,4 +1,4 @@
-import { Container, Text } from "./styles";
+import { Container, Number, Text } from "./styles";
 import { Link } from "react-scroll";
 interface Props {
   name: string;
@@ -23,6 +23,7 @@ export default function MenuItem({
           onClick();
         }}
       >
+        <Number>{number}</Number>
         <Text>{name}</Text>
       </Container>
     </Link>

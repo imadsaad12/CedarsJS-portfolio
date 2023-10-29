@@ -24,9 +24,9 @@ export const Header = styled.div`
 `;
 
 export const Number = styled.span`
-  font-size: 16px;
-  font-family: ${(props) => props.theme.fontsFamily.primaryFontFamily};
-  color: ${({ theme: { colors } }) => colors.white};
+  font-size: 25px;
+  font-family: ${({ theme: { fontsFamily } }) => fontsFamily.SFMonoLight};
+  color: ${({ theme: { colors } }) => colors.blue};
   letter-spacing: 1px;
   height: 100%;
   display: flex;
@@ -34,8 +34,8 @@ export const Number = styled.span`
 `;
 
 export const Title = styled.span`
-  font-size: 28px;
-  font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
+  font-size: 25px;
+  font-family: ${({ theme: { fontsFamily } }) => fontsFamily.SFMonoHeavy};
   color: ${({ theme: { colors } }) => colors.white};
   height: 100%;
   display: flex;

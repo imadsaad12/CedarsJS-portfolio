@@ -9,8 +9,12 @@ const theme = {
   },
   fontSizes: {},
   fontsFamily: {
-    primaryFontFamily: "MyCustomFont", // techno (used in navbar)
-    secondaryFontFamily: "monospace",
+    CalibreBlack: "CalibreBlack",
+    CalibreBold: "CalibreBold",
+    CalibreLight: "CalibreLight",
+    SFMonoBold: "SFMonoBold",
+    SFMonoHeavy: "SFMonoHeavy",
+    SFMonoLight: "SFMonoLight",
   },
 
   // max-width for different screen sizes in px

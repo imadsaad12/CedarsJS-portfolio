@@ -13,7 +13,7 @@ export const Title = styled.h1`
   font-weight: 600;
   color: ${({ theme: { colors } }) => colors.white};
   line-height: 1.1;
-  font-family: ${(props) => props.theme.fontsFamily.primaryFontFamily};
+  font-family: ${({ theme: { fontsFamily } }) => fontsFamily.SFMonoBold};
   @media (max-width: ${(props) =>
       props.theme.breakingPoints.sm}px) and (min-width: ${(props) =>
       props.theme.breakingPoints.xs}px) {
@@ -28,6 +28,7 @@ export const Description = styled.p`
   margin: 0px;
   font-size: 18px;
   color: ${({ theme: { colors } }) => colors.white};
+  font-family: ${({ theme: { fontsFamily } }) => fontsFamily.CalibreLight};
 `;
 
 export const Button = styled.button`

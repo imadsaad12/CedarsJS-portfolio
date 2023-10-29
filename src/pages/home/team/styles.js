@@ -20,9 +20,9 @@ export const Header = styled.div`
 `;
 
 export const Number = styled.span`
-  font-size: 16px;
-  font-family: ${(props) => props.theme.fontsFamily.primaryFontFamily};
-  color: ${({ theme: { colors } }) => colors.white};
+  font-size: 25px;
+  font-family: ${({ theme: { fontsFamily } }) => fontsFamily.SFMonoLight};
+  color: ${({ theme: { colors } }) => colors.green};
   letter-spacing: 1px;
   height: 100%;
   display: flex;
@@ -31,12 +31,11 @@ export const Number = styled.span`
 
 export const Title = styled.span`
   font-size: 25px;
-  font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
+  font-family: ${({ theme: { fontsFamily } }) => fontsFamily.SFMonoHeavy};
   color: ${({ theme: { colors } }) => colors.white};
   height: 100%;
   display: flex;
   align-items: center;
-  margin-bottom: 5px;
   font-weight: bold;
   @media (max-width: ${(props) => props.theme.breakingPoints.xs}px) {
     font-size: 18px;
@@ -102,8 +101,8 @@ export const Circle = styled.div`
   height: 5px;
   width: 5px;
   border-radius: 50%;
-  right: ${(props) => (props.direction == "left" ? "5px" : "none")};
-  left: ${(props) => (props.direction == "left" ? "none" : "5px")};
+  right: ${(props) => (props.direction === "left" ? "5px" : "none")};
+  left: ${(props) => (props.direction === "left" ? "none" : "5px")};
 
   transform: scale(1);
   transition: all 0.2s ease-in-out;
@@ -137,5 +136,5 @@ export const LineContainer = styled.div`
   align-items: center;
   gap: 15px;
   justify-content: ${(props) =>
-    props.direction == "left" ? "flex-start" : "flex-end"};
+    props.direction === "left" ? "flex-start" : "flex-end"};
 `;

@@ -6,7 +6,7 @@ export default function Work() {
   return (
     <Container id="work">
       <Header>
-        <Number>III.</Number>
+        <Number>03.</Number>
         <Title>Some Things We’ve Built</Title>
         <Line />
       </Header>

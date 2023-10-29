@@ -28,7 +28,6 @@ export const Container = styled.div`
   z-index: 12;
   animation: ${fadeIn} 0.4s linear;
   opacity: 1;
-
 `;
 export const CodeContainer = styled.div`
   display: flex;
@@ -42,6 +41,7 @@ export const Code = styled.pre`
   display: inline-block;
   margin: 0;
   color: ${(props) => (props.colored ? "#2590F1" : "none")};
+  font-family: ${({ theme: { fontsFamily } }) => fontsFamily.CalibreLight};
 `;
 export const Nav = styled.div`
   position: absolute;

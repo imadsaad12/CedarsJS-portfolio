@@ -43,6 +43,7 @@ overflow: hidden;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
   animation-name: ${(props) => (props.isFadeIn ? fadeIn : fadeOut)};
+  z-index: 900;
 `;
 
 export const Logo = styled.img`

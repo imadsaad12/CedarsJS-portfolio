@@ -1,13 +1,13 @@
 import React from "react";
 import { Container, Code, CodeContainer, Nav, Circle } from "./styles";
 
-export default function Info() {
+export default function Info({ name, job }) {
   let word1 = `<div>`;
   let word3 = `  <name>`;
-  let word2 = `Hadi Saab`;
+  let word2 = name;
   let word4 = `</name>`;
   let word5 = `  <job>`;
-  let word6 = `Software Engineer`;
+  let word6 = job;
   let word7 = `</job>`;
   let word8 = `</div>`;
 

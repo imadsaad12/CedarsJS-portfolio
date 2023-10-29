@@ -64,6 +64,7 @@ export const Link = styled.div`
 
 export const Text = styled.span`
   font-size: 12px;
+  font-family: ${({ theme: { fontsFamily } }) => fontsFamily.SFMonoLight};
 `;
 export const Icon = {
   marginLeft: "10px",

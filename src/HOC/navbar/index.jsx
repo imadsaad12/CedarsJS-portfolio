@@ -12,17 +12,7 @@ import useBreakpoint from "../../utils/useMediaQuery";
 import theme from "../../styles/theme";
 import Stars from "../../styles/reusable/Stars";
 
-<<<<<<< HEAD:src/HOC/navbar/index.tsx
-export default function Navbar({
-  setIsBlurred,
-  isFadeIn,
-}: {
-  setIsBlurred: Function;
-  isFadeIn: boolean;
-}) {
-=======
-export default function Navbar({ setIsBlurred }) {
->>>>>>> 47c35c7 (fix):src/HOC/navbar/index.jsx
+export default function Navbar({ setIsBlurred, isFadeIn }) {
   const [isOpen, setIsOpen] = useState(false);
   const isSmallScreen = useBreakpoint(theme.breakingPoints.sm);
 
@@ -32,14 +22,14 @@ export default function Navbar({ setIsBlurred }) {
   };
 
   const menuList = [
-    { name: "Home", number: "I .", link: "home" },
-    { name: "About us", number: "II .", link: "about-us" },
-    { name: "Work", number: "III .", link: "work" },
-    { name: "Contact", number: "VI .", link: "contact" },
+    { name: "Home", number: "01.", link: "home" },
+    { name: "About us", number: "02.", link: "about-us" },
+    { name: "Work", number: "03.", link: "work" },
+    { name: "Contact", number: "04.", link: "contact" },
   ];
 
   return (
-    <NavbarContainer id="navbar">
+    <NavbarContainer id="navbar" isFadeIn={isFadeIn}>
       <Logo />
       <Stars left={"0"}  width={"50%"}  />
       <Stars right={"0"}  width={"50%"}  />

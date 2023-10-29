@@ -3,13 +3,17 @@ import Experience from "./experience";
 import Info from "./info";
 import Links from "./Links";
 import AnimatedLines from "./animatedLines";
-export default function MemberInfo() {
+export default function MemberInfo({ selectedMember }) {
   return (
     <>
-      <AnimatedLines />
-      <Links />
-      <Info />
-      <Experience />
+      {selectedMember && (
+        <>
+          <AnimatedLines />
+          <Links {...selectedMember} />
+          <Info {...selectedMember} />
+          <Experience {...selectedMember} />
+        </>
+      )}
     </>
   );
 }

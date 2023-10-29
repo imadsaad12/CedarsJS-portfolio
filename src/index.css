@@ -12,6 +12,26 @@ code {
     monospace;
 }
 @font-face {
-  font-family: "MyCustomFont";
-  src: url("./styles/fonts/Atmospheric-YzMG4.otf") format("opentype");
+  font-family: "CalibreBlack";
+  src: url("./styles/fonts/CalibreBlack.otf") format("opentype");
+}
+@font-face {
+  font-family: "CalibreBold";
+  src: url("./styles/fonts/CalibreBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "CalibreLight";
+  src: url("./styles/fonts/CalibreLight.otf") format("opentype");
+}
+@font-face {
+  font-family: "SFMonoBold";
+  src: url("./styles/fonts/SF-Mono/SFMonoBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "SFMonoHeavy";
+  src: url("./styles/fonts/SF-Mono/SFMonoHeavy.otf") format("opentype");
+}
+@font-face {
+  font-family: "SFMonoLight";
+  src: url("./styles/fonts/SF-Mono/SFMonoLight.otf") format("opentype");
 }

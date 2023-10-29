@@ -1,15 +1,13 @@
 import React from "react";
-import { Circle, Container, Content, OuterSpinner, SVG, Text } from "./styles";
+import { Circle, Content, OuterSpinner, SVG, Text, Years } from "./styles";
 
-export default function Experience() {
+export default function Experience({ experience }) {
   return (
     <>
       <OuterSpinner>
         <Content>
-          <Text style={{ fontSize: "35px", fontWeight: "bold" }}>2+</Text>
-          <p style={{ fontSize: "15px", marginTop: "-25px", color: "white" }}>
-            Years
-          </p>
+          <Text>{experience}</Text>
+          <Years>Years</Years>
         </Content>
         <SVG width="200" height="200" xmlns="http://www.w3.org/2000/svg">
           <defs>
@@ -29,7 +27,6 @@ export default function Experience() {
           />
         </SVG>
       </OuterSpinner>
-      {/* <Text>2+ years </Text> */}
     </>
   );
 }
