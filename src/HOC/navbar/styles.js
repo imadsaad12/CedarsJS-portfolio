@@ -35,10 +35,7 @@ export const NavbarContainer = styled.div`
   align-items: center;
   background-color: ${({ theme: { colors } }) => colors.background};
   z-index: 20;
-<<<<<<< HEAD:src/HOC/navbar/styles.ts
-overflow: hidden;
-=======
->>>>>>> bc01780 (fix):src/HOC/navbar/styles.js
+  overflow: hidden;
   animation-duration: 0.2s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
