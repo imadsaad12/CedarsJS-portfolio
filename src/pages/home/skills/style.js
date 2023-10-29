@@ -28,17 +28,17 @@ position: absolute;
   /* position: relative; */
   animation: ${rotate} ${(props) =>props.index}s linear infinite; 
   transform-origin: center;
-  margin-top: 15vh;
+  /* margin-top: 15vh; */
   opacity: 0.4;
   /* position: relative; */
 `;
-export const Icon = styled(SiGmail)`
-  font-size: 24px;
-  color: #007bff;
+export const Icon = styled.img`
   position: absolute;
   top: -10px;
   left: 50%;
   transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
 `;
 
 export const Light = styled.div`
@@ -83,3 +83,10 @@ z-index: 20;
   display: inline-block;
   font-family: ${({ theme: { fontsFamily } }) => fontsFamily.CalibreBold};
 `;
+
+export const Javascript = styled.img`
+position: absolute;
+width: 80px;
+height:80px;
+`;
+

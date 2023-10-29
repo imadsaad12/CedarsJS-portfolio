@@ -40,6 +40,7 @@ height: 400px; */
   position: absolute;
   left: ${(props) => props.left};
   top: ${(props) => props.top};
+  right: ${(props) => props.right};
   mix-blend-mode: color-dodge;
   width: 60px;
   height: 60px;
