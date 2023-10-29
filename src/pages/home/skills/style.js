@@ -1,0 +1,85 @@
+import styled, { keyframes } from "styled-components";
+import { SiGmail } from "react-icons/si";
+export const Container = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+  /* background-color: red; */
+  position: relative;
+  margin-top: 10vh;
+`;
+const rotate = keyframes`
+  0% {
+    transform:  rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+`;
+
+export const Circle = styled.div`
+position: absolute;
+  width:  ${(props) =>props.radius};
+  height:  ${(props) =>props.radius};
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  /* position: relative; */
+  animation: ${rotate} ${(props) =>props.index}s linear infinite; 
+  transform-origin: center;
+  margin-top: 15vh;
+  opacity: 0.4;
+  /* position: relative; */
+`;
+export const Icon = styled(SiGmail)`
+  font-size: 24px;
+  color: #007bff;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+`;
+
+export const Light = styled.div`
+  background-color: ${({ theme: { colors } }) => colors.background};
+  width: 500px;
+  height:200px;
+  filter: blur(40px);
+  position: absolute;
+  top: 0;
+  z-index: 4;
+`;
+export const Fade = styled.div`
+  background-color: #348fc5;
+  width: 100%;
+  height:100px;
+  filter: blur(90px);
+  position: absolute;
+  top: 20px;
+  z-index: 10;
+  opacity: 0.4;
+`;
+
+export const FullStack = styled.span`
+  font-size: 45px;
+  color: ${({ theme: { colors } }) => colors.white};
+  text-align: left;
+  display: inline-block;
+  position: absolute;
+  top:0;
+  z-index: 20;
+/* letter-spacing: 6px; */
+  font-family: ${({ theme: { fontsFamily } }) => fontsFamily.CalibreBold};
+`;
+
+export const Web = styled.span`
+  top:50px;
+  position: absolute;
+z-index: 20;
+  font-size: 45px;
+  color: ${({ theme: { colors } }) => colors.white};
+  text-align: left;
+  display: inline-block;
+  font-family: ${({ theme: { fontsFamily } }) => fontsFamily.CalibreBold};
+`;

@@ -1,19 +1,21 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 80%;
+  width: 100%;
   display: flex;
-  margin-top: 10em;
+  /* margin-top: 10em; */
   flex-direction: column;
   @media (max-width: ${(props) => props.theme.breakingPoints.xs}px) {
     margin-top: 5em;
   }
   height: 33em;
+  position: relative;
+  align-items: center;
 `;
 
 export const Header = styled.div`
   height: 5em;
-  width: 70%;
+  width: 80%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -21,6 +23,7 @@ export const Header = styled.div`
   @media (max-width: ${(props) => props.theme.breakingPoints.sm}px) {
     width: 90%;
   }
+  margin-top: 10vh;
 `;
 
 export const Number = styled.span`

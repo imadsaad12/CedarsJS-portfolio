@@ -5,6 +5,7 @@ export const Container = styled.div`
   margin: 50px auto;
   text-align: center;
   box-sizing: inherit;
+  width: 80%;
 `;
 
 export const Title = styled.h1`
