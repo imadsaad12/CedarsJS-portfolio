@@ -27,17 +27,19 @@ export default function HOC(WrappedComponent) {
 
     window.onscroll = () => {
       const currentScrollPos = window.pageYOffset;
+      const isSideBarOpen = document.getElementById("sideBar");
 
       if (prevScrollPos > currentScrollPos) {
         setIsFadeIn(true);
-      } else {
+      } else if (!isSideBarOpen) {
         setIsFadeIn(false);
       }
-      document.getElementById("navbar").style.boxShadow =
-        "0px 10px 30px -10px rgba(0, 0, 0, 0.35)";
 
       if (currentScrollPos === 0) {
         document.getElementById("navbar").style.boxShadow = "none";
+      } else {
+        document.getElementById("navbar").style.boxShadow =
+          "0px 10px 30px -10px rgba(0, 0, 0, 0.35)";
       }
 
       prevScrollPos = currentScrollPos;

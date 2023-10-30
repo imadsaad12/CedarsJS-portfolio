@@ -64,37 +64,7 @@ export default function Team() {
         <Title>Meet The Team</Title>
         <Line></Line>
       </Header>
-      <NewTeam />
-      {/* {isSmallSmallScreen ? (
-        <Slider teamMembers={teamMembers} />
-      ) : (
-        <MembersLayout>
-          <Members teamMembers={teamMembers.slice(0, 3)} handlemember={handlemember} />
-          <LinesContainer>
-            <LinesLayout>
-              {teamMembers.slice(0, 3).map(({ isClicked, id }) => (
-                <LineContainer direction={"left"}>
-                  <DrawingContainer isClicked={isClicked}  id={"line" + id} />
-                  <Circle isClicked={isClicked} direction={"left"} id={"circle" + id} />
-                </LineContainer>
-              ))}
-            </LinesLayout>
-          </LinesContainer>
-          <MemberDetails teamMembers={teamMembers} />
-          <LinesContainer>
-            <LinesLayout>
-              {teamMembers.slice(-3).map(({ isClicked, id }) => (
-                <LineContainer direction={"right"}>
-                  <DrawingContainer isClicked={isClicked} id={"line" + id} />
-                  <Circle isClicked={isClicked} direction={"right"} id={"circle" + id} />
-                </LineContainer>
-              ))}
-            </LinesLayout>
-          </LinesContainer>
-          <Members teamMembers={teamMembers.slice(-3)} handlemember={handlemember} />
-
-        </MembersLayout>
-      )} */}
+      {isSmallSmallScreen ? <Slider teamMembers={teamMembers} /> : <NewTeam />}
     </Container>
   );
 }

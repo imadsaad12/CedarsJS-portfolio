@@ -8,7 +8,11 @@ export const Container = styled.div`
     margin-top: 5em;
   }
   height: 85vh;
-  /* position: relative; */
+  @media (max-width: ${(props) => props.theme.breakingPoints.sm}px) {
+    flex-direction: column;
+    margin-top: 0em;
+    height: 75vh;
+  }
 `;
 
 export const LeftContainer = styled.div`
@@ -50,10 +54,15 @@ export const Hand = styled.img`
   mix-blend-mode: color-dodge;
   z-index: 5;
   animation: infinite ${HandAnimation} 4s;
+  @media (max-width: ${({ theme: { breakingPoints } }) =>breakingPoints.sm}px) {
+    width: 350px;
+    height: 170px;
+    left: 6%;
+  }
 `;
 export const CodeAnimation = keyframes`
   0% {
-    bottom: 22%;
+    bottom: 26%;
   }
 
   50% {
@@ -61,7 +70,7 @@ export const CodeAnimation = keyframes`
   }
 
   100% {
-    bottom: 22%;
+    bottom: 26%;
   }
 
 `;
@@ -69,24 +78,29 @@ export const Code = styled.img`
   width: 460px;
   height: 330px;
   position: absolute;
-  bottom: 22%;
+  bottom: 26%;
   left: 50px;
   mix-blend-mode: color-dodge;
   z-index: 5;
   animation: infinite ${CodeAnimation} 4s;
+  @media (max-width: ${({ theme: { breakingPoints } }) =>breakingPoints.sm}px) {
+    width: 280px;
+    height: 200px;
+    left: 13%;
+  }
 `;
 
 export const Light = styled.div`
   background-color: #348fc5;
-  width: ${(props) =>props.width};
-  height: ${(props) =>props.height};
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
   border-radius: 50%;
-  filter: blur(${(props) =>props.blurwidth});
+  filter: blur(${(props) => props.blurwidth});
   position: absolute;
-  bottom: ${(props) =>props.bottom};
-  left: ${(props) =>props.left};
-  top: ${(props) =>props.top};
-  right: ${(props) =>props.right};
+  bottom: ${(props) => props.bottom};
+  left: ${(props) => props.left};
+  top: ${(props) => props.top};
+  right: ${(props) => props.right};
   z-index: 4;
 `;
 
@@ -98,13 +112,16 @@ export const TitleContainer = styled.div`
   padding-left: 20px;
 `;
 export const Border = styled.div`
-position: absolute;
-left: 0;
-height: 100%;
-width: 1px;
-background-color: white;
-box-shadow: 0px 0 10px 2px ${(props) => props.index==props.activeIndex?props.theme.colors.blue:"transparent"};
-
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 1px;
+  background-color: white;
+  box-shadow: 0px 0 10px 2px
+    ${(props) =>
+      props.index == props.activeIndex
+        ? props.theme.colors.blue
+        : "transparent"};
 `;
 
 export const Title = styled.span`
@@ -113,6 +130,9 @@ export const Title = styled.span`
   text-align: left;
   display: inline-block;
   font-family: ${({ theme: { fontsFamily } }) => fontsFamily.CalibreBold};
+  @media (max-width: ${({ theme: { breakingPoints } }) =>breakingPoints.sm}px) {
+    font-size: 50px;
+  }
 `;
 
 export const Inspire = styled.span`
@@ -127,6 +147,9 @@ export const Inspire = styled.span`
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
+  @media (max-width: ${({ theme: { breakingPoints } }) =>breakingPoints.sm}px) {
+    font-size: 50px;
+  }
 `;
 
 export const InspireContainer = styled.div`
@@ -134,69 +157,34 @@ export const InspireContainer = styled.div`
   flex-direction: row;
   gap: 15px;
 `;
-export const Star = styled.img`
-/* width: 350px;
-height: 400px; */
-position: absolute;
-left: ${(props) => props.left};
-top: ${(props) => props.top};
-filter: blur(${(props) => props.blur});
-mix-blend-mode:color-dodge;
-width: 30px;
-height: 30px;
-`;
+
 export const Stars = styled.img`
-position: absolute;
-left:0;
-mix-blend-mode:color-dodge;
- width: 100%;
- height: 50%;
- left: ${(props) => props.left};
-top: ${(props) => props.top};
-bottom: ${(props) => props.bottom};
-right: ${(props) => props.right};
-/* height: 100vh;  */
-opacity: 0.7;
+  position: absolute;
+  left: 0;
+  mix-blend-mode: color-dodge;
+  width: 100%;
+  height: 50%;
+  left: ${(props) => props.left};
+  top: ${(props) => props.top};
+  bottom: ${(props) => props.bottom};
+  right: ${(props) => props.right};
+  opacity: 0.7;
 `;
 export const Stars2 = styled.img`
-position: absolute;
-right:0;
-mix-blend-mode:color-dodge;
-width: 1000px;
- height: 400px;
+  position: absolute;
+  right: 0;
+  mix-blend-mode: color-dodge;
+  width: 1000px;
+  height: 400px;
 `;
-export const Comet = styled.img`
-/* width: 350px;
-height: 400px; */
-position: absolute;
-left: ${(props) => props.left};
-top: ${(props) => props.top};
-mix-blend-mode:color-dodge;
-width: 60px;
-height: 60px;
-
-`;
-
 
 export const Planet = styled.div`
-/* width: 350px;
-height: 400px; */
-position: absolute;
-box-shadow: inset 0px 0 10px 2px ${(props) => props.theme.colors.blue};
-right:-130px;
-top:0;
-width: 300px;
-height: 300px;
-border-radius: 50%;
-`;
-export const MultiLayer = styled.img`
-/* width: 350px;
-height: 400px; */
-position: absolute;
-left:200px;
-top:100px;
-width: 200px;
-height: 200px;
-mix-blend-mode:color-dodge;
 
+  position: absolute;
+  box-shadow: inset 0px 0 10px 2px ${(props) => props.theme.colors.blue};
+  right: -130px;
+  top: 0;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
 `;

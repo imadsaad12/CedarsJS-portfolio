@@ -27,13 +27,10 @@ export default function Intro() {
       <Star left={"80%"} top={"10%"} blur={"2px"} />
       <MultiLayer />
       <Comet left={"50%"} top={"4%"} />
-      {/* <Comet left={"30%"} top={"4%"} /> */}
-      {/* <Comet left={"10%"} top={"10%"} /> */}
       <Comet left={"20%"} top={"20%"} />
       <Comet left={"40%"} top={"12%"} />
       <Comet left={"60%"} top={"14%"} />
       <Comet left={"80%"} top={"11%"} />
-      {/* <Comet left={"80%"} top={"4%"} /> */}
       <Comet left={"2%"} top={"4%"} />
       <Comet left={"20%"} top={"10%"} />
       <Comet left={"20%"} top={"10%"} />
@@ -48,7 +45,7 @@ export default function Intro() {
       />
       <LeftContainer>
         <Stars bottom={null} top={"0"} width={"100%"} height={"50%"} />
-        <Stars top={null} bottom={"0"}  width={"100%"} height={"50%"}  />
+        <Stars top={null} bottom={"0"} width={"100%"} height={"50%"} />
         <Light
           styles={{
             left: "0px",
@@ -69,8 +66,8 @@ export default function Intro() {
         </TitleContainer>
       </LeftContainer>
       <RightContainer>
-        <Stars bottom={null} top={"0"}  width={"100%"} height={"50%"} />
-        <Stars top={null} bottom={"0"}  width={"100%"} height={"50%"} />
+        <Stars bottom={null} top={"0"} width={"100%"} height={"50%"} />
+        <Stars top={null} bottom={"0"} width={"100%"} height={"50%"} />
         <Hand src={hand} />
         <Code src={code} />
         <Light

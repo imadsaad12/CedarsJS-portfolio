@@ -10,32 +10,21 @@ import {
   Javascript,
 } from "./style";
 import Stars from "../../../styles/reusable/Stars";
-import js from "./js.png";
-import html from "./html.png";
-import css from "./css.png";
-import nodejs from "./nodejs.png";
-import react from "./react.png";
+import js from "../../../static/js.png";
+import html from "../../../static/html.png";
+import css from "../../../static/css.png";
+import nodejs from "../../../static/nodejs.png";
+import react from "../../../static/react.png";
 import Comet from "../../../styles/reusable/Comet";
 import Star from "../../../styles/reusable/Star";
+import useBreakpoint from "../../../utils/useMediaQuery";
+import theme from "../../../styles/theme";
 
-const planets = [
-  {
-    icon: html,
-  },
-  {
-    icon: css,
-  },
-  {
-    icon: nodejs,
-  },
-  {
-    icon: react,
-  },
-  {
-    icon: html,
-  },
-];
 export default function Skills() {
+  const isSmallScreen = useBreakpoint(theme.breakingPoints.sm);
+  const radius = isSmallScreen ? 60 : 90;
+  const planets = [html, css, nodejs, react, html];
+
   return (
     <Container>
       <Comet top={"10%"} right={"10%"} />
@@ -55,10 +44,10 @@ export default function Skills() {
       <FullStack>Full Stack</FullStack>
       <Web>Web Developers</Web>
       <Light />
-      {planets.map((circle, index) => {
+      {planets.map((icon, index) => {
         return (
-          <Circle radius={`${90 * (index + 2)}px`} index={index + 3}>
-            <Icon src={circle.icon} />
+          <Circle radius={`${radius * (index + 2)}px`} index={index + 3}>
+            <Icon src={icon} isSmallScreen={isSmallScreen} />
           </Circle>
         );
       })}

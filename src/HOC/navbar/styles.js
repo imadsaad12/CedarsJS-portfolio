@@ -91,7 +91,7 @@ export const BurgerMenuButton = styled.button`
 export const Bar = styled.div`
   height: 2px;
   transition: transform 0.3s, opacity 0.3s;
-  background-color: ${({ theme: { colors } }) => colors.black};
+  background-color: ${({ theme: { colors } }) => colors.blue};
   &:nth-child(1) {
     ${({ isOpen }) =>
       isOpen
@@ -153,11 +153,11 @@ const closeSideBar = keyframes`
 export const SideBar = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 0;
   position: fixed;
-  background-color: ${({ theme: { colors } }) => colors.white};
+  background-color: ${({ theme: { colors } }) => colors.background};
   right: 0;
   top: 0;
   height: 100vh;
@@ -167,4 +167,14 @@ export const SideBar = styled.div`
   animation-fill-mode: forwards;
   animation-name: ${(props) => (props.isOpen ? displaySideBar : closeSideBar)};
   gap: 40px;
+`;
+
+export const ItemsWrapper = styled.div`
+  width: 50%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: center;
+  align-items: flex-start;
 `;
