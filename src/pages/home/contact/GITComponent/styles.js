@@ -16,9 +16,7 @@ export const Title = styled.h1`
   color: ${({ theme: { colors } }) => colors.white};
   line-height: 1.1;
   font-family: ${({ theme: { fontsFamily } }) => fontsFamily.SFMonoBold};
-  @media (max-width: ${(props) =>
-      props.theme.breakingPoints.sm}px) and (min-width: ${(props) =>
-      props.theme.breakingPoints.xs}px) {
+  @media (max-width: ${(props) =>props.theme.breakingPoints.sm}px) and (min-width: ${(props) =>props.theme.breakingPoints.xs}px) {
     font-size: 30px;
   }
   @media (max-width: ${(props) => props.theme.breakingPoints.xs}px) {
