@@ -35,3 +35,8 @@ code {
   font-family: "SFMonoLight";
   src: url("./styles/fonts/SF-Mono/SFMonoLight.otf") format("opentype");
 }
+
+@font-face {
+  font-family: "Sphere";
+  src: url("./styles/fonts/SphereFez-8MAzJ.ttf") format("opentype");
+}

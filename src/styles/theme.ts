@@ -15,6 +15,7 @@ const theme = {
     SFMonoBold: "SFMonoBold",
     SFMonoHeavy: "SFMonoHeavy",
     SFMonoLight: "SFMonoLight",
+    Sphere: "Sphere",
   },
 
   // max-width for different screen sizes in px
