@@ -6,6 +6,7 @@ export const Container = styled.div`
   text-align: center;
   box-sizing: inherit;
   width: 80%;
+  z-index: 100;
 `;
 
 export const Title = styled.h1`
@@ -15,9 +16,7 @@ export const Title = styled.h1`
   color: ${({ theme: { colors } }) => colors.white};
   line-height: 1.1;
   font-family: ${({ theme: { fontsFamily } }) => fontsFamily.SFMonoBold};
-  @media (max-width: ${(props) =>
-      props.theme.breakingPoints.sm}px) and (min-width: ${(props) =>
-      props.theme.breakingPoints.xs}px) {
+  @media (max-width: ${(props) =>props.theme.breakingPoints.sm}px) and (min-width: ${(props) =>props.theme.breakingPoints.xs}px) {
     font-size: 30px;
   }
   @media (max-width: ${(props) => props.theme.breakingPoints.xs}px) {
@@ -33,9 +32,9 @@ export const Description = styled.p`
 `;
 
 export const Button = styled.button`
-  color: ${({ theme: { colors } }) => colors.gray};
+  color: ${({ theme: { colors } }) => colors.blue};
   background-color: transparent;
-  border: 1px solid ${({ theme: { colors } }) => colors.white};
+  border: 1px solid ${({ theme: { colors } }) => colors.blue};
   border-radius: 4px;
   padding: 1.25rem 1.75rem;
   font-size: 14px;
@@ -47,7 +46,7 @@ export const Button = styled.button`
   cursor: pointer;
   &:hover {
     outline: none;
-    box-shadow: 4px 4px 0 0 ${({ theme: { colors } }) => colors.white};
+    box-shadow: 4px 4px 0 0 ${({ theme: { colors } }) => colors.blue};
     transform: translate(-5px, -5px);
   }
 `;

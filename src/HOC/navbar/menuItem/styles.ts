@@ -22,8 +22,7 @@ export const Container = styled.div<ContainerProps>`
   gap: ${(props) => !props.isSideBar && "5px"};
   line-height: 1px;
   font-size: ${(props) => (props.isSideBar ? "13px" : "10px")};
-  color: ${({ theme: { colors }, isSideBar }) =>
-    isSideBar ? colors.black : colors.white};
+  color: ${({ theme: { colors } }) => colors.white};
   overflow: hidden;
   &:hover {
     color: white;

@@ -20,31 +20,28 @@ const rotate = keyframes`
 `;
 
 export const Circle = styled.div`
-position: absolute;
-  width:  ${(props) =>props.radius};
-  height:  ${(props) =>props.radius};
+  position: absolute;
+  width: ${(props) => props.radius};
+  height: ${(props) => props.radius};
   border: 2px solid #ccc;
   border-radius: 50%;
-  /* position: relative; */
-  animation: ${rotate} ${(props) =>props.index}s linear infinite; 
+  animation: ${rotate} ${(props) => props.index}s linear infinite;
   transform-origin: center;
-  /* margin-top: 15vh; */
   opacity: 0.4;
-  /* position: relative; */
 `;
 export const Icon = styled.img`
   position: absolute;
   top: -10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 40px;
-  height: 40px;
+  width: ${({ isSmallScreen }) => (isSmallScreen ? "30" : "40")}px;
+  height: ${({ isSmallScreen }) => (isSmallScreen ? "30" : "40")}px;
 `;
 
 export const Light = styled.div`
   background-color: ${({ theme: { colors } }) => colors.background};
   width: 500px;
-  height:200px;
+  height: 200px;
   filter: blur(40px);
   position: absolute;
   top: 0;
@@ -53,7 +50,7 @@ export const Light = styled.div`
 export const Fade = styled.div`
   background-color: #348fc5;
   width: 100%;
-  height:100px;
+  height: 100px;
   filter: blur(90px);
   position: absolute;
   top: 20px;
@@ -67,16 +64,16 @@ export const FullStack = styled.span`
   text-align: left;
   display: inline-block;
   position: absolute;
-  top:0;
+  top: 0;
   z-index: 20;
-/* letter-spacing: 6px; */
+  /* letter-spacing: 6px; */
   font-family: ${({ theme: { fontsFamily } }) => fontsFamily.CalibreBold};
 `;
 
 export const Web = styled.span`
-  top:50px;
+  top: 50px;
   position: absolute;
-z-index: 20;
+  z-index: 20;
   font-size: 45px;
   color: ${({ theme: { colors } }) => colors.white};
   text-align: left;
@@ -85,8 +82,7 @@ z-index: 20;
 `;
 
 export const Javascript = styled.img`
-position: absolute;
-width: 80px;
-height:80px;
+  position: absolute;
+  width: 80px;
+  height: 80px;
 `;
-

@@ -1,6 +1,20 @@
 import React from "react";
-import { CardContainer, Image, TextContainer,Name,Work } from "./styles";
+import {
+  CardContainer,
+  Image,
+  TextContainer,
+  Name,
+  Work,
+  OuterSpinner,
+  InnerSpinner,
+  IconsContainer,
+} from "./styles";
+import { BsTelephoneFill, BsLinkedin } from "react-icons/bs";
+import { SiGmail } from "react-icons/si";
+
 export default function Card({ index, currentIndex, member, teamMembers }) {
+  const isActive = index == currentIndex;
+
   const getstyle = (index) => {
     const styles = {
       transform: "translateX(0)",
@@ -25,13 +39,23 @@ export default function Card({ index, currentIndex, member, teamMembers }) {
 
     return styles;
   };
+
   return (
     <CardContainer style={getstyle(index)}>
-        <TextContainer>
-          <Name>{member.name}</Name>
-          <Work>{member.job}</Work>
-        </TextContainer>
-        <Image src={member.image} />
+      <TextContainer>
+        <Name>{member.name}</Name>
+        <Work>{member.job}</Work>
+        {isActive && (
+          <IconsContainer>
+            <BsTelephoneFill style={{ color: "white" }} />
+            <BsLinkedin style={{ color: "white" }} />
+            <SiGmail style={{ color: "white" }} />
+          </IconsContainer>
+        )}
+      </TextContainer>
+      {/* <OuterSpinner isActive={isActive} /> */}
+      {/* <InnerSpinner isActive={isActive} /> */}
+      <Image src={member.image} isActive={isActive} />
     </CardContainer>
   );
 }

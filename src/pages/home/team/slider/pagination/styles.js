@@ -15,9 +15,9 @@ export const Item = styled.div`
   width: ${(props) => (props.index == props.currentIndex ? "10px" : "8px")};
   height: ${(props) => (props.index == props.currentIndex ? "10px" : "8px")};
   border: 1px solid;
-  border-color: ${(props) => props.theme.colors.primaryFontColor};
+  border-color: ${(props) => props.theme.colors.white};
   border-radius: 50%;
   background-color: ${(props) =>
-    props.index == props.currentIndex ? props.theme.colors.navBar : null};
+    props.index == props.currentIndex ? props.theme.colors.white : null};
   transition: all 0.3s ease-in-out;
 `;

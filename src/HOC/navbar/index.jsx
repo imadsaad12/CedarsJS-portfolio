@@ -3,6 +3,7 @@ import Logo from "../../static/logo";
 import {
   Bar,
   BurgerMenuButton,
+  ItemsWrapper,
   MenuContainer,
   NavbarContainer,
   SideBar,
@@ -29,10 +30,10 @@ export default function Navbar({ setIsBlurred, isFadeIn }) {
   ];
 
   return (
-    <NavbarContainer id="navbar" isFadeIn={isFadeIn}>
+    <NavbarContainer id="navbar" isFadeIn={isFadeIn} isOpen={isOpen}>
       <Logo />
-      <Stars left={"0"}  width={"50%"}  />
-      <Stars right={"0"}  width={"50%"}  />
+      <Stars left={"0"} width={"50%"} />
+      <Stars right={"0"} width={"50%"} />
 
       {isSmallScreen ? (
         <BurgerMenuButton onClick={toggleMenu}>
@@ -48,19 +49,21 @@ export default function Navbar({ setIsBlurred, isFadeIn }) {
         </MenuContainer>
       )}
       {isOpen && (
-        <SideBar isOpen={isOpen}>
-          {menuList.map(
-            ({ name, number, link }) =>
-              isOpen && (
-                <MenuItem
-                  name={name}
-                  number={number}
-                  link={link}
-                  isSideBar={true}
-                  onClick={toggleMenu}
-                />
-              )
-          )}
+        <SideBar id="sideBar" isOpen={isOpen}>
+          <ItemsWrapper>
+            {menuList.map(
+              ({ name, number, link }) =>
+                isOpen && (
+                  <MenuItem
+                    name={name}
+                    number={number}
+                    link={link}
+                    isSideBar={true}
+                    onClick={toggleMenu}
+                  />
+                )
+            )}
+          </ItemsWrapper>
         </SideBar>
       )}
     </NavbarContainer>
