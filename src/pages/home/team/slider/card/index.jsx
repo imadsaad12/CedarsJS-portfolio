@@ -20,23 +20,21 @@ export default function Card({ index, currentIndex, member, teamMembers }) {
       transform: "translateX(0)",
       height: "100%",
       zIndex: 10,
-
       opacity: 1,
       filter: "blur(0px)",
     };
 
     if (index < currentIndex) {
       styles.transform = `translateX(${(index - currentIndex) * 105}%)`;
-      styles.height = "80%";
+      // styles.height = "80%";
       styles.filter = "blur(0px)";
       styles.zIndex = teamMembers.length - index;
     } else if (index > currentIndex) {
       styles.transform = `translateX(${(index - currentIndex) * 105}%)`;
-      styles.height = "80%";
+      // styles.height = "80%";
       styles.zIndex = teamMembers.length - index;
       styles.filter = "blur(0px)";
     }
-
     return styles;
   };
 
@@ -45,13 +43,13 @@ export default function Card({ index, currentIndex, member, teamMembers }) {
       <TextContainer>
         <Name>{member.name}</Name>
         <Work>{member.job}</Work>
-        {isActive && (
-          <IconsContainer>
+        {/* {isActive && ( */}
+          <IconsContainer isActive={isActive} >
             <BsTelephoneFill style={{ color: "white" }} />
             <BsLinkedin style={{ color: "white" }} />
             <SiGmail style={{ color: "white" }} />
           </IconsContainer>
-        )}
+        {/* )} */}
       </TextContainer>
       {/* <OuterSpinner isActive={isActive} /> */}
       {/* <InnerSpinner isActive={isActive} /> */}

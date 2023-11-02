@@ -11,6 +11,8 @@ export const CardContainer = styled.div`
   z-index: 999;
   display: flex;
   justify-content: center;
+  overflow: hidden;
+  align-items: center;
 `;
 const imageDisplay = keyframes`
    0% { 
@@ -21,12 +23,12 @@ const imageDisplay = keyframes`
   }
 `;
 export const Image = styled.img`
-  width: ${({ isActive }) => (isActive ? "250px" : "150px")};
-  height: ${({ isActive }) => (isActive ? "250px" : "150px")};
-  border-radius: ${({ isActive }) => (isActive ? "50%" : "50%")};
-  margin-top: ${({ isActive }) => (isActive ? "0px" : "20px")};
+  width: ${({ isActive }) => (isActive ? "200px" : "150px")};
+  height: ${({ isActive }) => (isActive ? "100%" : "150px")};
+  border-radius: ${({ isActive }) => (isActive ? "100px" : "50%")};
+  /* margin-top: ${({ isActive }) => (isActive ? "0px" : "20px")}; */
   animation: ${imageDisplay} 0.5s ease-in-out;
-  transition: all 0.5s;
+  transition: all 0.5s ease-in-out;
 `;
 const spin = keyframes`
    0% { 
@@ -69,6 +71,7 @@ export const TextContainer = styled.div`
   text-align: center;
   justify-content: flex-end;
   flex-direction: column;
+  bottom: 20px;
 `;
 
 export const Work = styled.span`
@@ -77,6 +80,7 @@ export const Work = styled.span`
   font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
   margin-left: 10px;
   margin-bottom: 10px;
+  
 `;
 
 export const Name = styled.div`
@@ -95,4 +99,7 @@ export const IconsContainer = styled.div`
   gap: 10%;
   height: 30px;
   width: 100%;
+  opacity: ${({ isActive }) => (isActive ? "1" : "0")};
+  transition: all 0.3s ease-in-out;
+
 `;

@@ -1,46 +1,74 @@
-import React,{useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import starsvertical from "./starsvertical.png";
 import earth from "./earth.png";
 import overlay from "./overlay.png";
-import screen from "./screen.png";
 
-import {Stars, Earth,TitleContainer,Letter,OverlayLight ,ScreenLight} from "./styles";
+import {
+  Stars,
+  Earth,
+  Letter,
+  OverlayLight,
+  Light,
+  DescriptionContainer,
+  Border,
+  Description,
+  DescriptionContainer2,
+  Border2,
+} from "./styles";
 export default function IntroMobile() {
-  const [scrolled,setScrolled]=useState(false)
+  const [scrolled, setScrolled] = useState(false);
+
+
   useEffect(() => {
-
-    window.onscroll = () => {
-      const currentScrollPos = window.pageYOffset;
-      console.log(currentScrollPos)
-
-      if (currentScrollPos >= 0) {
-        setScrolled(true)
-        // document.getElementById("navbar").style.boxShadow = "none";
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      if (scrollY > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
       }
-
     };
-  });
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
-  useEffect(()=>{
-    console.log("hi")
 
-  },[])
+
   return (
     <>
-      <Earth src={earth} scrolled={scrolled}/>
-      <OverlayLight src={overlay}/>
-      {/* <ScreenLight src={screen}/> */}
+      <Earth src={earth} scrolled={scrolled} />
+      <OverlayLight src={overlay} scrolled={scrolled} />
+      <DescriptionContainer scrolled={scrolled} >
+        <Border/>
+        <Description>A talented group of developers,
+           shaping web and mobile
+           apps through design, development, and inspiration.</Description>
+      </DescriptionContainer>
+      <DescriptionContainer2 scrolled={scrolled} >
+        <Border2/>
+        <Description>Our team is at the forefront 
+          of technology, constantly embracing 
+          the latest advancements.
 
-      <TitleContainer>
-        <Letter>C</Letter>
-        <Letter>E</Letter>
-        <Letter>D</Letter>
-        <Letter>A</Letter>
-        <Letter>R</Letter>
-        <Letter>S</Letter>
-    </TitleContainer>
+
+
+
+</Description>
+      </DescriptionContainer2>
+      {["C", "E", "D", "A", "R", "S","J","S"].map((letter, index) => (
+        <Letter top={`${index*1.1}em`} left={`${(index+1)*10.5}%`}  scrolled={scrolled}>{letter}</Letter>
+      ))}
       <Stars src={starsvertical} />
-
+      <Light
+        styles={{
+          bottom: "0",
+          width: "150%",
+          height: "150px",
+          blurwidth: "100px",
+        }}
+      />
     </>
   );
 }
