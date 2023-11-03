@@ -2,7 +2,7 @@ import styled, { keyframes } from "styled-components";
 
 export const CardContainer = styled.div`
   position: absolute;
-  width: 13em;
+  width: 100%;
   height: 100%;
   transition: height 0.5s ease, transform 0.5s ease, filter 1s ease,
     opacity 0.5s ease;
@@ -23,12 +23,12 @@ const imageDisplay = keyframes`
   }
 `;
 export const Image = styled.img`
-  width: ${({ isActive }) => (isActive ? "200px" : "150px")};
-  height: ${({ isActive }) => (isActive ? "100%" : "150px")};
-  border-radius: ${({ isActive }) => (isActive ? "100px" : "50%")};
-  /* margin-top: ${({ isActive }) => (isActive ? "0px" : "20px")}; */
+  width: 250px;
+  height: 250px;
+  border-radius:50%;
+  opacity: ${({ isActive }) => (isActive ? "1" : "0")};
   animation: ${imageDisplay} 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
 `;
 const spin = keyframes`
    0% { 

@@ -32,10 +32,10 @@ export default function IntroDesktop() {
       <Comet left={"50%"} top={"4%"} />
       {/* <Comet left={"30%"} top={"4%"} /> */}
       {/* <Comet left={"10%"} top={"10%"} /> */}
-      <Comet left={"20%"} top={"20%"} />
-      <Comet left={"40%"} top={"12%"} />
-      <Comet left={"60%"} top={"14%"} />
-      <Comet left={"80%"} top={"11%"} />
+      <Comet left={"15%"} top={"80%"} />
+      <Comet left={"40%"} top={"80%"} />
+      <Comet left={"60%"} top={"80%"} />
+      <Comet left={"80%"} top={"22%"} />
       {/* <Comet left={"80%"} top={"4%"} /> */}
       <Comet left={"2%"} top={"4%"} />
       <Comet left={"20%"} top={"10%"} />

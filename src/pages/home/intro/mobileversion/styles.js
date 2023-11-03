@@ -10,24 +10,25 @@ export const Stars = styled.img`
 `;
 export const Earth = styled.img`
   position: absolute;
-  bottom: ${(props) => (props.scrolled ? "20em" : "0")};
+  top: ${(props) => (props.scrolled ? "6em" : "calc(100% - 490px)")};
 
   z-index: 5;
   width: ${(props) => (props.scrolled ? "200px" : "490px")};
   height: ${(props) => (props.scrolled ? "200px" : "490px")};
-  right: ${(props) => (props.scrolled ? "20%" : "-9em")};
-
+  right: ${(props) => (props.scrolled ? "50%" : "-9em")};
+  transform: ${(props) => (props.scrolled ? "translateX(50%);" : null)}; 
   transition: all 1s ease-in-out;
 `;
 export const OverlayLight = styled.img`
   position: absolute;
-  bottom: ${(props) => (props.scrolled ? "20em" : "0")};
+  top: ${(props) => (props.scrolled ? "6em" : "calc(100% - 490px)")};
 
   z-index: 6;
   width: ${(props) => (props.scrolled ? "200px" : "490px")};
   height: ${(props) => (props.scrolled ? "200px" : "490px")};
-  right: ${(props) => (props.scrolled ? "20%" : "-9em")};
+  right: ${(props) => (props.scrolled ? "50%" : "-9em")};
   mix-blend-mode: overlay;
+  transform: ${(props) => (props.scrolled ? "translateX(50%);" : null)}; 
 
   transition: all 1s ease-in-out;
 `;
@@ -38,7 +39,7 @@ export const OverlayLight = styled.img`
 export const Letter = styled.span`
   position: absolute;
   font-size: ${(props) => props.scrolled? "2em":"3em"};;
-  top: ${(props) => props.scrolled? "7em":props.top};
+  top: ${(props) => props.scrolled? "5.5em":props.top};
   left: ${(props) => props.scrolled?props.left:"10%"};
   color: ${(props) =>props.theme.colors.white};
   font-family: ${({ theme: { fontsFamily } }) => fontsFamily.Sphere};
@@ -64,7 +65,7 @@ export const Light = styled.div`
 export const DescriptionContainer = styled.div`
   position: absolute;
   left:30%;
-  bottom:${(props) => props.scrolled?"15em":"40em"};;
+  bottom:${(props) => props.scrolled?"20em":"40em"};;
 
   font-family: ${({ theme: { fontsFamily } }) => fontsFamily.CalibreLight};
   font-size: 12px;
@@ -107,7 +108,7 @@ export const DescriptionContainer2 = styled.div`
   right:30%;
   display:${(props) => props.scrolled?"flex":"none"};;
 
-  bottom:6em;
+  bottom:10em;
 
   font-family: ${({ theme: { fontsFamily } }) => fontsFamily.CalibreLight};
   font-size: 12px;
