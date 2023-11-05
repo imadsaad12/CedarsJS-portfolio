@@ -16,7 +16,7 @@ export const Earth = styled.img`
   width: ${(props) => (props.scrolled ? "200px" : "490px")};
   height: ${(props) => (props.scrolled ? "200px" : "490px")};
   right: ${(props) => (props.scrolled ? "50%" : "-9em")};
-  transform: ${(props) => (props.scrolled ? "translateX(50%);" : "translateX(0%)")}; 
+  transform: ${(props) => (props.scrolled ? "translateX(50%)" : null)}; 
   transition: all 1s ease-in-out;
 `;
 export const OverlayLight = styled.img`
