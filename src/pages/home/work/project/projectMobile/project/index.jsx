@@ -24,10 +24,12 @@ import { TbFileDescription } from "react-icons/tb";
 
 export default function Project({ index, activeIndex, setactiveIndex }) {
   const handleActiveIndex = () => {
-    if (index == activeIndex) {
-      setactiveIndex(null);
+    if (activeIndex.includes(index)) {
+      const updatedIndexes = activeIndex.filter((existingItem) => existingItem !== index);
+      setactiveIndex(updatedIndexes);
     } else {
-      setactiveIndex(index);
+      // If the item is not found, append it
+      setactiveIndex((prevActiveIndex) => [...prevActiveIndex, index]);
     }
   };
   return (

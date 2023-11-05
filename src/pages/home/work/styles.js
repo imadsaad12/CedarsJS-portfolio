@@ -6,8 +6,11 @@ export const Container = styled.div`
   height: auto;
   margin-top: 10em;
   flex-direction: column;
+  align-items: center;
   @media (max-width: ${(props) => props.theme.breakingPoints.xs}px) {
     margin-top: 5em;
+    width: 100%;
+
   }
 `;
 
@@ -22,7 +25,6 @@ export const Header = styled.div`
     width: 90%;
   }
 `;
-
 export const Number = styled.span`
   font-size: 25px;
   font-family: ${({ theme: { fontsFamily } }) => fontsFamily.SFMonoLight};

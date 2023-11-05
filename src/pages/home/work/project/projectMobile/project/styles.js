@@ -1,8 +1,8 @@
 import styled, { keyframes } from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
-  background-color: ${(props) => props.theme.colors.dark};
+  width: 80%;
+  background-color:#202735;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,7 +11,7 @@ export const Container = styled.div`
 `;
 export const MainContainer = styled.div`
   width: 100%;
-  height: 5em;
+  height: 7em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,7 +21,7 @@ export const viewcontainer = keyframes`
     height: 0em;
   }
   100% {
-    height: 5em;
+    height: 7em;
   }
 `;
 
@@ -72,12 +72,21 @@ export const Border = styled.div`
   height: 80%;
   display: flex;
   justify-content: center;
-  background-color: ${(props) => props.theme.colors.navBar};
-  box-shadow: -7px 0 25px 2px ${(props) => props.index==props.activeIndex?props.theme.colors.navBar:"transparent"};
+  background-color: ${({ theme: { colors } }) => colors.blue};
+  box-shadow: -7px 0 25px 2px ${(props) => props.activeIndex.includes(props.index)?props.theme.colors.blue:"transparent"};
   width: 2px;
 `;
 export const Name = styled.span`
-  font-size: 16px;
+  font-size: 20px;
+  background: linear-gradient(
+    to right,
+    ${({ theme: { colors } }) => colors.blue},
+    ${({ theme: { colors } }) => colors.green}
+  );
+  font-family: ${({ theme: { fontsFamily } }) => fontsFamily.CalibreBold};
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: bold;
 `;
 
@@ -107,7 +116,7 @@ export const HiddenContainer = styled.div`
   width: 100%;
   align-items: center;
   justify-content: center;
-  display: ${(props) => (props.index == props.activeIndex ? "flex" : "none")};
+  display: ${(props) => (props.activeIndex.includes(props.index) ? "flex" : "none")};
   animation: ${viewcontainer} 0.5s ease-in-out;
   overflow: hidden;
 `;
@@ -134,7 +143,7 @@ export const SkillsContainer = styled.div`
 
 `;
 export const Skill = styled.p`
-  color: ${(props) => props.theme.colors.background};
+  color: ${(props) => props.theme.colors.white};
   font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
   text-align: center;
   font-size: 12px;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import starsvertical from "./starsvertical.png";
-import earth from "./earth.png";
-import overlay from "./overlay.png";
+import starsvertical from "../../../../static/starsvertical.png";
+import earth from "../../../../static/earth.png";
+import overlay from "../../../../static/overlay.png";
 
 import {
   Stars,

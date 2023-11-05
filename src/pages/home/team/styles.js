@@ -4,19 +4,27 @@ export const Container = styled.div`
   width: 65%;
   display: flex;
   flex-direction: column;
-  margin-top: 5em;
   @media (max-width: ${(props) => props.theme.breakingPoints.md}px) {
     width: 100%;
+    position: relative;
+    margin-top: 2em;
+
   }
+  align-items: center;
+
+
 `;
 
 export const Header = styled.div`
   height: 5em;
-  width: 70%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
+  @media (max-width: ${(props) => props.theme.breakingPoints.sm}px) {
+    width: 90%;
+  }
 `;
 
 export const Number = styled.span`

@@ -13,6 +13,9 @@ export const CardContainer = styled.div`
   justify-content: center;
   overflow: hidden;
   align-items: center;
+  flex-direction: column;
+  transform: ${(props) =>
+    `translateX(${(props.index - props.currentIndex) * 105}%)`};
 `;
 const imageDisplay = keyframes`
    0% { 
@@ -22,10 +25,15 @@ const imageDisplay = keyframes`
     transform: scale(1); 
   }
 `;
+export const ImageContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 export const Image = styled.img`
-  width: 250px;
-  height: 250px;
-  border-radius:50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
   opacity: ${({ isActive }) => (isActive ? "1" : "0")};
   animation: ${imageDisplay} 0.5s ease-in-out;
   transition: all 1s ease-in-out;
@@ -38,40 +46,14 @@ const spin = keyframes`
     transform: rotate(360deg); 
   }
 `;
-export const OuterSpinner = styled.div`
-  border: 6px solid transparent;
-  display: ${({ isActive }) => isActive && "none"};
-  border-radius: 50%;
-  border-top: 6px solid #fff;
-  width: 175px;
-  height: 175px;
-  animation: ${spin} 3s linear reverse infinite;
-  position: absolute;
-  top: 1px;
-`;
-export const InnerSpinner = styled.div`
-  border: 6px solid transparent;
-  display: ${({ isActive }) => isActive && "none"};
-  border-radius: 50%;
-  border-left: 6px solid #fff;
-  width: 160px;
-  height: 160px;
-  animation: ${spin} 3s linear infinite;
-  position: absolute;
-  top: 7px;
-`;
+
 
 export const TextContainer = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 5;
   display: flex;
-  /* align-items: flex-start; */
   text-align: center;
   justify-content: flex-end;
   flex-direction: column;
-  bottom: 20px;
+  margin-top: 20px;
 `;
 
 export const Work = styled.span`
@@ -80,7 +62,6 @@ export const Work = styled.span`
   font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
   margin-left: 10px;
   margin-bottom: 10px;
-  
 `;
 
 export const Name = styled.div`
@@ -101,5 +82,4 @@ export const IconsContainer = styled.div`
   width: 100%;
   opacity: ${({ isActive }) => (isActive ? "1" : "0")};
   transition: all 0.3s ease-in-out;
-
 `;

@@ -16,7 +16,7 @@ export const Earth = styled.img`
   width: ${(props) => (props.scrolled ? "200px" : "490px")};
   height: ${(props) => (props.scrolled ? "200px" : "490px")};
   right: ${(props) => (props.scrolled ? "50%" : "-9em")};
-  transform: ${(props) => (props.scrolled ? "translateX(50%);" : null)}; 
+  transform: ${(props) => (props.scrolled ? "translateX(50%);" : "translateX(0%)")}; 
   transition: all 1s ease-in-out;
 `;
 export const OverlayLight = styled.img`
@@ -28,7 +28,7 @@ export const OverlayLight = styled.img`
   height: ${(props) => (props.scrolled ? "200px" : "490px")};
   right: ${(props) => (props.scrolled ? "50%" : "-9em")};
   mix-blend-mode: overlay;
-  transform: ${(props) => (props.scrolled ? "translateX(50%);" : null)}; 
+  transform: ${(props) => (props.scrolled ? "translateX(50%)" : "translateX(0%)")}; 
 
   transition: all 1s ease-in-out;
 `;
@@ -107,9 +107,7 @@ export const DescriptionContainer2 = styled.div`
   position: absolute;
   right:30%;
   display:${(props) => props.scrolled?"flex":"none"};;
-
   bottom:10em;
-
   font-family: ${({ theme: { fontsFamily } }) => fontsFamily.CalibreLight};
   font-size: 12px;
   transition: all 1s ease-in-out;
