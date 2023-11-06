@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Carousel, CarouselContainer } from "./styles";
+import { Carousel, CarouselContainer, Light } from "./styles";
 import Card from "./card";
 import Pagination from "./pagination";
 import Stars from "../../../../styles/reusable/Stars";
@@ -53,6 +53,7 @@ export default function Slider({ teamMembers }) {
         ))}
       </CarouselContainer>
       <Pagination teamMembers={ teamMembers } currentIndex={currentIndex}/>
+      <Light/>
       
     </Carousel>
   );

@@ -53,7 +53,10 @@ export const TextContainer = styled.div`
   text-align: center;
   justify-content: flex-end;
   flex-direction: column;
-  margin-top: 20px;
+  position: absolute;
+width: 320px;
+height: 400px;
+z-index: 7;
 `;
 
 export const Work = styled.span`
@@ -66,7 +69,7 @@ export const Work = styled.span`
 
 export const Name = styled.div`
   color: ${({ theme: { colors } }) => colors.white};
-  font-size: 18px;
+  font-size: 25px;
   font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
   font-weight: bold;
   margin-left: 10px;
@@ -82,4 +85,33 @@ export const IconsContainer = styled.div`
   width: 100%;
   opacity: ${({ isActive }) => (isActive ? "1" : "0")};
   transition: all 0.3s ease-in-out;
+`;
+
+
+
+
+export const Member = styled.img`
+width: 320px;
+height: 350px;
+position: absolute;
+z-index: 6;
+`;
+export const Moon = styled.img`
+position: absolute;
+width: 320px;
+height: 350px;
+z-index: 5;
+`;
+export const Square = styled.img`
+position: absolute;
+width: 320px;
+height: 350px;
+z-index: 6;
+`;
+
+export const Face = styled.img`
+position: absolute;
+width: 320px;
+height: 350px;
+z-index: 7;
 `;
