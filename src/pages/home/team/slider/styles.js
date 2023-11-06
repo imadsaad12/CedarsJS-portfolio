@@ -19,6 +19,12 @@ export const CarouselContainer = styled.div`
   justify-content: center;
 `;
 
+export const Moon = styled.img`
+position: absolute;
+width: 350px;
+height: 350px;
+z-index: 5;
+`;
 export const Light = styled.div`
   background-color: #348fc5;
   width: 150px;

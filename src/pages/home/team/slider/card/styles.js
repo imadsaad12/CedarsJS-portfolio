@@ -17,35 +17,24 @@ export const CardContainer = styled.div`
   transform: ${(props) =>
     `translateX(${(props.index - props.currentIndex) * 105}%)`};
 `;
-const imageDisplay = keyframes`
-   0% { 
-    transform: scale(0); 
-  }
-   100%{ 
-    transform: scale(1); 
-  }
-`;
-export const ImageContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-export const Image = styled.img`
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  opacity: ${({ isActive }) => (isActive ? "1" : "0")};
-  animation: ${imageDisplay} 0.5s ease-in-out;
-  transition: all 1s ease-in-out;
-`;
-const spin = keyframes`
-   0% { 
-    transform: rotate(0deg); 
-  }
-   100%{ 
-    transform: rotate(360deg); 
-  }
-`;
+
+const AniText=keyframes`
+0%{
+  opacity: 0;
+
+
+}
+80%{
+  opacity: 0;
+
+
+}
+100%{
+
+  opacity: 1;
+
+}
+`
 
 
 export const TextContainer = styled.div`
@@ -57,8 +46,52 @@ export const TextContainer = styled.div`
 width: 320px;
 height: 400px;
 z-index: 7;
+animation:  2.8s ${AniText}  ease-in-out;
+
+`;
+export const DetectorContainer = styled.div`
+position: absolute;
+width: 320px;
+height: 400px;
+z-index: 7;
+display: flex;
+justify-content: center;
+
 `;
 
+const AniDetector=keyframes`
+0%{
+  top:100px;
+  width: 50px;
+  opacity: 0;
+}
+50%{
+  top:170px;
+  width: 100px;
+  opacity: 1;
+
+}
+75%{
+  opacity: 1;
+
+}
+100%{
+  top:240px;
+  width: 50px;
+  opacity: 0;
+
+}
+`
+export const Detector = styled.div`
+position: absolute;
+height: 3px;
+width: 90px;
+opacity: 0;
+z-index: 7;
+background-color: ${({ theme: { colors } }) => colors.green};;
+animation:  2s ${AniDetector}  ease-in-out;
+
+`;
 export const Work = styled.span`
   color: ${({ theme: { colors } }) => colors.white};
   font-size: 10px;
@@ -96,22 +129,62 @@ height: 350px;
 position: absolute;
 z-index: 6;
 `;
-export const Moon = styled.img`
-position: absolute;
-width: 320px;
+
+const AniSquare=keyframes`
+
+40%{
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+
+}
+100%{
+  width: 320px;
 height: 350px;
-z-index: 5;
-`;
+  opacity: 1;
+
+}
+`
 export const Square = styled.img`
 position: absolute;
 width: 320px;
 height: 350px;
 z-index: 6;
+animation:  2s ${AniSquare}  ease-in-out;
+
 `;
+
+
+const AniFace=keyframes`
+0%{
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+
+}
+80%{
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+
+}
+100%{
+  width: 320px;
+height: 350px;
+  opacity: 1;
+
+}
+`
+
+
+
 
 export const Face = styled.img`
 position: absolute;
 width: 320px;
 height: 350px;
 z-index: 7;
+animation:  2.3s ${AniFace}  ease-in-out;
+
 `;
+

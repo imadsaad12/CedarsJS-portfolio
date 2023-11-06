@@ -1,8 +1,10 @@
 import React, { useState, useRef } from "react";
-import { Carousel, CarouselContainer, Light } from "./styles";
+import { Carousel, CarouselContainer, Light ,MoonContainer,Moon} from "./styles";
 import Card from "./card";
 import Pagination from "./pagination";
 import Stars from "../../../../styles/reusable/Stars";
+import moon from "../../../../static/teammobile/moon.png";
+
 export default function Slider({ teamMembers }) {
   const [currentIndex, setCurrentIndex] = useState(2);
   const divRef = useRef(null);
@@ -38,12 +40,16 @@ export default function Slider({ teamMembers }) {
     <Carousel>
        <Stars top={"0"}  width={"100%"} height={"50%"} />
        <Stars bottom={"0"}  width={"100%"} height={"50%"} />
+      {/* <MoonContainer>
 
+      </MoonContainer> */}
       <CarouselContainer
         ref={divRef}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
       >
+              <Moon src={moon} />
+
         {teamMembers.map((member, index) => (
           <Card
             index={index}
