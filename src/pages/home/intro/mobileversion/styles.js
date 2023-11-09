@@ -16,7 +16,8 @@ export const Earth = styled.img`
   width: ${(props) => (props.scrolled ? "200px" : "490px")};
   height: ${(props) => (props.scrolled ? "200px" : "490px")};
   /* transform: ${(props) =>
-    props.scrolled ? "translateX(0%)" : "translateX(20%)"}; */
+    props.scrolled ? "translateX(0,0)" : "translateX(20%)"}; */
+  left: ${(props) => (props.scrolled ? "30%" : "25%")};
   transition: all 1s;
 `;
 export const OverlayLight = styled.img`
@@ -27,8 +28,9 @@ export const OverlayLight = styled.img`
   width: ${(props) => (props.scrolled ? "200px" : "490px")};
   height: ${(props) => (props.scrolled ? "200px" : "490px")};
   mix-blend-mode: overlay;
-  transform: ${(props) =>
-    props.scrolled ? "translateX(0%)" : "translateX(25%)"};
+  /* transform: ${(props) =>
+    props.scrolled ? "translateX(0%)" : "translateX(25%)"}; */
+  left: ${(props) => (props.scrolled ? "30%" : "25%")};
 
   transition: all 1s;
 `;
