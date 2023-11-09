@@ -24,7 +24,7 @@ export const Image = styled.img`
 export const ImageWrapper = styled.div`
   width: 100%;
   height: 100%;
-  filter: grayscale(100%) contrast(1) brightness(90%);
+  /* filter: grayscale(100%) contrast(1) brightness(90%); */
   mix-blend-mode: multiply;
   transition: all 0.1s ease-in-out;
 `;
@@ -40,7 +40,7 @@ export const ImageContainer = styled.div`
     mix-blend-mode: none;
   }
   &:hover ${ImageWrapper} {
-    filter: grayscale(0%) contrast(1) brightness(90%);
+    /* filter: grayscale(0%) contrast(1) brightness(90%); */
     mix-blend-mode: normal;
   }
   @media (max-width: ${(props) => props.theme.breakingPoints.sm}px) {

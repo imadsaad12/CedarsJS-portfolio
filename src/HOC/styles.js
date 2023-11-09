@@ -7,7 +7,6 @@ export const PageLayout = styled.div`
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-
 `;
 
 export const PageContent = styled.div`

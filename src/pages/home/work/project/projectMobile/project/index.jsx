@@ -16,16 +16,17 @@ import {
   DescriptionContainer,
   Description,
   SkillsContainer,
-  Skill
+  Skill,
 } from "./styles";
 import { BiLogoSlack, BiTime } from "react-icons/bi";
 import { TbFileDescription } from "react-icons/tb";
 
-
 export default function Project({ index, activeIndex, setactiveIndex }) {
   const handleActiveIndex = () => {
     if (activeIndex.includes(index)) {
-      const updatedIndexes = activeIndex.filter((existingItem) => existingItem !== index);
+      const updatedIndexes = activeIndex.filter(
+        (existingItem) => existingItem !== index
+      );
       setactiveIndex(updatedIndexes);
     } else {
       // If the item is not found, append it
@@ -56,19 +57,18 @@ export default function Project({ index, activeIndex, setactiveIndex }) {
       </MainContainer>
       <HiddenContainer index={index} activeIndex={activeIndex}>
         <HiddenWrapper>
-            <DescriptionContainer>
-                <TbFileDescription size="35px"/>
-                <Description>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Consequuntur nulla debitis
-              </Description>
-            </DescriptionContainer>
-            <SkillsContainer>
-              <Skill>React</Skill>
-              <Skill>Strapi</Skill>
-              <Skill>PostgreSQL</Skill>
-            </SkillsContainer>
-
+          <DescriptionContainer>
+            <TbFileDescription size="35px" />
+            <Description>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Consequuntur nulla debitis
+            </Description>
+          </DescriptionContainer>
+          <SkillsContainer>
+            <Skill>React</Skill>
+            <Skill>Strapi</Skill>
+            <Skill>PostgreSQL</Skill>
+          </SkillsContainer>
         </HiddenWrapper>
       </HiddenContainer>
     </Container>
