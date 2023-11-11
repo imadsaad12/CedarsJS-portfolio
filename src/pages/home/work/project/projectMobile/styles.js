@@ -8,4 +8,5 @@ export const Container = styled.div`
   margin-bottom: 3em;
   gap:20px;
   align-items: center;
+  z-index: 5;
 `;
