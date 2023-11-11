@@ -6,6 +6,7 @@ import {
   Text,
   IconsContainer,
   LogoContainer,
+  StarsLayout
 } from "./styles";
 import Navbar from "./navbar";
 import Logo from "../static/logo";
@@ -49,15 +50,17 @@ export default function HOC(WrappedComponent) {
 
   return (
     <PageLayout isLoading={isLoading}>
+      <StarsLayout>
+      </StarsLayout>
       <Navbar setIsBlurred={setIsBlurred} isFadeIn={isFadeIn} />
       <PageContent isLoading={isLoading} isBlurred={isBlurred}>
         <WrappedComponent />
         {isSmallScreen ? (
           <>
             <IconsContainer>
-              <CiFacebook size={25} style={{ color: "#02203c" }} />
-              <BiLogoInstagram size={25} style={{ color: "#02203c" }} />
-              <FaLinkedin size={25} style={{ color: "#02203c" }} />
+              <CiFacebook size={25}  />
+              <BiLogoInstagram size={25} />
+              <FaLinkedin size={25} />
             </IconsContainer>
             <Text>Designed & built by CedarsJS</Text>
           </>

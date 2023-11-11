@@ -6,7 +6,7 @@ export const Container = styled.div`
   /* margin-top: 10em; */
   flex-direction: column;
   @media (max-width: ${(props) => props.theme.breakingPoints.xs}px) {
-    margin-top: 5em;
+    margin-top: 1em;
   }
   height: 33em;
   position: relative;

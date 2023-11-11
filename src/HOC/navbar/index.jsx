@@ -7,7 +7,9 @@ import {
   MenuContainer,
   NavbarContainer,
   SideBar,
+  LogoImage
 } from "./styles";
+import cedars from "../../static/cedars.png"
 import MenuItem from "./menuItem";
 import useBreakpoint from "../../utils/useMediaQuery";
 import theme from "../../styles/theme";
@@ -30,8 +32,9 @@ export default function Navbar({ setIsBlurred, isFadeIn }) {
   ];
 
   return (
-    <NavbarContainer id="navbar" isFadeIn={isFadeIn} isOpen={isOpen}>
-      <Logo />
+    <NavbarContainer id="navbar" isFadeIn={isFadeIn} isOpen={isOpen} Screen={isSmallScreen}>
+      {/* <Logo /> */}
+      {!isSmallScreen  &&<LogoImage src={cedars}/>}
       <Stars left={"0"} width={"50%"} />
       <Stars right={"0"} width={"50%"} />
 

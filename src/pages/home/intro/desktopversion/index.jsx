@@ -38,9 +38,7 @@ export default function IntroDesktop() {
       <Comet left={"80%"} top={"22%"} />
       {/* <Comet left={"80%"} top={"4%"} /> */}
       <Comet left={"2%"} top={"4%"} />
-      <Comet left={"20%"} top={"10%"} />
-      <Comet left={"20%"} top={"10%"} />
-      <Light
+      {/* <Light
         styles={{
           right: "0px",
           top: "200px",
@@ -48,11 +46,11 @@ export default function IntroDesktop() {
           height: "70px",
           blurwidth: "50px",
         }}
-      />
+      /> */}
       <LeftContainer>
-        <Stars bottom={null} top={"0"} width={"100%"} height={"50%"} />
-        <Stars top={null} bottom={"0"}  width={"100%"} height={"50%"}  />
-        <Light
+        {/* <Stars bottom={null} top={"0"} width={"100%"} height={"50%"} />
+        <Stars top={null} bottom={"0"}  width={"100%"} height={"50%"}  /> */}
+        {/* <Light
           styles={{
             left: "0px",
             bottom: "0px",
@@ -60,7 +58,7 @@ export default function IntroDesktop() {
             height: "200px",
             blurwidth: "150px",
           }}
-        />
+        /> */}
 
         <TitleContainer>
           <Title>We Develop</Title>
@@ -72,19 +70,19 @@ export default function IntroDesktop() {
         </TitleContainer>
       </LeftContainer>
       <RightContainer>
-        <Stars bottom={null} top={"0"}  width={"100%"} height={"50%"} />
-        <Stars top={null} bottom={"0"}  width={"100%"} height={"50%"} />
+        {/* <Stars bottom={null} top={"0"}  width={"100%"} height={"50%"} />
+        <Stars top={null} bottom={"0"}  width={"100%"} height={"50%"} /> */}
         <Hand src={hand} />
         <Code src={code} />
-        <Light
+        {/* <Light
           styles={{
             left: "100px",
             bottom: "0px",
             width: "300px",
             height: "300px",
             blurwidth: "100px",
-          }}
-        />
+          }} 
+        />*/}
       </RightContainer>
     </>
   );

@@ -31,7 +31,7 @@ export const NavbarContainer = styled.div`
   top: 0;
   height: 10vh;
   width: 100%;
-  justify-content: space-between;
+  justify-content: ${(props)=>props.Screen?"flex-end":"space-between"};
   align-items: center;
   background-color: ${({ theme: { colors } }) => colors.background};
   z-index: 20;
@@ -177,4 +177,17 @@ export const ItemsWrapper = styled.div`
   justify-content: space-between;
   align-self: center;
   align-items: flex-start;
+`;
+
+export const LogoImage = styled.img`
+/* width: 60px; */
+height: 30%;
+margin-left: 30px;
+  /* width: 50%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: center;
+  align-items: flex-start; */
 `;

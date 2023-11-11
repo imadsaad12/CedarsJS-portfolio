@@ -1,4 +1,6 @@
 import styled, { keyframes } from "styled-components";
+import stars from "../static/space/stars.png";
+
 export const PageLayout = styled.div`
   display: flex;
   flex-direction: column;
@@ -7,6 +9,19 @@ export const PageLayout = styled.div`
   min-height: 100vh;
   position: relative;
   overflow: hidden;
+
+`;
+export const StarsLayout = styled.div`
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-image: url(${stars});
+  background-repeat: repeat;
+  background-size: 500px 300px; 
+    mix-blend-mode: color-dodge;
+  top:0;
+  opacity: 0.6;
 `;
 
 export const PageContent = styled.div`
@@ -50,11 +65,12 @@ export const LogoContainer = styled.div`
 `;
 
 export const Text = styled.p`
-  color: ${(props) => props.theme.colors.primaryFontColor};
   font-family: ${(props) => props.theme.fontsFamily.secondaryFontFamily};
   padding-bottom: 10px;
   width: 70%;
   text-align: center;
+  color: ${({ theme: { colors } }) => colors.white};
+
 `;
 
 export const ComponentWrapper = styled.div`
@@ -76,4 +92,5 @@ export const IconsContainer = styled.div`
   justify-content: space-between;
   height: 50px;
   width: 40%;
+  color: ${({ theme: { colors } }) => colors.white};
 `;

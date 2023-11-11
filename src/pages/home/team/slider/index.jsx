@@ -38,8 +38,8 @@ export default function Slider({ teamMembers }) {
 
   return (
     <Carousel>
-       <Stars top={"0"}  width={"100%"} height={"50%"} />
-       <Stars bottom={"0"}  width={"100%"} height={"50%"} />
+       {/* <Stars top={"0"}  width={"100%"} height={"50%"} />
+       <Stars bottom={"0"}  width={"100%"} height={"50%"} /> */}
       {/* <MoonContainer>
 
       </MoonContainer> */}
@@ -59,7 +59,7 @@ export default function Slider({ teamMembers }) {
         ))}
       </CarouselContainer>
       <Pagination teamMembers={ teamMembers } currentIndex={currentIndex}/>
-      <Light/>
+      {/* <Light/> */}
       
     </Carousel>
   );
