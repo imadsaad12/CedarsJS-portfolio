@@ -20,20 +20,19 @@ export const CarouselContainer = styled.div`
 `;
 
 export const Moon = styled.img`
-position: absolute;
-width: 350px;
-height: 350px;
-z-index: 5;
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  z-index: 5;
 `;
 export const Light = styled.div`
   background-color: #348fc5;
   width: 150px;
   height: 400px;
   border-radius: 50%;
-  filter: blur(100px);
+  /* filter: blur(100px); */
   position: absolute;
   bottom: 10%;
   z-index: 4;
   left: 0;
 `;
-

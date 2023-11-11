@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import starsvertical from "../../../../static/starsvertical.png";
 import earth from "../../../../static/earth.png";
 import overlay from "../../../../static/overlay.png";
@@ -18,7 +18,6 @@ import {
 export default function IntroMobile() {
   const [scrolled, setScrolled] = useState(false);
 
-
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -28,37 +27,38 @@ export default function IntroMobile() {
         setScrolled(false);
       }
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-
 
   return (
     <>
       <Earth src={earth} scrolled={scrolled} />
       <OverlayLight src={overlay} scrolled={scrolled} />
-      <DescriptionContainer scrolled={scrolled} >
-        <Border/>
-        <Description>A talented group of developers,
-           shaping web and mobile
-           apps through design, development, and inspiration.</Description>
+      <DescriptionContainer scrolled={scrolled}>
+        <Border />
+        <Description>
+          A talented group of developers, shaping web and mobile apps through
+          design, development, and inspiration.
+        </Description>
       </DescriptionContainer>
-      <DescriptionContainer2 scrolled={scrolled} >
-        <Border2/>
-        <Description>Our team is at the forefront 
-          of technology, constantly embracing 
-          the latest advancements.
-
-
-
-
-</Description>
+      <DescriptionContainer2 scrolled={scrolled}>
+        <Border2 />
+        <Description>
+          Our team is at the forefront of technology, constantly embracing the
+          latest advancements.
+        </Description>
       </DescriptionContainer2>
-      {["C", "E", "D", "A", "R", "S","J","S"].map((letter, index) => (
-        <Letter top={`${index*1.1}em`} left={`${(index+1)*10.5}%`}  scrolled={scrolled}>{letter}</Letter>
+      {["C", "E", "D", "A", "R", "S", "J", "S"].map((letter, index) => (
+        <Letter
+          top={`${index * 1.1}em`}
+          left={`${(index + 1) * 10.5}%`}
+          scrolled={scrolled}
+        >
+          {letter}
+        </Letter>
       ))}
       <Stars src={starsvertical} />
       <Light

@@ -42,7 +42,7 @@ export const Light = styled.div`
   background-color: ${({ theme: { colors } }) => colors.background};
   width: 500px;
   height: 200px;
-  filter: blur(40px);
+  /* filter: blur(40px); */
   position: absolute;
   top: 0;
   z-index: 4;
@@ -51,7 +51,7 @@ export const Fade = styled.div`
   background-color: #348fc5;
   width: 100%;
   height: 100px;
-  filter: blur(90px);
+  /* filter: blur(90px); */
   position: absolute;
   top: 20px;
   z-index: 10;

@@ -61,7 +61,6 @@ export const TextContainer = styled.div`
   &:hover ${GmailContainer} {
     display: block;
   }
-  
 `;
 
 export const JobText = styled.span`
@@ -91,7 +90,7 @@ export const ImageWrapper = styled.div`
   height: 100%;
   position: relative;
   overflow: hidden;
-  filter: grayscale(100%) contrast(1) brightness(90%);
+  /* filter: grayscale(100%) contrast(1) brightness(90%); */
   mix-blend-mode: multiply;
 `;
 export const Image = styled.img`

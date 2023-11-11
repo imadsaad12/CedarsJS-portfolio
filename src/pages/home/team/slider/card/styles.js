@@ -4,8 +4,7 @@ export const CardContainer = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  transition: height 0.5s ease, transform 0.5s ease, filter 1s ease,
-    opacity 0.5s ease;
+  transition: height 0.5s ease, transform 0.5s ease, opacity 0.5s ease;
   border-radius: 20px;
   overflow: hidden;
   z-index: 999;
@@ -18,7 +17,7 @@ export const CardContainer = styled.div`
     `translateX(${(props.index - props.currentIndex) * 105}%)`};
 `;
 
-const AniText=keyframes`
+const AniText = keyframes`
 0%{
   opacity: 0;
 
@@ -34,8 +33,7 @@ const AniText=keyframes`
   opacity: 1;
 
 }
-`
-
+`;
 
 export const TextContainer = styled.div`
   display: flex;
@@ -43,23 +41,21 @@ export const TextContainer = styled.div`
   justify-content: flex-end;
   flex-direction: column;
   position: absolute;
-width: 320px;
-height: 400px;
-z-index: 7;
-animation:  2.8s ${AniText}  ease-in-out;
-
+  width: 320px;
+  height: 400px;
+  z-index: 7;
+  animation: 2.8s ${AniText} ease-in-out;
 `;
 export const DetectorContainer = styled.div`
-position: absolute;
-width: 320px;
-height: 400px;
-z-index: 7;
-display: flex;
-justify-content: center;
-
+  position: absolute;
+  width: 320px;
+  height: 400px;
+  z-index: 7;
+  display: flex;
+  justify-content: center;
 `;
 
-const AniDetector=keyframes`
+const AniDetector = keyframes`
 0%{
   top:100px;
   width: 50px;
@@ -81,16 +77,15 @@ const AniDetector=keyframes`
   opacity: 0;
 
 }
-`
+`;
 export const Detector = styled.div`
-position: absolute;
-height: 3px;
-width: 90px;
-opacity: 0;
-z-index: 7;
-background-color: ${({ theme: { colors } }) => colors.green};;
-animation:  2s ${AniDetector}  ease-in-out;
-
+  position: absolute;
+  height: 3px;
+  width: 90px;
+  opacity: 0;
+  z-index: 7;
+  background-color: ${({ theme: { colors } }) => colors.green};
+  animation: 2s ${AniDetector} ease-in-out;
 `;
 export const Work = styled.span`
   color: ${({ theme: { colors } }) => colors.white};
@@ -120,17 +115,14 @@ export const IconsContainer = styled.div`
   transition: all 0.3s ease-in-out;
 `;
 
-
-
-
 export const Member = styled.img`
-width: 320px;
-height: 350px;
-position: absolute;
-z-index: 6;
+  width: 320px;
+  height: 350px;
+  position: absolute;
+  z-index: 6;
 `;
 
-const AniSquare=keyframes`
+const AniSquare = keyframes`
 
 40%{
   opacity: 0;
@@ -144,18 +136,16 @@ height: 350px;
   opacity: 1;
 
 }
-`
+`;
 export const Square = styled.img`
-position: absolute;
-width: 320px;
-height: 350px;
-z-index: 6;
-animation:  2s ${AniSquare}  ease-in-out;
-
+  position: absolute;
+  width: 320px;
+  height: 350px;
+  z-index: 6;
+  animation: 2s ${AniSquare} ease-in-out;
 `;
 
-
-const AniFace=keyframes`
+const AniFace = keyframes`
 0%{
   opacity: 0;
   width: 0px;
@@ -174,17 +164,12 @@ height: 350px;
   opacity: 1;
 
 }
-`
-
-
-
-
-export const Face = styled.img`
-position: absolute;
-width: 320px;
-height: 350px;
-z-index: 7;
-animation:  2.3s ${AniFace}  ease-in-out;
-
 `;
 
+export const Face = styled.img`
+  position: absolute;
+  width: 320px;
+  height: 350px;
+  z-index: 7;
+  animation: 2.3s ${AniFace} ease-in-out;
+`;

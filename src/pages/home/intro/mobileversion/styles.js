@@ -15,8 +15,10 @@ export const Earth = styled.img`
   z-index: 5;
   width: ${(props) => (props.scrolled ? "200px" : "490px")};
   height: ${(props) => (props.scrolled ? "200px" : "490px")};
-  transform: ${(props) => (props.scrolled ? "translateX(0%)" : "translateX(20%)")}; 
-  transition: all 1s ;
+  /* transform: ${(props) =>
+    props.scrolled ? "translateX(0,0)" : "translateX(20%)"}; */
+  left: ${(props) => (props.scrolled ? "30%" : "25%")};
+  transition: all 1s;
 `;
 export const OverlayLight = styled.img`
   position: absolute;
@@ -26,24 +28,22 @@ export const OverlayLight = styled.img`
   width: ${(props) => (props.scrolled ? "200px" : "490px")};
   height: ${(props) => (props.scrolled ? "200px" : "490px")};
   mix-blend-mode: overlay;
-  transform: ${(props) => (props.scrolled ? "translateX(0%)" : "translateX(25%)")}; 
+  /* transform: ${(props) =>
+    props.scrolled ? "translateX(0%)" : "translateX(25%)"}; */
+  left: ${(props) => (props.scrolled ? "30%" : "25%")};
 
-  transition: all 1s ;
+  transition: all 1s;
 `;
-
-
-
 
 export const Letter = styled.span`
   position: absolute;
-  font-size: ${(props) => props.scrolled? "2em":"3em"};;
-  top: ${(props) => props.scrolled? "5.5em":props.top};
-  left: ${(props) => props.scrolled?props.left:"10%"};
-  color: ${(props) =>props.theme.colors.white};
+  font-size: ${(props) => (props.scrolled ? "2em" : "3em")};
+  top: ${(props) => (props.scrolled ? "5.5em" : props.top)};
+  left: ${(props) => (props.scrolled ? props.left : "10%")};
+  color: ${(props) => props.theme.colors.white};
   font-family: ${({ theme: { fontsFamily } }) => fontsFamily.Sphere};
   transition: all 1s ease-in-out;
-  z-index: ${(props) => props.scrolled? "6":"3"};
-
+  z-index: ${(props) => (props.scrolled ? "6" : "3")};
 `;
 
 export const Light = styled.div`
@@ -51,9 +51,10 @@ export const Light = styled.div`
   width: ${({ styles: { width } }) => width};
   height: ${({ styles: { height } }) => height};
   border-radius: 50%;
-  filter: blur(${({ styles: { blurwidth } }) => blurwidth});
+  /* -webkit-filter: blur(${({ styles: { blurwidth } }) => blurwidth}); */
   position: absolute;
-  bottom:  ${({ styles: { bottom } }) => bottom};
+  /* filter: blur(${({ styles: { blurwidth } }) => blurwidth}); */
+  bottom: ${({ styles: { bottom } }) => bottom};
   left: ${({ styles: { left } }) => left};
   top: ${({ styles: { top } }) => top};
   right: ${({ styles: { right } }) => right};
@@ -62,8 +63,8 @@ export const Light = styled.div`
 
 export const DescriptionContainer = styled.div`
   position: absolute;
-  left:30%;
-  bottom:${(props) => props.scrolled?"20em":"40em"};;
+  left: 30%;
+  bottom: ${(props) => (props.scrolled ? "20em" : "40em")};
 
   font-family: ${({ theme: { fontsFamily } }) => fontsFamily.CalibreLight};
   font-size: 12px;
@@ -79,13 +80,11 @@ export const Border = styled.div`
   background-color: white;
   opacity: 0.5;
   height: 100%;
-
 `;
 
-export const Description = styled.span`
-`;
+export const Description = styled.span``;
 
-const animatedescription=keyframes`
+const animatedescription = keyframes`
 0%{
   right:0%;
   opacity: 0;
@@ -100,19 +99,19 @@ const animatedescription=keyframes`
   opacity: 1;
 
 }
-`
+`;
 export const DescriptionContainer2 = styled.div`
   position: absolute;
-  right:30%;
-  display:${(props) => props.scrolled?"flex":"none"};;
-  bottom:10em;
+  right: 30%;
+  display: ${(props) => (props.scrolled ? "flex" : "none")};
+  bottom: 10em;
   font-family: ${({ theme: { fontsFamily } }) => fontsFamily.CalibreLight};
   font-size: 12px;
   transition: all 1s ease-in-out;
   width: 110px;
   color: ${({ theme: { colors } }) => colors.white};
   padding-right: 10px;
-  animation:1.5s ${animatedescription} ease-in-out;
+  animation: 1.5s ${animatedescription} ease-in-out;
 `;
 
 export const Border2 = styled.div`
@@ -122,6 +121,4 @@ export const Border2 = styled.div`
   background-color: white;
   opacity: 0.5;
   height: 100%;
-
 `;
-

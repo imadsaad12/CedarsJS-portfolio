@@ -11,7 +11,7 @@ export const Light = styled.img`
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  filter: blur(150px);
+  /* filter: blur(150px); */
   position: absolute;
   right: 0;
   bottom: 0;
@@ -25,7 +25,7 @@ export const Light2 = styled.img`
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  filter: blur(150px);
+  /* filter: blur(150px); */
   position: absolute;
   /* left: 100px; */
   z-index: 0;

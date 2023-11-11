@@ -5,9 +5,9 @@ export const Light = styled.div`
   width: ${({ styles: { width } }) => width};
   height: ${({ styles: { height } }) => height};
   border-radius: 50%;
-  filter: blur(${({ styles: { blurwidth } }) => blurwidth});
+  /* filter: blur(${({ styles: { blurwidth } }) => blurwidth}); */
   position: absolute;
-  bottom:  ${({ styles: { bottom } }) => bottom};
+  bottom: ${({ styles: { bottom } }) => bottom};
   left: ${({ styles: { left } }) => left};
   top: ${({ styles: { top } }) => top};
   right: ${({ styles: { right } }) => right};
@@ -18,7 +18,7 @@ export const StarImage = styled.img`
   position: absolute;
   left: ${({ styles: { left } }) => left};
   top: ${({ styles: { top } }) => top};
-  filter: ${({ styles: { blur } }) => blur};
+  /* filter: ${({ styles: { blur } }) => blur}; */
   mix-blend-mode: color-dodge;
   width: 30px;
   height: 30px;
@@ -26,8 +26,8 @@ export const StarImage = styled.img`
 export const StarsImage = styled.img`
   position: absolute;
   mix-blend-mode: color-dodge;
-  width:  ${({ styles: { width } }) => width};
-  height: ${({ styles: { height } }) => height};;
+  width: ${({ styles: { width } }) => width};
+  height: ${({ styles: { height } }) => height};
   left: ${({ styles: { left } }) => left};
   top: ${({ styles: { top } }) => top};
   bottom: ${({ styles: { bottom } }) => bottom};

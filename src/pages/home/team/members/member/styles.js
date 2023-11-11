@@ -12,10 +12,10 @@ export const Layer = styled.div`
 export const ImageWrapper = styled.div`
   width: 100%;
   height: 100%;
-  filter: ${({ isClicked }) =>
-    isClicked ? "grayscale(100%)" : "grayscale(0%)"};
-  filter: contrast(1);
-  filter: brightness(90%);
+  /* filter: ${({ isClicked }) =>
+    isClicked ? "grayscale(100%)" : "grayscale(0%)"}; */
+  /* filter: contrast(1); */
+  /* filter: brightness(90%); */
   mix-blend-mode: ${({ isClicked }) => (isClicked ? "multiply" : "none")};
 
   transition: all 1s ease-in-out;
