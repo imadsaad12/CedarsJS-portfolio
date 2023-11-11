@@ -61,14 +61,14 @@ export default function IntroMobile() {
         </Letter>
       ))}
       <Stars src={starsvertical} />
-      {/* <Light
+      <Light
         styles={{
-          bottom: "0",
+          bottom: "50px",
           width: "150%",
           height: "150px",
           blurwidth: "100px",
         }}
-      /> */}
+      />
     </>
   );
 }

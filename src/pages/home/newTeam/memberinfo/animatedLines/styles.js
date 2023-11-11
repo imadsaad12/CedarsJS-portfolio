@@ -11,6 +11,35 @@ export const Container = styled.div`
   right: 10%;
   top: -5%;
   z-index: 100;
+  @media (max-width: 2000px) {
+    right: 18%;
+  }
+  @media (max-width: 1800px) {
+    right: 15%;
+  }
+  @media (max-width: 1600px) {
+    right: 10%;
+  }
+  @media (max-width: ${({ theme: { breakingPoints } }) =>
+      breakingPoints.xl}px) {
+    right: 10%;
+  }
+  @media (max-width: 1400px) {
+    right: 10%;
+  }
+  @media (max-width: 1300px) {
+    right: 7%;
+  }
+  @media (max-width: 1100px) {
+    right: 5%;
+  }
+  @media (max-width: ${({ theme: { breakingPoints } }) =>
+      breakingPoints.md}px) {
+    right: 10%;
+  }
+  @media (max-width: 800px) {
+    right: 10%;
+  }
 `;
 const growUp = keyframes`
 0%{

@@ -9,6 +9,35 @@ export const OuterSpinner = styled.div`
   z-index: 20;
   right: 18%;
   bottom: 2%;
+  @media (max-width: 2000px) {
+    right: 24%;
+  }
+  @media (max-width: 1800px) {
+    right: 20%;
+  }
+  @media (max-width: 1600px) {
+    right: 18%;
+  }
+  @media (max-width: ${({ theme: { breakingPoints } }) =>
+      breakingPoints.xl}px) {
+    right: 20%;
+  }
+  @media (max-width: 1400px) {
+    right: 18%;
+  }
+  @media (max-width: 1300px) {
+    right: 7%;
+  }
+  @media (max-width: 1100px) {
+    right: 5%;
+  }
+  @media (max-width: ${({ theme: { breakingPoints } }) =>
+      breakingPoints.md}px) {
+    right: 18%;
+  }
+  @media (max-width: 800px) {
+    right: 10%;
+  }
 `;
 export const SVG = styled.svg`
   transform: rotate(-90deg);

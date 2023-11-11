@@ -27,12 +27,12 @@ export const Moon = styled.img`
 `;
 export const Light = styled.div`
   background-color: #348fc5;
-  width: 150px;
-  height: 400px;
+  width: 1px;
+  height: 1px;
   border-radius: 50%;
-  /* filter: blur(100px); */
+  box-shadow: 0 0 100px 100px #348fc5;
   position: absolute;
-  bottom: 10%;
+  top: 40%;
   z-index: 4;
-  left: 0;
+  left: 15%;
 `;

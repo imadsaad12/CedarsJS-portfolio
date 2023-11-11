@@ -40,9 +40,10 @@ export const Icon = styled.img`
 
 export const Light = styled.div`
   background-color: ${({ theme: { colors } }) => colors.background};
-  width: 500px;
-  height: 200px;
+  width: 50;
+  height: 1px;
   /* filter: blur(40px); */
+  box-shadow: 0 0 100px 50px #348fc5;
   position: absolute;
   top: 0;
   z-index: 4;
@@ -50,8 +51,8 @@ export const Light = styled.div`
 export const Fade = styled.div`
   background-color: #348fc5;
   width: 100%;
-  height: 100px;
-  /* filter: blur(90px); */
+  height: 1px;
+  box-shadow: 0 0 100px 100px #348fc5;
   position: absolute;
   top: 20px;
   z-index: 10;

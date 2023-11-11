@@ -1,11 +1,11 @@
 import styled, { keyframes } from "styled-components";
 
 export const Light = styled.div`
-  background-color: #348fc5;
-  width: ${({ styles: { width } }) => width};
-  height: ${({ styles: { height } }) => height};
-  border-radius: 50%;
-  /* filter: blur(${({ styles: { blurwidth } }) => blurwidth}); */
+  width: 1px;
+  height: 1px;
+  border-radius: 60%;
+  box-shadow: 0 0 100px 100px #348fc5;
+  opacity: 0.4;
   position: absolute;
   bottom: ${({ styles: { bottom } }) => bottom};
   left: ${({ styles: { left } }) => left};

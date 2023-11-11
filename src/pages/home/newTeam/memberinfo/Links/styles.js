@@ -44,6 +44,35 @@ export const Container = styled.div`
   & > :nth-child(3) {
     animation: ${fadeIn} 1.1s ease-in-out;
   }
+  @media (max-width: 2000px) {
+    left: 18%;
+  }
+  @media (max-width: 1800px) {
+    left: 15%;
+  }
+  @media (max-width: 1600px) {
+    left: 12%;
+  }
+  @media (max-width: ${({ theme: { breakingPoints } }) =>
+      breakingPoints.xl}px) {
+    left: 10%;
+  }
+  @media (max-width: 1400px) {
+    left: 7%;
+  }
+  @media (max-width: 1300px) {
+    left: 5%;
+  }
+  @media (max-width: 1100px) {
+    left: 0%;
+  }
+  @media (max-width: ${({ theme: { breakingPoints } }) =>
+      breakingPoints.md}px) {
+    left: 10%;
+  }
+  @media (max-width: 800px) {
+    left: 10%;
+  }
 `;
 export const Link = styled.div`
   background: linear-gradient(

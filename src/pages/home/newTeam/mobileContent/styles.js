@@ -40,6 +40,23 @@ export const TeamMemberContainer = styled.div`
   animation: ${({ condition }) =>
     condition ? `${fadeIn} 1s ease-in-out` : "none"};
   cursor: pointer;
+
+  @media (max-width: 2000px) {
+    left: ${({ left, isClicked }) =>
+      isClicked ? "0" : `calc(${left} + 28px)`};
+  }
+  @media (max-width: 1600px) {
+    left: ${({ left, isClicked }) =>
+      isClicked ? "0" : `calc(${left} + 10px)`};
+  }
+  @media (max-width: ${({ theme: { breakingPoints } }) =>
+      breakingPoints.xl}px) {
+    left: ${({ left, isClicked }) => (isClicked ? "0" : `calc(${left} + 8px)`)};
+  }
+  @media (max-width: ${({ theme: { breakingPoints } }) =>
+      breakingPoints.md}px) {
+    left: ${({ left, isClicked }) => (isClicked ? "0" : `calc(${left} + 0px)`)};
+  }
 `;
 export const Title = styled.span`
   color: ${({ theme: { colors } }) => colors.white};

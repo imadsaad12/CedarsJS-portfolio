@@ -7,26 +7,26 @@ export const Stars = styled.img`
   z-index: 0;
 `;
 export const Light = styled.img`
-  background-color: #348fc5;
-  width: 300px;
-  height: 300px;
+  box-shadow: 0 0 100px 100px #348fc5;
+  opacity: 0.5;
+  width: 1px;
+  height: 1px;
   border-radius: 50%;
-  /* filter: blur(150px); */
   position: absolute;
-  right: 0;
-  bottom: 0;
-  /* left: 100px; */
+  right: 150px;
+  bottom: 100px;
   z-index: 0;
 `;
 export const Light2 = styled.img`
-  top: 0;
-  left: 0;
-  background-color: #348fc5;
-  width: 300px;
-  height: 300px;
+  top: 150px;
+  left: 100px;
+  box-shadow: 0 0 100px 100px #348fc5;
+  opacity: 0.5;
+  width: 1px;
+  height: 1px;
   border-radius: 50%;
-  /* filter: blur(150px); */
   position: absolute;
-  /* left: 100px; */
+  right: 10px;
+  bottom: 50px;
   z-index: 0;
 `;

@@ -40,8 +40,8 @@ export default function IntroDesktop() {
       <Comet left={"2%"} top={"4%"} />
       {/* <Light
         styles={{
-          right: "0px",
-          top: "200px",
+          right: "100px",
+          top: "150px",
           width: "70px",
           height: "70px",
           blurwidth: "50px",
@@ -52,8 +52,8 @@ export default function IntroDesktop() {
         <Stars top={null} bottom={"0"}  width={"100%"} height={"50%"}  /> */}
         {/* <Light
           styles={{
-            left: "0px",
-            bottom: "0px",
+            left: "350px",
+            bottom: "300px",
             width: "200px",
             height: "200px",
             blurwidth: "150px",
@@ -76,8 +76,8 @@ export default function IntroDesktop() {
         <Code src={code} />
         {/* <Light
           styles={{
-            left: "100px",
-            bottom: "0px",
+            left: "200px",
+            bottom: "100px",
             width: "300px",
             height: "300px",
             blurwidth: "100px",

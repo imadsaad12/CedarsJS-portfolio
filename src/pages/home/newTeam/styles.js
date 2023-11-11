@@ -22,6 +22,18 @@ export const Mobile = styled.div`
   background-image: url("https://i.stack.imgur.com/yLOOp.jpg");
   border-radius: 50px;
   overflow: hidden;
+
+  @media (max-width: 2000px) {
+    width: 35%;
+  }
+  @media (max-width: ${({ theme: { breakingPoints } }) =>
+      breakingPoints.lg}px) {
+    width: 45%;
+  }
+  @media (max-width: ${({ theme: { breakingPoints } }) =>
+      breakingPoints.md}px) {
+    width: 37%;
+  }
 `;
 
 export const MobileFrame = styled.img`
