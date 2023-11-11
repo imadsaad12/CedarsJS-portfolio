@@ -153,20 +153,21 @@ const closeSideBar = keyframes`
 export const SideBar = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  width: 0;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 80%;
   position: fixed;
-  background-color: ${({ theme: { colors } }) => colors.background};
-  right: 0;
+  right: ${(props)=>props.isOpen?0:"-80%"};
   top: 0;
   height: 100vh;
   z-index: 999;
   animation-duration: 0.2s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
-  animation-name: ${(props) => (props.isOpen ? displaySideBar : closeSideBar)};
+  transition: all 0.5s ease-in-out;
+  /* animation-name: ${(props) => (props.isOpen ? displaySideBar : closeSideBar)}; */
   gap: 40px;
+  overflow: hidden;
 `;
 
 export const ItemsWrapper = styled.div`
@@ -177,6 +178,10 @@ export const ItemsWrapper = styled.div`
   justify-content: space-between;
   align-self: center;
   align-items: flex-start;
+  position: absolute;
+  z-index: 6;
+  right: 17%;
+  top:10%;
 `;
 
 export const LogoImage = styled.img`
@@ -190,4 +195,23 @@ margin-left: 30px;
   justify-content: space-between;
   align-self: center;
   align-items: flex-start; */
+`;
+
+export const CurvedSidebar = styled.svg`
+height: 100%;
+position: absolute;
+
+
+`;
+export const Curve = styled.path`
+position: absolute;
+height: 100%;
+fill: ${({ theme: { colors } }) => colors.background};
+z-index: 5;
+`;
+export const Curve2 = styled.path`
+position: absolute;
+height: 100%;
+fill: ${({ theme: { colors } }) => colors.blue};
+z-index: 4;
 `;
