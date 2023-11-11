@@ -44,9 +44,25 @@ export const OverlayLight = styled.img`
   width: ${(props) => (props.scrolled ? "200px" : "490px")};
   height: ${(props) => (props.scrolled ? "200px" : "490px")};
   mix-blend-mode: overlay;
-  /* transform: ${(props) =>
-    props.scrolled ? "translateX(0%)" : "translateX(25%)"}; */
-  left: ${(props) => (props.scrolled ? "30%" : "25%")};
+  @media (max-width: 500px) {
+    left: ${(props) => (props.scrolled ? "30%" : "16%")};
+  }
+  @media (max-width: 432px) {
+    left: ${(props) => (props.scrolled ? "28%" : "16%")};
+  }
+  @media (max-width: 400px) {
+    left: ${(props) => (props.scrolled ? "27%" : "16%")};
+  }
+  @media (max-width: 380px) {
+    left: ${(props) => (props.scrolled ? "25%" : "16%")};
+  }
+  @media (max-width: 370px) {
+    left: ${(props) => (props.scrolled ? "23%" : "16%")};
+  }
+  @media (max-width: 342px) {
+    left: ${(props) => (props.scrolled ? "21%" : "16%")};
+  }
+  left: ${(props) => (props.scrolled ? "35%" : "25%")};
 
   transition: all 1s;
 `;
