@@ -31,16 +31,16 @@ export const NavbarContainer = styled.div`
   top: 0;
   height: 10vh;
   width: 100%;
-  justify-content: ${(props)=>props.Screen?"flex-end":"space-between"};
+  justify-content: ${(props) => (props.Screen ? "flex-end" : "space-between")};
   align-items: center;
-  background-color: ${({ theme: { colors } }) => colors.background};
-  z-index: 20;
+  background-color: ${({ Screen, theme: { colors } }) =>
+    Screen ? "transparent" : colors.background};
   overflow: hidden;
   animation-duration: 0.2s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
   animation-name: ${(props) => (props.isFadeIn ? fadeIn : fadeOut)};
-  z-index: 900;
+  z-index: 9000;
 `;
 
 export const Logo = styled.img`
@@ -157,7 +157,7 @@ export const SideBar = styled.div`
   justify-content: flex-start;
   width: 80%;
   position: fixed;
-  right: ${(props)=>props.isOpen?0:"-80%"};
+  right: ${(props) => (props.isOpen ? 0 : "-80%")};
   top: 0;
   height: 100vh;
   z-index: 999;
@@ -165,7 +165,8 @@ export const SideBar = styled.div`
   animation-timing-function: linear;
   animation-fill-mode: forwards;
   transition: all 0.5s ease-in-out;
-  /* animation-name: ${(props) => (props.isOpen ? displaySideBar : closeSideBar)}; */
+  /* animation-name: ${(props) =>
+    props.isOpen ? displaySideBar : closeSideBar}; */
   gap: 40px;
   overflow: hidden;
 `;
@@ -181,13 +182,13 @@ export const ItemsWrapper = styled.div`
   position: absolute;
   z-index: 6;
   right: 17%;
-  top:10%;
+  top: 10%;
 `;
 
 export const LogoImage = styled.img`
-/* width: 60px; */
-height: 30%;
-margin-left: 30px;
+  /* width: 60px; */
+  height: 30%;
+  margin-left: 30px;
   /* width: 50%;
   height: 35%;
   display: flex;
@@ -198,20 +199,18 @@ margin-left: 30px;
 `;
 
 export const CurvedSidebar = styled.svg`
-height: 100%;
-position: absolute;
-
-
+  height: 100%;
+  position: absolute;
 `;
 export const Curve = styled.path`
-position: absolute;
-height: 100%;
-fill: ${({ theme: { colors } }) => colors.background};
-z-index: 5;
+  position: absolute;
+  height: 100%;
+  fill: ${({ theme: { colors } }) => colors.background};
+  z-index: 5;
 `;
 export const Curve2 = styled.path`
-position: absolute;
-height: 100%;
-fill: ${({ theme: { colors } }) => colors.blue};
-z-index: 4;
+  position: absolute;
+  height: 100%;
+  fill: ${({ theme: { colors } }) => colors.blue};
+  z-index: 4;
 `;

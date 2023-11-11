@@ -59,30 +59,29 @@ export default function Navbar({ setIsBlurred, isFadeIn }) {
           ))}
         </MenuContainer>
       )}
-          <SideBar id="sideBar" isOpen={isOpen}>
-            <CurvedSidebar
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 956 2560"
-            >
-              <Curve2 d="m956 0v2560h-728c0 0 234-853.5-110-1586-200-520.5-8-974-8-974z" />
-              <Curve d="m956 0v2560h-720c0 0 234-853.5-110-1586-200-520.5-8-974-8-974z" />
-     
-            </CurvedSidebar>
-            <ItemsWrapper>
-                {menuList.map(
-                  ({ name, number, link }) =>
-                    isOpen && (
-                      <MenuItem
-                        name={name}
-                        number={number}
-                        link={link}
-                        isSideBar={true}
-                        onClick={toggleMenu}
-                      />
-                    )
-                )}
-              </ItemsWrapper>
-          </SideBar>
+      <SideBar id="sideBar" isOpen={isOpen}>
+        <CurvedSidebar
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 956 2560"
+        >
+          <Curve2 d="m956 0v2560h-728c0 0 234-853.5-110-1586-200-520.5-8-974-8-974z" />
+          <Curve d="m956 0v2560h-720c0 0 234-853.5-110-1586-200-520.5-8-974-8-974z" />
+        </CurvedSidebar>
+        <ItemsWrapper>
+          {menuList.map(
+            ({ name, number, link }) =>
+              isOpen && (
+                <MenuItem
+                  name={name}
+                  number={number}
+                  link={link}
+                  isSideBar={true}
+                  onClick={toggleMenu}
+                />
+              )
+          )}
+        </ItemsWrapper>
+      </SideBar>
     </NavbarContainer>
   );
 }

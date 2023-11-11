@@ -39,11 +39,11 @@ export default function Skills() {
       <Stars left={"0"} bottom={"0"} width={"50%"} height={"50%"} />
       <Stars right={"0"} top={"0"} width={"50%"} height={"50%"} />
       <Stars right={"0"} bottom={"0"} width={"50%"} height={"50%"} />
-      {/* <Fade /> */}
+      <Fade />
       <Javascript src={js} />
       <FullStack>Full Stack</FullStack>
       <Web>Web Developers</Web>
-      {/* <Light /> */}
+      <Light />
       {planets.map((icon, index) => {
         return (
           <Circle radius={`${radius * (index + 2)}px`} index={index + 3}>

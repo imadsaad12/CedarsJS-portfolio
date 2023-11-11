@@ -47,6 +47,7 @@ export const Light = styled.div`
   position: absolute;
   top: 0;
   z-index: 4;
+  opacity: 0.4;
 `;
 export const Fade = styled.div`
   background-color: #348fc5;

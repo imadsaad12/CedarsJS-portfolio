@@ -6,7 +6,7 @@ import {
   Text,
   IconsContainer,
   LogoContainer,
-  StarsLayout
+  StarsLayout,
 } from "./styles";
 import Navbar from "./navbar";
 import Logo from "../static/logo";
@@ -28,17 +28,17 @@ export default function HOC(WrappedComponent) {
 
     window.onscroll = () => {
       const currentScrollPos = window.pageYOffset;
-      const isSideBarOpen = document.getElementById("sideBar");
+      // const isSideBarOpen = document.getElementById("sideBar");
 
       if (prevScrollPos > currentScrollPos) {
         setIsFadeIn(true);
-      } else if (!isSideBarOpen) {
+      } else if (!isSmallScreen) {
         setIsFadeIn(false);
       }
 
       if (currentScrollPos === 0) {
         document.getElementById("navbar").style.boxShadow = "none";
-      } else {
+      } else if (!isSmallScreen) {
         document.getElementById("navbar").style.boxShadow =
           "0px 10px 30px -10px rgba(0, 0, 0, 0.35)";
       }
@@ -50,15 +50,14 @@ export default function HOC(WrappedComponent) {
 
   return (
     <PageLayout isLoading={isLoading}>
-      <StarsLayout>
-      </StarsLayout>
+      <StarsLayout></StarsLayout>
       <Navbar setIsBlurred={setIsBlurred} isFadeIn={isFadeIn} />
       <PageContent isLoading={isLoading} isBlurred={isBlurred}>
         <WrappedComponent />
         {isSmallScreen ? (
           <>
             <IconsContainer>
-              <CiFacebook size={25}  />
+              <CiFacebook size={25} />
               <BiLogoInstagram size={25} />
               <FaLinkedin size={25} />
             </IconsContainer>

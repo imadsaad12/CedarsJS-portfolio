@@ -35,4 +35,5 @@ export const Light = styled.div`
   top: 40%;
   z-index: 4;
   left: 15%;
+  opacity: 0.5;
 `;

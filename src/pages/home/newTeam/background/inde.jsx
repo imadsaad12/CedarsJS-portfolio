@@ -5,8 +5,8 @@ import stars from "../../../../static/stars.png";
 export default function Background() {
   return (
     <>
-      {/* <Stars src={stars} />
-      <Light />
+      {/* <Stars src={stars} /> */}
+      {/* <Light />
       <Light2 /> */}
     </>
   );

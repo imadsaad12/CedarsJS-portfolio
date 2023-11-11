@@ -1,5 +1,11 @@
 import React, { useState, useRef } from "react";
-import { Carousel, CarouselContainer, Light ,MoonContainer,Moon} from "./styles";
+import {
+  Carousel,
+  CarouselContainer,
+  Light,
+  MoonContainer,
+  Moon,
+} from "./styles";
 import Card from "./card";
 import Pagination from "./pagination";
 import Stars from "../../../../styles/reusable/Stars";
@@ -38,7 +44,7 @@ export default function Slider({ teamMembers }) {
 
   return (
     <Carousel>
-       {/* <Stars top={"0"}  width={"100%"} height={"50%"} />
+      {/* <Stars top={"0"}  width={"100%"} height={"50%"} />
        <Stars bottom={"0"}  width={"100%"} height={"50%"} /> */}
       {/* <MoonContainer>
 
@@ -48,19 +54,14 @@ export default function Slider({ teamMembers }) {
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
       >
-              <Moon src={moon} />
+        <Moon src={moon} />
 
         {teamMembers.map((member, index) => (
-          <Card
-            index={index}
-            currentIndex={currentIndex}
-            member={member}
-          />
+          <Card index={index} currentIndex={currentIndex} member={member} />
         ))}
       </CarouselContainer>
-      <Pagination teamMembers={ teamMembers } currentIndex={currentIndex}/>
-      {/* <Light/> */}
-      
+      <Pagination teamMembers={teamMembers} currentIndex={currentIndex} />
+      <Light />
     </Carousel>
   );
 }
