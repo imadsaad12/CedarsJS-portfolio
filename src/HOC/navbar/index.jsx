@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Logo from "../../static/logo";
 import {
   Bar,
   BurgerMenuButton,
