@@ -43,9 +43,8 @@ export default function Navbar({ setIsBlurred, isFadeIn }) {
     >
       {/* <Logo /> */}
       {!isSmallScreen && <LogoImage src={cedars} />}
-      {/* <Stars left={"0"} width={"50%"} />
-      <Stars right={"0"} width={"50%"} /> */}
-
+      {!isSmallScreen && <Stars left={"0"} width={"50%"} />}
+      {!isSmallScreen && <Stars right={"0"} width={"50%"} />}
       {isSmallScreen ? (
         <BurgerMenuButton onClick={toggleMenu}>
           <Bar isOpen={isOpen} />
