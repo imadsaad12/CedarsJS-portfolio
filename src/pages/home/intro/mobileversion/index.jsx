@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import starsvertical from "../../../../static/starsvertical.png";
 import earth from "../../../../static/earth.png";
 import overlay from "../../../../static/overlay.png";

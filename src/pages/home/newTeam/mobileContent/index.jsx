@@ -37,7 +37,7 @@ export default function MobileContent({ setSelectedMember, selectedMember }) {
             isClicked={selectedMember?.id === id}
             backgroundImage={image}
           >
-            <OuterSpinner isClicked={selectedMember?.id === id} />
+            {/* <OuterSpinner isClicked={selectedMember?.id === id} /> */}
           </TeamMemberContainer>
         ))}
       </TeamMembersContainer>

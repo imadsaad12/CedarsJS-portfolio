@@ -40,11 +40,12 @@ export const TeamMemberContainer = styled.div`
   animation: ${({ condition }) =>
     condition ? `${fadeIn} 1s ease-in-out` : "none"};
   cursor: pointer;
+  filter: drop-shadow(1px 1px 3px black);
 
   @media (max-width: 2000px) {
     left: ${({ left, isClicked }) =>
       isClicked ? "0" : `calc(${left} + 28px)`};
-  }
+  };
   @media (max-width: 1600px) {
     left: ${({ left, isClicked }) =>
       isClicked ? "0" : `calc(${left} + 10px)`};
