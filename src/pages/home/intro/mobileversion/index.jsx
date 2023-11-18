@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-import starsvertical from "../../../../static/starsvertical.png";
 import earth from "../../../../static/earth.png";
 import overlay from "../../../../static/overlay.png";
 
 import {
-  Stars,
   Earth,
   Letter,
   OverlayLight,
@@ -40,7 +38,7 @@ export default function IntroMobile() {
       <DescriptionContainer scrolled={scrolled}>
         <Border />
         <Description>
-          A talented group of developers, shaping web and mobile apps through
+          A professional group of developers, shaping web and mobile apps through
           design, development, and inspiration.
         </Description>
       </DescriptionContainer>
@@ -60,7 +58,6 @@ export default function IntroMobile() {
           {letter}
         </Letter>
       ))}
-      <Stars src={starsvertical} />
       <Light
         styles={{
           bottom: "50px",

@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+import { MdKeyboardArrowLeft } from "react-icons/md";
+import { MdKeyboardArrowRight } from "react-icons/md";
+
 export const Carousel = styled.div`
   width: 100%;
   overflow-x: hidden;
@@ -17,6 +20,7 @@ export const CarouselContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
 `;
 
 export const Moon = styled.img`
@@ -36,4 +40,22 @@ export const Light = styled.div`
   z-index: 4;
   left: 15%;
   opacity: 0.5;
+`;
+
+export const ArrowLeft = styled(MdKeyboardArrowLeft)`
+  position: absolute;
+  left: 0;
+  opacity: 0.7;
+  color:${(props) => props.theme.colors.green};
+  z-index: 10;
+
+
+`;
+export const ArrowRight = styled(MdKeyboardArrowRight)`
+  position: absolute;
+  right: 0;
+  opacity: 0.7;
+  color:${(props) => props.theme.colors.green};
+  z-index: 10;
+
 `;

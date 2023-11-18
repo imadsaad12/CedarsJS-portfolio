@@ -7,7 +7,7 @@ export const CardContainer = styled.div`
   transition: height 0.5s ease, transform 0.5s ease, opacity 0.5s ease;
   border-radius: 20px;
   overflow: hidden;
-  z-index: 999;
+  z-index: 9;
   display: flex;
   justify-content: center;
   overflow: hidden;

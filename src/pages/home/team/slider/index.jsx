@@ -3,13 +3,14 @@ import {
   Carousel,
   CarouselContainer,
   Light,
-  MoonContainer,
   Moon,
+  ArrowLeft,
+  ArrowRight
 } from "./styles";
 import Card from "./card";
 import Pagination from "./pagination";
-import Stars from "../../../../styles/reusable/Stars";
 import moon from "../../../../static/teammobile/moon.png";
+
 
 export default function Slider({ teamMembers }) {
   const [currentIndex, setCurrentIndex] = useState(2);
@@ -32,9 +33,9 @@ export default function Slider({ teamMembers }) {
       const currentX = event.touches[0].clientX;
       const deltaX = currentX - startX;
 
-      if (deltaX > 10) {
+      if (deltaX > 5) {
         handleright();
-      } else if (deltaX < -10) {
+      } else if (deltaX < -5) {
         handleleft();
       }
 
@@ -44,16 +45,15 @@ export default function Slider({ teamMembers }) {
 
   return (
     <Carousel>
-      {/* <Stars top={"0"}  width={"100%"} height={"50%"} />
-       <Stars bottom={"0"}  width={"100%"} height={"50%"} /> */}
-      {/* <MoonContainer>
 
-      </MoonContainer> */}
       <CarouselContainer
         ref={divRef}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
       >
+        <ArrowLeft size={"30px"} onClick={handleright} />
+        <ArrowRight size={"30px"} onClick={handleleft}/>
+
         <Moon src={moon} />
 
         {teamMembers.map((member, index) => (
