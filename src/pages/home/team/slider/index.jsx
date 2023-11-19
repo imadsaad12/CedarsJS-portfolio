@@ -13,7 +13,7 @@ import moon from "../../../../static/teammobile/moon.png";
 
 
 export default function Slider({ teamMembers }) {
-  const [currentIndex, setCurrentIndex] = useState(2);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const divRef = useRef(null);
   const [startX, setStartX] = useState(null);
 

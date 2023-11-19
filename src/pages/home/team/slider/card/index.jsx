@@ -16,13 +16,12 @@ import { BsTelephoneFill, BsLinkedin } from "react-icons/bs";
 import { SiGmail } from "react-icons/si";
 import face from "../../../../../static/teammobile/face.png";
 import square from "../../../../../static/teammobile/square.png";
-import memberimage from "../../../../../static/teammobile/member.png";
 
 export default function Card({ index, currentIndex, member }) {
   const isActive = index == currentIndex;
   return (
     <CardContainer index={index} currentIndex={currentIndex}>
-      <Member src={memberimage} />
+      <Member src={member.image} />
 
       {isActive && (
         <>

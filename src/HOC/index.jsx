@@ -2,14 +2,12 @@ import React, { useState, useEffect } from "react";
 import {
   PageLayout,
   PageContent,
-  ComponentWrapper,
   Text,
   IconsContainer,
   LogoContainer,
   StarsLayout,
 } from "./styles";
 import Navbar from "./navbar";
-import Logo from "../static/logo";
 import EmailAndSocialMedia from "./emaiAndSocialMedia";
 import useBreakpoint from "../utils/useMediaQuery";
 import theme from "../styles/theme";

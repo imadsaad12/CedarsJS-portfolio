@@ -1,6 +1,10 @@
-import per1 from "./per1.jpg";
-import per2 from "./per2.jpg";
-import per3 from "./per3.jpg";
+import hadi from "./teammobile/hadi.png";
+import hassan from "./teammobile/hassan.png";
+import hashem from "./teammobile/hashem.png";
+import imad from "./teammobile/imad.png";
+import noureden from "./teammobile/noureden.png";
+
+
 
 export const members = [
   {
@@ -10,7 +14,7 @@ export const members = [
     bottomHeight: 100,
     name: "Hadi Saab",
     job: "Software Developer",
-    image: per1,
+    image: hadi,
     zIndex: "2",
     top: "20%",
     left: "0",
@@ -26,7 +30,7 @@ export const members = [
     bottomHeight: 50,
     name: "Imad Saad",
     job: "Software Developer",
-    image: per2,
+    image: imad,
     zIndex: "3",
     top: "20%",
     left: "49%",
@@ -42,7 +46,7 @@ export const members = [
     bottomHeight: 0,
     name: "Ali Hashem",
     job: "Software Developer",
-    image: per3,
+    image: hashem,
     zIndex: "4",
     top: "45%",
     left: "0",
@@ -51,22 +55,7 @@ export const members = [
     linkedIn: "Ali Hashem",
     experience: "1+",
   },
-  {
-    id: 4,
-    isClicked: false,
-    upperHeight: 0,
-    bottomHeight: 100,
-    name: "Bassel Kassem",
-    job: "Software Developer",
-    image: per1,
-    zIndex: "5",
-    top: "45%",
-    left: "49%",
-    email: "Bassel.Kassem@gmail.com",
-    phoneNumber: "+961 71 905513",
-    linkedIn: "Bassel Kassem",
-    experience: "3+",
-  },
+
   {
     id: 5,
     isClicked: false,
@@ -74,7 +63,7 @@ export const members = [
     bottomHeight: 50,
     name: "Hadi Nourdine",
     job: "Software Developer",
-    image: per1,
+    image: noureden,
     zIndex: "6",
     top: "70%",
     left: "0",
@@ -90,7 +79,7 @@ export const members = [
     bottomHeight: 0,
     name: "Hassan Awwad",
     job: "Software Developer",
-    image: per1,
+    image: hassan,
     zIndex: "7",
     top: "70%",
     left: "49%",
@@ -98,5 +87,21 @@ export const members = [
     phoneNumber: "+961 71 089335",
     linkedIn: "Hassan Awwad",
     experience: "6+",
+  },
+  {
+    id: 4,
+    isClicked: false,
+    upperHeight: 0,
+    bottomHeight: 100,
+    name: "Bassel Kassem",
+    job: "Software Developer",
+    image: hadi,
+    zIndex: "5",
+    top: "45%",
+    left: "49%",
+    email: "Bassel.Kassem@gmail.com",
+    phoneNumber: "+961 71 905513",
+    linkedIn: "Bassel Kassem",
+    experience: "3+",
   },
 ];
