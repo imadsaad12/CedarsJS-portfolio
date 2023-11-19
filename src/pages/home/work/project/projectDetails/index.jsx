@@ -26,9 +26,10 @@ export default function ProjectDetails() {
 
       <DescriptionContainer>
         <Description>
-          A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and
-          more. Available on Visual Studio Marketplace, Package Control, Atom
-          Package Manager, and npm.
+          Crafted a lively freelance website for your juice shop, blending
+          eye-catching design with user-friendly features. Showcases your tasty
+          offerings with style, making it easy for customers to explore and
+          engage. The perfect online hub for your vibrant juice business
         </Description>
       </DescriptionContainer>
       <SkillsContainer>
@@ -38,8 +39,12 @@ export default function ProjectDetails() {
           ))}
         </SkillsList>
         <IconsContainer>
-          <FiGithub />
-          <MdOutlineIosShare />
+          <MdOutlineIosShare
+            style={{ cursor: "pointer" }}
+            onClick={() =>
+              (window.location.href = "https://www.ramadanjuice-saida.com/")
+            }
+          />
         </IconsContainer>
       </SkillsContainer>
     </DetailsContainer>

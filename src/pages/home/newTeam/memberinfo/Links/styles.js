@@ -89,6 +89,7 @@ export const Link = styled.div`
   justify-content: flex-start;
   gap: 10px;
   color: ${({ theme: { colors } }) => colors.white};
+  cursor: pointer;
 `;
 
 export const Text = styled.span`

@@ -2,7 +2,7 @@ import styled, { keyframes } from "styled-components";
 
 export const Container = styled.div`
   width: 80%;
-  background-color:#202735;
+  background-color: #202735;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,8 +24,6 @@ export const viewcontainer = keyframes`
     height: 7em;
   }
 `;
-
-
 
 export const Wrapper = styled.div`
   width: 90%;
@@ -73,7 +71,11 @@ export const Border = styled.div`
   display: flex;
   justify-content: center;
   background-color: ${({ theme: { colors } }) => colors.blue};
-  box-shadow: -7px 0 25px 2px ${(props) => props.activeIndex.includes(props.index)?props.theme.colors.blue:"transparent"};
+  box-shadow: -7px 0 25px 2px
+    ${(props) =>
+      props.activeIndex.includes(props.index)
+        ? props.theme.colors.blue
+        : "transparent"};
   width: 2px;
 `;
 export const Name = styled.span`
@@ -110,13 +112,13 @@ export const Dash = styled.div`
   font-size: 8px;
 `;
 
-
 export const HiddenContainer = styled.div`
-  height: 7em;
+  height: 10em;
   width: 100%;
   align-items: center;
   justify-content: center;
-  display: ${(props) => (props.activeIndex.includes(props.index) ? "flex" : "none")};
+  display: ${(props) =>
+    props.activeIndex.includes(props.index) ? "flex" : "none"};
   animation: ${viewcontainer} 0.5s ease-in-out;
   overflow: hidden;
 `;
@@ -126,11 +128,10 @@ export const HiddenWrapper = styled.div`
   height: 90%;
   display: flex;
   flex-direction: column;
-  border-top: 1px solid rgb(255,255,255,0.4);
+  border-top: 1px solid rgb(255, 255, 255, 0.4);
   align-items: center;
   justify-content: center;
   overflow: hidden;
-
 `;
 
 export const SkillsContainer = styled.div`
@@ -140,7 +141,6 @@ export const SkillsContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
   gap: 5px;
-
 `;
 export const Skill = styled.p`
   color: ${(props) => props.theme.colors.white};
@@ -159,11 +159,12 @@ export const DescriptionContainer = styled.div`
   gap: 5px;
   color: white;
   color: rgb(255, 255, 255, 0.8);
-
+  /* height: 50px; */
 `;
 
 export const Description = styled.span`
-  font-size: 12px;
-  margin-top: 5px;
-
+  font-size: 10px;
+  margin-top: 3%;
+  width: 100%;
+  line-height: 17px;
 `;

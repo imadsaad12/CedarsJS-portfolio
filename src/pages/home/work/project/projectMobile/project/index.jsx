@@ -20,6 +20,7 @@ import {
 } from "./styles";
 import { BiLogoSlack, BiTime } from "react-icons/bi";
 import { TbFileDescription } from "react-icons/tb";
+import ramadanLogo from "../../../../../../static/ramadanJuiceLogo.png";
 
 export default function Project({ index, activeIndex, setactiveIndex }) {
   const handleActiveIndex = () => {
@@ -37,8 +38,19 @@ export default function Project({ index, activeIndex, setactiveIndex }) {
     <Container>
       <MainContainer onClick={handleActiveIndex}>
         <Wrapper>
-          <LogoContainer>
-            <BiLogoSlack />
+          <LogoContainer
+            onClick={() =>
+              (window.location.href = "https://www.ramadanjuice-saida.com/")
+            }
+          >
+            <img
+              src={ramadanLogo}
+              style={{
+                width: "50px",
+                height: "50px",
+                borderRadius: "50%",
+              }}
+            />
           </LogoContainer>
           <NameContainer>
             <Name>Ramadan Juice</Name>
@@ -58,10 +70,13 @@ export default function Project({ index, activeIndex, setactiveIndex }) {
       <HiddenContainer index={index} activeIndex={activeIndex}>
         <HiddenWrapper>
           <DescriptionContainer>
-            <TbFileDescription size="35px" />
+            <TbFileDescription size="30px" style={{ marginTop: "3%" }} />
             <Description>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Consequuntur nulla debitis
+              Crafted a lively freelance website for your juice shop, blending
+              eye-catching design with user-friendly features. Showcases your
+              tasty offerings with style, making it easy for customers to
+              explore and engage. The perfect online hub for your vibrant juice
+              business
             </Description>
           </DescriptionContainer>
           <SkillsContainer>

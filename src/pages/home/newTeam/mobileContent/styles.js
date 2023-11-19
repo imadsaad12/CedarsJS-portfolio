@@ -28,7 +28,7 @@ export const TeamMemberContainer = styled.div`
   margin: ${({ isClicked }) => (isClicked ? "0" : "25px")};
   position: absolute;
   border-radius: ${({ isClicked }) => (isClicked ? "0" : "50%")};
-  background-color: blue;
+  background-color: ${({ theme: { colors } }) => colors.white};
   top: ${({ top, isClicked }) => (isClicked ? "0" : top)};
   left: ${({ left, isClicked }) => (isClicked ? "0" : left)};
   background-image: ${({ backgroundImage }) => `url(${backgroundImage})`};
@@ -45,7 +45,7 @@ export const TeamMemberContainer = styled.div`
   @media (max-width: 2000px) {
     left: ${({ left, isClicked }) =>
       isClicked ? "0" : `calc(${left} + 28px)`};
-  };
+  }
   @media (max-width: 1600px) {
     left: ${({ left, isClicked }) =>
       isClicked ? "0" : `calc(${left} + 10px)`};

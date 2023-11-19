@@ -63,6 +63,7 @@ export const SwipeContainer = styled.div`
 export const Swipe = styled.span`
   user-select: none; // Disable text selection while swiping
   touch-action: manipulation; // Improve touch handling
+  color: black;
 `;
 
 const IconAnimation = keyframes`
@@ -83,4 +84,5 @@ export const AnimatedIcon = styled(MdKeyboardDoubleArrowUp)`
   animation: 1s ${IconAnimation} infinite;
   user-select: none; // Disable text selection while swiping
   touch-action: manipulation; // Improve touch handling
+  color: black;
 `;
