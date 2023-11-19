@@ -18,7 +18,16 @@ import face from "../../../../../static/teammobile/face.png";
 import square from "../../../../../static/teammobile/square.png";
 
 export default function Card({ index, currentIndex, member }) {
-  const isActive = index == currentIndex;
+  const isActive = index === currentIndex;
+  const handleClickEmail = (email) => {
+    window.location.href = `mailto:${email}`;
+  };
+  const handleClickPhone = (phone) => {
+    window.location.href = `tel:${phone}`;
+  };
+  const handleClickLinkedIn = (url) => {
+    window.location.href = url;
+  };
   return (
     <CardContainer index={index} currentIndex={currentIndex}>
       <Member src={member.image} />
@@ -34,9 +43,18 @@ export default function Card({ index, currentIndex, member }) {
             <Name>{member.name}</Name>
             <Work>{member.job}</Work>
             <IconsContainer isActive={isActive}>
-              <BsTelephoneFill style={{ color: "white" }} />
-              <BsLinkedin style={{ color: "white" }} />
-              <SiGmail style={{ color: "white" }} />
+              <BsTelephoneFill
+                style={{ color: "white" }}
+                onClick={() => handleClickPhone(member.phoneNumber)}
+              />
+              <BsLinkedin
+                style={{ color: "white" }}
+                onClick={() => handleClickLinkedIn(member.linkedInURL)}
+              />
+              <SiGmail
+                style={{ color: "white" }}
+                onClick={() => handleClickEmail(member.email)}
+              />
             </IconsContainer>
           </TextContainer>
         </>
