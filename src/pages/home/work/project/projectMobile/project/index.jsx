@@ -44,9 +44,9 @@ export default function Project({ index, activeIndex, setactiveIndex }) {
             <Name>Ramadan Juice</Name>
             <TimeContainer>
               <BiTime />
-              <Time>10/22/2023</Time>
+              <Time>20/7/2023</Time>
               <Dash />
-              <Time>10/22/2024</Time>
+              <Time>20/8/2023</Time>
             </TimeContainer>
           </NameContainer>
 
